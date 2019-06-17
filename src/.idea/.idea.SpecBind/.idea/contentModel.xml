@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_SpecBind.-239975167.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$/../appveyor.yml" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p=".nuget" t="Include">
+        <e p="NuGet.Config" t="Include" />
+      </e>
+      <e p="NetStandard" t="Include" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Selenium" t="Include" />
+      <e p="Solution Items" t="Include" />
+      <e p="specbind" t="IncludeRecursive">
+        <e p="ActionPipeline" t="Include">
+          <e p="ActionContext.cs" t="Include" />
+          <e p="ActionPipelineService.cs" t="Include" />
+          <e p="ActionRepository.cs" t="Include" />
+          <e p="ActionResult.cs" t="Include" />
+          <e p="ActionResultExtensions.cs" t="Include" />
+          <e p="ElementLocator.cs" t="Include" />
+          <e p="IAction.cs" t="Include" />
+          <e p="IActionPipelineService.cs" t="Include" />
+          <e p="IActionRepository.cs" t="Include" />
+          <e p="IElementLocator.cs" t="Include" />
+          <e p="ILocatorAction.cs" t="Include" />
+          <e p="IPostAction.cs" t="Include" />
+          <e p="IPreAction.cs" t="Include" />
+        </e>
+        <e p="Actions" t="Include">
+          <e p="ActionBase.cs" t="Include" />
+          <e p="BasicValidationChecksActionBase.cs" t="Include" />
+          <e p="ButtonClickAction.cs" t="Include" />
+          <e p="ClearDataAction.cs" t="Include" />
+          <e p="ComboComparisonType.cs" t="Include" />
+          <e p="ContextActionBase.cs" t="Include" />
+          <e p="DismissDialogAction.cs" t="Include" />
+          <e p="EnterDataAction.cs" t="Include" />
+          <e p="GetElementAsPageAction.cs" t="Include" />
+          <e p="GetListItemByCriteriaAction.cs" t="Include" />
+          <e p="GetListItemByIndexAction.cs" t="Include" />
+          <e p="HighlightLocatorAction.cs" t="Include" />
+          <e p="HoverOverElementAction.cs" t="Include" />
+          <e p="ILogger.cs" t="Include" />
+          <e p="NavigationPostAction.cs" t="Include" />
+          <e p="PageNavigationAction.cs" t="Include" />
+          <e p="SetCookiePreAction.cs" t="Include" />
+          <e p="SetTokenFromValueAction.cs" t="Include" />
+          <e p="ValidateActionBase.cs" t="Include" />
+          <e p="ValidateComboBoxAction.cs" t="Include" />
+          <e p="ValidateElementEnabledAction.cs" t="Include" />
+          <e p="ValidateElementExistsAction.cs" t="Include" />
+          <e p="ValidateItemAction.cs" t="Include" />
+          <e p="ValidateListAction.cs" t="Include" />
+          <e p="ValidateListRowCountAction.cs" t="Include" />
+          <e p="ValidateTokenAction.cs" t="Include" />
+          <e p="ValidationCheckContext.cs" t="Include" />
+          <e p="WaitConditions.cs" t="Include" />
+          <e p="WaitForElementAction.cs" t="Include" />
+          <e p="WaitForListItemsAction.cs" t="Include" />
+          <e p="WaitForPageAction.cs" t="Include" />
+        </e>
+        <e p="AlertBoxSteps.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BrowserSupport" t="Include">
+          <e p="AlertBoxAction.cs" t="Include" />
+          <e p="BrowserBase.cs" t="Include" />
+          <e p="BrowserExtensions.cs" t="Include" />
+          <e p="BrowserFactory.cs" t="Include" />
+          <e p="BrowserType.cs" t="Include" />
+          <e p="IBrowser.cs" t="Include" />
+          <e p="NullLogger.cs" t="Include" />
+          <e p="ProxyLogger.cs" t="Include" />
+          <e p="WebDriverSupport.cs" t="Include" />
+        </e>
+        <e p="Configuration" t="Include">
+          <e p="ApplicationConfigurationElement.cs" t="Include" />
+          <e p="AssemblyCollection.cs" t="Include" />
+          <e p="AssemblyElement.cs" t="Include" />
+          <e p="BrowserFactoryConfiguration.cs" t="Include" />
+          <e p="BrowserFactoryConfigurationElement.cs" t="Include" />
+          <e p="ConfigurationSectionHandler.cs" t="Include" />
+        </e>
+        <e p="DataSteps.cs" t="Include" />
+        <e p="Deployment" t="Include">
+          <e p="App.config.install.xdt" t="Include" />
+          <e p="App.config.uninstall.xdt" t="Include" />
+        </e>
+        <e p="Extensions" t="Include">
+          <e p="NameValueConfigurationCollectionExtensions.cs" t="Include" />
+        </e>
+        <e p="Helpers" t="Include">
+          <e p="AssemblyLoader.cs" t="Include" />
+          <e p="AttributeExtensions.cs" t="Include" />
+          <e p="FileUploadHelper.cs" t="Include" />
+          <e p="IScenarioContextHelper.cs" t="Include" />
+          <e p="ISettingHelper.cs" t="Include" />
+          <e p="ITokenManager.cs" t="Include" />
+          <e p="ResourceLocator.cs" t="Include" />
+          <e p="ScenarioContextHelper.cs" t="Include" />
+          <e p="SettingHelper.cs" t="Include" />
+          <e p="StringLookupExtensions.cs" t="Include" />
+          <e p="TableFormater.cs" t="Include" />
+          <e p="TableItemType.cs" t="Include" />
+          <e p="TokenManager.cs" t="Include" />
+          <e p="UriHelper.cs" t="Include" />
+          <e p="ValidationTableExtensions.cs" t="Include" />
+          <e p="Waiter.cs" t="Include" />
+          <e p="WrappedSettingHelper.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PageNavigationSteps.cs" t="Include" />
+        <e p="Pages" t="Include">
+          <e p="ComboBoxItem.cs" t="Include" />
+          <e p="ComparisonType.cs" t="Include" />
+          <e p="ElementDescription.cs" t="Include" />
+          <e p="ElementExecuteException.cs" t="Include" />
+          <e p="ElementLocatorAttribute.cs" t="Include" />
+          <e p="ExpressionData.cs" t="Include" />
+          <e p="IActiveCheck.cs" t="Include" />
+          <e p="IDataControl.cs" t="Include" />
+          <e p="IElementList.cs" t="Include" />
+          <e p="IElementProvider.cs" t="Include" />
+          <e p="IPage.cs" t="Include" />
+          <e p="IPageElementHandler.cs" t="Include" />
+          <e p="IPageMapper.cs" t="Include" />
+          <e p="IPropertyData.cs" t="Include" />
+          <e p="ListElementWrapper.cs" t="Include" />
+          <e p="NumericComparisonType.cs" t="Include" />
+          <e p="PageAliasAttribute.cs" t="Include" />
+          <e p="PageBase.cs" t="Include" />
+          <e p="PageBuilderBase.cs" t="Include" />
+          <e p="PageBuilderContext.cs" t="Include" />
+          <e p="PageMapper.cs" t="Include" />
+          <e p="PageNavigationAttribute.cs" t="Include" />
+          <e p="PageNavigationException.cs" t="Include" />
+          <e p="SetCookieAttribute.cs" t="Include" />
+          <e p="TableElement.cs" t="Include" />
+          <e p="TagConstants.cs" t="Include" />
+          <e p="TypeExtensions.cs" t="Include" />
+          <e p="ValidationItemResult.cs" t="Include" />
+          <e p="ValidationResult.cs" t="Include" />
+          <e p="VirtualPropertyAttribute.cs" t="Include" />
+        </e>
+        <e p="PageStepBase.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="PropertyHandlers" t="Include">
+          <e p="ElementPropertyData.cs" t="Include" />
+          <e p="ListPropertyData.cs" t="Include" />
+          <e p="PagePropertyData.cs" t="Include" />
+          <e p="PropertyDataBase.cs" t="Include" />
+          <e p="VirtualPropertyData.cs" t="Include" />
+        </e>
+        <e p="SelectionSteps.cs" t="Include" />
+        <e p="SpecBind.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.nuspec" t="Include" />
+        <e p="TokenSteps.cs" t="Include" />
+        <e p="Validation" t="Include">
+          <e p="ContainsComparer.cs" t="Include" />
+          <e p="DoesNotContainComparer.cs" t="Include" />
+          <e p="DoesNotExistComparer.cs" t="Include" />
+          <e p="EnabledComparer.cs" t="Include" />
+          <e p="EndsWithComparer.cs" t="Include" />
+          <e p="EqualsComparer.cs" t="Include" />
+          <e p="ExistsComparer.cs" t="Include" />
+          <e p="GreaterThanComparer.cs" t="Include" />
+          <e p="GreaterThanEqualsComparer.cs" t="Include" />
+          <e p="ItemValidation.cs" t="Include" />
+          <e p="IValidationComparer.cs" t="Include" />
+          <e p="IValidationTable.cs" t="Include" />
+          <e p="LessThanComparer.cs" t="Include" />
+          <e p="LessThanEqualsComparer.cs" t="Include" />
+          <e p="NotEnabledComparer.cs" t="Include" />
+          <e p="NotEqualsComparer.cs" t="Include" />
+          <e p="StartsWithComparer.cs" t="Include" />
+          <e p="ValidateTableHelpers.cs" t="Include" />
+          <e p="ValidationComparerBase.cs" t="Include" />
+          <e p="ValidationTable.cs" t="Include" />
+          <e p="ValidationTablePreAction.cs" t="Include" />
+          <e p="ValueComparerBase.cs" t="Include" />
+        </e>
+        <e p="WaitingSteps.cs" t="Include" />
+      </e>
+      <e p="SpecBind.NetStandard" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.NetStandard.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.NetStandard.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SpecBind.Plugin" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configuration" t="Include" />
+        <e p="Constants.cs" t="Include" />
+        <e p="Deployment" t="Include">
+          <e p="App.config.install.xdt" t="Include" />
+          <e p="App.config.uninstall.xdt" t="Include" />
+        </e>
+        <e p="ISpecBindConfigurationProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SpecBind.Plugin.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.Plugin.nuspec" t="Include" />
+        <e p="SpecBindConfigurationProvider.cs" t="Include" />
+        <e p="SpecBindGeneratorPlugin.cs" t="Include" />
+        <e p="SpecBindTestGeneratorProvider.cs" t="Include" />
+      </e>
+      <e p="SpecBind.Plugin.NetStandard" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.Plugin.NetStandard.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.Plugin.NetStandard.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SpecBind.Selenium" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Deployment" t="Include">
+          <e p="App.config.install.xdt" t="Include" />
+          <e p="App.config.uninstall.xdt" t="Include" />
+        </e>
+        <e p="Drivers" t="Include">
+          <e p="ISeleniumDriver.cs" t="Include" />
+          <e p="SeleniumChromeDriver.cs" t="Include" />
+          <e p="SeleniumChromeHeadlessDriver.cs" t="Include" />
+          <e p="SeleniumDriverBase.cs" t="Include" />
+          <e p="SeleniumEdgeDriver.cs" t="Include" />
+          <e p="SeleniumFirefoxDriver.cs" t="Include" />
+          <e p="SeleniumInternetExplorerDriver.cs" t="Include" />
+          <e p="SeleniumOperaDriver.cs" t="Include" />
+          <e p="SeleniumPhantomJSDriver.cs" t="Include" />
+          <e p="SeleniumSafariDriver.cs" t="Include" />
+        </e>
+        <e p="LocatorBuilder.cs" t="Include" />
+        <e p="NativeAttributeBuilder.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RemoteScreenshotWebDriver.cs" t="Include" />
+        <e p="SeleniumBase.cs" t="Include" />
+        <e p="SeleniumBrowser.cs" t="Include" />
+        <e p="SeleniumBrowserFactory.cs" t="Include" />
+        <e p="SeleniumListElementWrapper.cs" t="Include" />
+        <e p="SeleniumPage.cs" t="Include" />
+        <e p="SeleniumPageBuilder.cs" t="Include" />
+        <e p="SeleniumTableDriver.cs" t="Include" />
+        <e p="SpecBind.Selenium.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.Selenium.nuspec" t="Include" />
+        <e p="WebElement.cs" t="Include" />
+      </e>
+      <e p="SpecBind.Selenium.IntegrationTests" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Features" t="Include">
+          <e p="AlertTests.feature" t="Include" />
+          <e p="AlertTests.feature.cs" t="Include" />
+          <e p="InputTests.feature" t="Include" />
+          <e p="InputTests.feature.cs" t="Include" />
+          <e p="ListTests.feature" t="Include" />
+          <e p="ListTests.feature.cs" t="Include" />
+          <e p="NavigationTests.feature" t="Include" />
+          <e p="NavigationTests.feature.cs" t="Include" />
+          <e p="SelectionTests.feature" t="Include" />
+          <e p="SelectionTests.feature.cs" t="Include" />
+          <e p="TableDriverValidationTests.feature" t="Include" />
+          <e p="TableDriverValidationTests.feature.cs" t="Include" />
+          <e p="ValidationTests.feature" t="Include" />
+          <e p="ValidationTests.feature.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Pages" t="Include">
+          <e p="AboutPage.cs" t="Include" />
+          <e p="CoursesSearchPage.cs" t="Include" />
+          <e p="CreateCoursePage.cs" t="Include" />
+          <e p="GoogleHomePage.cs" t="Include" />
+          <e p="HomePage.cs" t="Include" />
+          <e p="InformationPage.cs" t="Include" />
+          <e p="InstructorSearchPage.cs" t="Include" />
+          <e p="JQueryClickingPage.cs" t="Include" />
+          <e p="LogOnPage.cs" t="Include" />
+          <e p="StudentCoursesPage.cs" t="Include" />
+          <e p="StudentDetailPage.cs" t="Include" />
+          <e p="StudentsSearchPage.cs" t="Include" />
+        </e>
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SpecBind.Selenium.IntegrationTests.csproj" t="IncludeRecursive" />
+        <e p="Steps" t="Include">
+          <e p="ErrorCheckSteps.cs" t="Include" />
+          <e p="TestPostNavigateHook.cs" t="Include" />
+        </e>
+      </e>
+      <e p="SpecBind.Selenium.IntegrationTests.NetStandard" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.Selenium.IntegrationTests.NetStandard.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.Selenium.IntegrationTests.NetStandard.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SpecBind.Selenium.NetStandard" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.Selenium.NetStandard.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.Selenium.NetStandard.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SpecBind.Selenium.Tests" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="LocatorBuilderFixture.cs" t="Include" />
+        <e p="NativeAttributeBuilderFixture.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="TestImage.jpg" t="Include" />
+          <e p="TestResource.Designer.cs" t="Include" />
+          <e p="TestResource.resx" t="Include" />
+        </e>
+        <e p="SeleniumBrowserFixture.cs" t="Include" />
+        <e p="SeleniumPageBuilderFixture.cs" t="Include" />
+        <e p="SeleniumPageFixture.cs" t="Include" />
+        <e p="SeleniumTableDriverFixture.cs" t="Include" />
+        <e p="SpecBind.Selenium.Tests.csproj" t="IncludeRecursive" />
+        <e p="WebElementFixture.cs" t="Include" />
+      </e>
+      <e p="SpecBind.Selenium.Tests.NetStandard" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.Selenium.Tests.NetStandard.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.Selenium.Tests.NetStandard.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SpecBind.sln" t="IncludeFlat" />
+      <e p="SpecBind.Tests" t="IncludeRecursive">
+        <e p="ActionPipeline" t="Include">
+          <e p="ActionPipelineServiceFixture.cs" t="Include" />
+          <e p="ActionRepositoryFixture.cs" t="Include" />
+          <e p="ActionResultExtensionsFixture.cs" t="Include" />
+          <e p="ActionResultFixture.cs" t="Include" />
+          <e p="ElementLocatorFixture.cs" t="Include" />
+        </e>
+        <e p="Actions" t="Include">
+          <e p="ButtonClickActionFixture.cs" t="Include" />
+          <e p="ClearDataActionFixture.cs" t="Include" />
+          <e p="DismissDialogActionFixture.cs" t="Include" />
+          <e p="EnterDataActionFixture.cs" t="Include" />
+          <e p="GetElementAsPageActionFixture.cs" t="Include" />
+          <e p="GetListItemByCriteriaActionFixture.cs" t="Include" />
+          <e p="GetListItemByIndexActionFixture.cs" t="Include" />
+          <e p="HighlightLocatorActionFixture.cs" t="Include" />
+          <e p="HoverOverElementActionFixture.cs" t="Include" />
+          <e p="NavigationPostActionFixture.cs" t="Include" />
+          <e p="PageNavigationActionFixture.cs" t="Include" />
+          <e p="SetCookiePreActionFixture.cs" t="Include" />
+          <e p="SetTokenFromValueActionFixture.cs" t="Include" />
+          <e p="ValidateComboBoxActionFixture.cs" t="Include" />
+          <e p="ValidateElementEnabledActionFixture.cs" t="Include" />
+          <e p="ValidateElementExistsActionFixture.cs" t="Include" />
+          <e p="ValidateItemActionFixture.cs" t="Include" />
+          <e p="ValidateListActionFixture.cs" t="Include" />
+          <e p="ValidateListRowCountActionFixture.cs" t="Include" />
+          <e p="ValidateTokenActionFixture.cs" t="Include" />
+          <e p="WaitForElementActionFixture.cs" t="Include" />
+          <e p="WaitForListItemsActionFixture.cs" t="Include" />
+          <e p="WaitForPageActionFixture.cs" t="Include" />
+        </e>
+        <e p="AlertBoxStepsFixture.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BrowserBaseFixture.cs" t="Include" />
+        <e p="BrowserSuport" t="Include">
+          <e p="ProxyLoggerFixture.cs" t="Include" />
+        </e>
+        <e p="ConfigurationFixture.cs" t="Include" />
+        <e p="DataStepsFixture.cs" t="Include" />
+        <e p="ExceptionHelper.cs" t="Include" />
+        <e p="Helpers" t="Include">
+          <e p="AttributeExtensionsFixture.cs" t="Include" />
+          <e p="TableFormatterFixture.cs" t="Include" />
+          <e p="ValidationTableExtensionsFixture.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PageBaseFixture.cs" t="Include" />
+        <e p="PageBuilderBaseFixture.cs" t="Include" />
+        <e p="PageBuilderContextFixture.cs" t="Include" />
+        <e p="PageExtensionsFixture.cs" t="Include" />
+        <e p="PageMapperFixture.cs" t="Include" />
+        <e p="PageNavigationStepsFixture.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="PropertyHandlers" t="Include">
+          <e p="ElementPropertyDataFixture.cs" t="Include" />
+          <e p="ListPropertyDataFixture.cs" t="Include" />
+          <e p="PagePropertyDataFixture.cs" t="Include" />
+          <e p="PropertyTestHelper.cs" t="Include" />
+          <e p="VirtualPropertyDataFixture.cs" t="Include" />
+        </e>
+        <e p="SelectionStepsFixture.cs" t="Include" />
+        <e p="SetCookieAttributeFixture.cs" t="Include" />
+        <e p="SpecBind.Tests.csproj" t="IncludeRecursive" />
+        <e p="StringLookupExtensionsFixture.cs" t="Include" />
+        <e p="Support" t="Include">
+          <e p="BaseElement.cs" t="Include" />
+          <e p="BasePageClass.cs" t="Include" />
+          <e p="InheritedClass.cs" t="Include" />
+          <e p="MockBrowserFactory.cs" t="Include" />
+          <e p="TestBase.cs" t="Include" />
+        </e>
+        <e p="TokenManagerFixture.cs" t="Include" />
+        <e p="TokenStepsFixture.cs" t="Include" />
+        <e p="UriHelperFixture.cs" t="Include" />
+        <e p="Validation" t="Include">
+          <e p="ComparisonTestBase.cs" t="Include" />
+          <e p="ContainsComparerFixture.cs" t="Include" />
+          <e p="DoesNotContainComparerFixture.cs" t="Include" />
+          <e p="DoesNotExistComparerFixture.cs" t="Include" />
+          <e p="EnabledComparerFixture.cs" t="Include" />
+          <e p="EndsWithComparerFixture.cs" t="Include" />
+          <e p="EqualsComparerFixture.cs" t="Include" />
+          <e p="ExistsComparerFixture.cs" t="Include" />
+          <e p="GreaterThanComparerFixture.cs" t="Include" />
+          <e p="GreaterThanEqualsComparerFixture.cs" t="Include" />
+          <e p="ItemValidationFixture.cs" t="Include" />
+          <e p="ItemValidationHelper.cs" t="Include" />
+          <e p="LessThanComparerFixture.cs" t="Include" />
+          <e p="LessThanEqualsComparerFixture.cs" t="Include" />
+          <e p="NotEnabledComparerFixture.cs" t="Include" />
+          <e p="NotEqualsComparerFixture.cs" t="Include" />
+          <e p="StartsWithComparerFixture.cs" t="Include" />
+          <e p="ValidationTablePreActionFixture.cs" t="Include" />
+        </e>
+        <e p="ValidationResultFixture.cs" t="Include" />
+        <e p="WaitingStepsFixture.cs" t="Include" />
+        <e p="WebDriverSupportFixture.cs" t="Include" />
+        <e p="WithExcludedAssemblyConfig.config" t="Include" />
+      </e>
+      <e p="SpecBind.Tests.NetStandard" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.Tests.NetStandard.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.Tests.NetStandard.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="stylecop.json" t="Include" />
+      <e p="test.runsettings" t="Include" />
+    </e>
+  </component>
+</project>
