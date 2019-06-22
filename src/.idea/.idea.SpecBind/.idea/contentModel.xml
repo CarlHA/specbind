@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/nunit.engine.netstandard.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.11.0/build/netcoreapp1.0/NUnit3.TestAdapter.pdb" t="Include" />
     <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_SpecBind.-239975167.00" t="ExcludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
@@ -15,6 +18,18 @@
       <e p="Selenium" t="Include" />
       <e p="Solution Items" t="Include" />
       <e p="specbind" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configuration/ApplicationConfigurationElement.cs" t="Include" />
+        <e p="Configuration/AssemblyCollection.cs" t="Include" />
+        <e p="Configuration/AssemblyElement.cs" t="Include" />
+        <e p="Configuration/BrowserFactoryConfigurationElement.cs" t="Include" />
+        <e p="Configuration/ConfigurationSectionHandler.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="SpecBind.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.nuspec" t="Include" />
+      </e>
+      <e p="SpecBind.NetStandard" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionContext.cs" t="Include" />
           <e p="ActionPipelineService.cs" t="Include" />
@@ -112,7 +127,6 @@
           <e p="WrappedSettingHelper.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="PageNavigationSteps.cs" t="Include" />
         <e p="Pages" t="Include">
           <e p="ComboBoxItem.cs" t="Include" />
@@ -158,7 +172,7 @@
           <e p="VirtualPropertyData.cs" t="Include" />
         </e>
         <e p="SelectionSteps.cs" t="Include" />
-        <e p="SpecBind.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.NetStandard.csproj" t="IncludeRecursive" />
         <e p="SpecBind.nuspec" t="Include" />
         <e p="TokenSteps.cs" t="Include" />
         <e p="Validation" t="Include">
@@ -186,17 +200,6 @@
           <e p="ValueComparerBase.cs" t="Include" />
         </e>
         <e p="WaitingSteps.cs" t="Include" />
-      </e>
-      <e p="SpecBind.NetStandard" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="SpecBind.NetStandard.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="SpecBind.NetStandard.csproj" t="IncludeRecursive" />
       </e>
       <e p="SpecBind.Plugin" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -367,6 +370,15 @@
       </e>
       <e p="SpecBind.sln" t="IncludeFlat" />
       <e p="SpecBind.Tests" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SpecBind.Tests.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SpecBind.Tests.NetStandard" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionPipelineServiceFixture.cs" t="Include" />
           <e p="ActionRepositoryFixture.cs" t="Include" />
@@ -414,17 +426,20 @@
           <e p="TableFormatterFixture.cs" t="Include" />
           <e p="ValidationTableExtensionsFixture.cs" t="Include" />
         </e>
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="SpecBind.Tests.NetStandard.AssemblyInfo.cs" t="Include" />
+              <e p="SpecBind.Tests.NetStandard.Program.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="PageBaseFixture.cs" t="Include" />
         <e p="PageBuilderBaseFixture.cs" t="Include" />
         <e p="PageBuilderContextFixture.cs" t="Include" />
         <e p="PageExtensionsFixture.cs" t="Include" />
         <e p="PageMapperFixture.cs" t="Include" />
         <e p="PageNavigationStepsFixture.cs" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="AssemblyInfo.cs" t="Include" />
-        </e>
         <e p="PropertyHandlers" t="Include">
           <e p="ElementPropertyDataFixture.cs" t="Include" />
           <e p="ListPropertyDataFixture.cs" t="Include" />
@@ -434,7 +449,7 @@
         </e>
         <e p="SelectionStepsFixture.cs" t="Include" />
         <e p="SetCookieAttributeFixture.cs" t="Include" />
-        <e p="SpecBind.Tests.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.Tests.NetStandard.csproj" t="IncludeRecursive" />
         <e p="StringLookupExtensionsFixture.cs" t="Include" />
         <e p="Support" t="Include">
           <e p="BaseElement.cs" t="Include" />
@@ -470,17 +485,6 @@
         <e p="WaitingStepsFixture.cs" t="Include" />
         <e p="WebDriverSupportFixture.cs" t="Include" />
         <e p="WithExcludedAssemblyConfig.config" t="Include" />
-      </e>
-      <e p="SpecBind.Tests.NetStandard" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="SpecBind.Tests.NetStandard.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="SpecBind.Tests.NetStandard.csproj" t="IncludeRecursive" />
       </e>
       <e p="stylecop.json" t="Include" />
       <e p="test.runsettings" t="Include" />

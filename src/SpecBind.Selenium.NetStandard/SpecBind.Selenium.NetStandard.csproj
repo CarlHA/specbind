@@ -2,6 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>SpecBind.Selenium</AssemblyName>
+        <RootNamespace>SpecBind.Selenium</RootNamespace>
+        <LangVersion>7.3</LangVersion>
     </PropertyGroup>
 
 </Project>
