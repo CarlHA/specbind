@@ -10,10 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{355684
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selenium", "Selenium", "{ECD281AC-2075-4F3A-B24A-D8B96E8CE56E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind", "SpecBind\SpecBind.csproj", "{E27BD8D5-242F-496E-BE3A-1C73A27E5275}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.Tests", "SpecBind.Tests\SpecBind.Tests.csproj", "{AE1176AA-1766-471B-BF06-84B66EFEB3CF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.Plugin", "SpecBind.Plugin\SpecBind.Plugin.csproj", "{0BCFC808-1647-448E-A9DC-99B3D9D336B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.Selenium", "SpecBind.Selenium\SpecBind.Selenium.csproj", "{BB4BC498-4C1B-40B3-965E-4650125A2DF0}"
@@ -48,14 +44,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E27BD8D5-242F-496E-BE3A-1C73A27E5275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E27BD8D5-242F-496E-BE3A-1C73A27E5275}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E27BD8D5-242F-496E-BE3A-1C73A27E5275}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E27BD8D5-242F-496E-BE3A-1C73A27E5275}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE1176AA-1766-471B-BF06-84B66EFEB3CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE1176AA-1766-471B-BF06-84B66EFEB3CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE1176AA-1766-471B-BF06-84B66EFEB3CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE1176AA-1766-471B-BF06-84B66EFEB3CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Release|Any CPU.ActiveCfg = Release|Any CPU

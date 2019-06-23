@@ -17,18 +17,11 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Selenium" t="Include" />
       <e p="Solution Items" t="Include" />
-      <e p="specbind" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Configuration/ApplicationConfigurationElement.cs" t="Include" />
-        <e p="Configuration/AssemblyCollection.cs" t="Include" />
-        <e p="Configuration/AssemblyElement.cs" t="Include" />
-        <e p="Configuration/BrowserFactoryConfigurationElement.cs" t="Include" />
-        <e p="Configuration/ConfigurationSectionHandler.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
-        <e p="SpecBind.csproj" t="IncludeRecursive" />
-        <e p="SpecBind.nuspec" t="Include" />
-      </e>
+      <e p="specbind/Configuration/ApplicationConfigurationElement.cs" t="Include" />
+      <e p="specbind/Configuration/AssemblyCollection.cs" t="Include" />
+      <e p="specbind/Configuration/AssemblyElement.cs" t="Include" />
+      <e p="specbind/Configuration/BrowserFactoryConfigurationElement.cs" t="Include" />
+      <e p="specbind/Configuration/ConfigurationSectionHandler.cs" t="Include" />
       <e p="SpecBind.NetStandard" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionContext.cs" t="Include" />
@@ -369,15 +362,6 @@
         <e p="SpecBind.Selenium.Tests.NetStandard.csproj" t="IncludeRecursive" />
       </e>
       <e p="SpecBind.sln" t="IncludeFlat" />
-      <e p="SpecBind.Tests" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
-        <e p="Properties" t="Include">
-          <e p="AssemblyInfo.cs" t="Include" />
-        </e>
-        <e p="SpecBind.Tests.csproj" t="IncludeRecursive" />
-      </e>
       <e p="SpecBind.Tests.NetStandard" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionPipelineServiceFixture.cs" t="Include" />
