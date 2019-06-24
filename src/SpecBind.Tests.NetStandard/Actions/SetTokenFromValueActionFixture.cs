@@ -77,7 +77,7 @@ namespace SpecBind.Tests.Actions
                 () => getItemAction.Execute(context),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "TokenFieldContext");
+                    StringAssert.Contains("TokenFieldContext", e.Message);
 
                     locator.VerifyAll();
                     tokenManager.VerifyAll();

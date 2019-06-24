@@ -81,7 +81,7 @@ namespace SpecBind.Tests.Actions
                 () => enterDataAction.Execute(context),
                 e =>
                     {
-                        StringAssert.Contains(e.Message, "EnterDataContext");
+                        StringAssert.Contains("EnterDataContext", e.Message);
 
                         locator.VerifyAll();
                         tokenManager.VerifyAll();

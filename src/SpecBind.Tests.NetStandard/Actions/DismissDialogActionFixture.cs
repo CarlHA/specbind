@@ -42,7 +42,7 @@ namespace SpecBind.Tests.Actions
 
             Assert.AreEqual(false, result.Success);
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "Could not translate 'foo' into a known dialog action. Available Actions:");
+            StringAssert.Contains("Could not translate 'foo' into a known dialog action. Available Actions:", result.Exception.Message);
 
             browser.VerifyAll();
         }

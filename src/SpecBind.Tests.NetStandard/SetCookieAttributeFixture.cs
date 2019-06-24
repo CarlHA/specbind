@@ -48,9 +48,9 @@ namespace SpecBind.Tests
 
             var result = attribute.ToString();
 
-            StringAssert.Contains(result, "Name: TestName");
-            StringAssert.Contains(result, "Value: TestValue");
-            StringAssert.Contains(result, "Path: /MyDomain");
+            StringAssert.Contains("Name: TestName", result);
+            StringAssert.Contains("Value: TestValue",result);
+            StringAssert.Contains("Path: /MyDomain", result);
         }
     }
 }

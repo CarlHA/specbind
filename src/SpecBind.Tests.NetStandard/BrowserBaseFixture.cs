@@ -162,11 +162,10 @@ namespace SpecBind.Tests
         [Test]
         public void TestGoToPageWhenUrlIsNotOnPageAndNavigationFailsThrowsAnException()
         {
-            UriHelper.BaseUri = new Uri("http://localhost:2222");
+            SpecBind.Helpers.UriHelper.BaseUri = new Uri("http://localhost:2222");
             var testPage = new Mock<IPage>();
             var logger = new Mock<ILogger>(MockBehavior.Strict);
             logger.Setup(l => l.Debug("Navigating to URL: {0}", "http://localhost:2222/foo"));
-
             var browser = new Mock<BrowserBase>(MockBehavior.Strict, logger.Object);
             browser.Setup(b => b.GoTo(new Uri("http://localhost:2222/foo"))).Throws<InvalidOperationException>();
 
@@ -176,7 +175,7 @@ namespace SpecBind.Tests
                 () => browser.Object.GoToPage(typeof(TestPage), new Dictionary<string, string>()),
                 ex =>
                     {
-                        StringAssert.StartsWith(ex.Message, "Could not navigate to URI: http://localhost:2222/foo.");
+                        StringAssert.StartsWith("Could not navigate to URI: http://localhost:2222/foo.", ex.Message);
 
                         browser.VerifyAll();
                         testPage.VerifyAll();

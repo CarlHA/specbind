@@ -30,7 +30,7 @@ namespace SpecBind.Tests.PropertyHandlers
             {
                 if (!string.IsNullOrEmpty(catchClause))
                 {
-                    StringAssert.Contains(e.Message, catchClause);
+                    StringAssert.Contains(catchClause, e.Message);
                 }
             }
         }

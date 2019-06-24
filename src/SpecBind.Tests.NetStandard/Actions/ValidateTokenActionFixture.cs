@@ -46,7 +46,7 @@ namespace SpecBind.Tests.Actions
             Assert.AreEqual(false, result.Success);
 
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "doesnotexist");
+            StringAssert.Contains("doesnotexist", result.Exception.Message);
 
             tokenManager.VerifyAll();
         }

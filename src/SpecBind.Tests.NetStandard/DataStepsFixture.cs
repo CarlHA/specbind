@@ -38,7 +38,7 @@ namespace SpecBind.Tests
                 () => steps.WhenIEnterDataInFieldsStep(null),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -63,7 +63,7 @@ namespace SpecBind.Tests
                 () => steps.WhenIEnterDataInFieldsStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -88,7 +88,7 @@ namespace SpecBind.Tests
                 () => steps.WhenIEnterDataInFieldsStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -170,8 +170,7 @@ namespace SpecBind.Tests
                                                        }
                                                        catch (ElementExecuteException ex)
                                                        {
-                                                           StringAssert.Contains(ex.Message,
-                                                                                 "Could Not Find Field: mysecondfield");
+                                                           StringAssert.Contains("Could Not Find Field: mysecondfield", ex.Message);
 
                                                            scenarioContext.VerifyAll();
                                                            pipelineService.VerifyAll();
@@ -258,7 +257,7 @@ namespace SpecBind.Tests
                 () => steps.WhenIClearDataInFieldsStep(null),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -283,7 +282,7 @@ namespace SpecBind.Tests
                 () => steps.WhenIClearDataInFieldsStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -361,8 +360,7 @@ namespace SpecBind.Tests
                                                        }
                                                        catch (ElementExecuteException ex)
                                                        {
-                                                           StringAssert.Contains(ex.Message,
-                                                                                 "Could Not Find Field: mysecondfield");
+                                                           StringAssert.Contains("Could Not Find Field: mysecondfield", ex.Message);
 
                                                            scenarioContext.VerifyAll();
                                                            pipelineService.VerifyAll();
@@ -387,7 +385,7 @@ namespace SpecBind.Tests
                 () => steps.ThenISeeStep(null),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -412,7 +410,7 @@ namespace SpecBind.Tests
                 () => steps.ThenISeeStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -437,7 +435,7 @@ namespace SpecBind.Tests
                 () => steps.ThenISeeStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
@@ -462,7 +460,7 @@ namespace SpecBind.Tests
                 () => steps.ThenISeeStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();

@@ -72,7 +72,7 @@ namespace SpecBind.Tests.Actions
             Assert.AreEqual(false, result.Success);
 
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "MyProperty");
+            StringAssert.Contains("MyProperty", result.Exception.Message);
 
             locator.VerifyAll();
             propData.VerifyAll();

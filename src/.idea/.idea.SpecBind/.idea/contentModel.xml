@@ -396,7 +396,6 @@
           <e p="WaitForPageActionFixture.cs" t="Include" />
         </e>
         <e p="AlertBoxStepsFixture.cs" t="Include" />
-        <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="BrowserBaseFixture.cs" t="Include" />
         <e p="BrowserSuport" t="Include">
@@ -442,6 +441,7 @@
           <e p="MockBrowserFactory.cs" t="Include" />
           <e p="TestBase.cs" t="Include" />
         </e>
+        <e p="testhost.dll.config" t="Include" />
         <e p="TokenManagerFixture.cs" t="Include" />
         <e p="TokenStepsFixture.cs" t="Include" />
         <e p="UriHelperFixture.cs" t="Include" />

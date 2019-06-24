@@ -227,7 +227,7 @@ namespace SpecBind.Tests
 				                                       }
 				                                       catch (PageNavigationException ex)
 				                                       {
-					                                       StringAssert.Contains(ex.Message, "InvalidPage");
+					                                       StringAssert.Contains("InvalidPage", ex.Message);
 
 					                                       browser.VerifyAll();
 					                                       throw;
