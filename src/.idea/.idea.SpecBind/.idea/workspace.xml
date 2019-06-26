@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be005213-33b5-424c-bb18-3d20c8ab11b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/SpecBind.NetStandard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.NetStandard/SpecBind.NetStandard.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/DismissDialogActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/DismissDialogActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/EnterDataActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/EnterDataActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetElementAsPageActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetElementAsPageActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetListItemByIndexActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetListItemByIndexActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/SetTokenFromValueActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/SetTokenFromValueActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateItemActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateItemActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateTokenActionFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateTokenActionFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/testhost.dll.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/DataStepsFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/DataStepsFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/PropertyHandlers/PropertyTestHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/PropertyHandlers/PropertyTestHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SetCookieAttributeFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SetCookieAttributeFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SpecBind.Tests.NetStandard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SpecBind.Tests.NetStandard.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/UriHelperFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/UriHelperFixture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,324 +16,138 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/PropertyHandlers/VirtualPropertyDataFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-              <folding>
-                <marker date="1561207218312" expanded="true" signature="0:125" ph="/* &lt;copyright file=&quot;VirtualPropertyDataFixture.cs&quot;&gt; ... */" />
-                <marker date="1561207218312" expanded="true" signature="168:4557" ph="{...}" />
-                <marker date="1561207218312" expanded="true" signature="181:393" ph="..." />
-                <marker date="1561207218312" expanded="true" signature="399:474" ph="/// A test fixture virtual properties. ... " />
-                <marker date="1561207218312" expanded="true" signature="536:4555" ph="{...}" />
-                <marker date="1561207218312" expanded="true" signature="551:656" ph="/// Tests that other methods in the class are not supported. ... " />
-                <marker date="1561207218312" expanded="true" signature="714:2127" ph="{...}" />
-                <marker date="1561207218312" expanded="true" signature="2137:2241" ph="/// Tests that GetCurrentValue from a non-element property. ... " />
-                <marker date="1561207218312" expanded="true" signature="2298:2975" ph="{...}" />
-                <marker date="1561207218312" expanded="true" signature="2985:3079" ph="/// Tests the ValidateItem method for a property. ... " />
-                <marker date="1561207218312" expanded="true" signature="3133:3759" ph="{...}" />
-                <marker date="1561207218312" expanded="true" signature="3769:4079" ph="/// Creates the property data. ... " />
-                <marker date="1561207218312" expanded="true" signature="4221:4549" ph="{...}" />
-                <marker date="1561207218312" expanded="true" signature="4391:4513" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/DismissDialogActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-761">
-              <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
-              <folding>
-                <marker date="1561395766110" expanded="true" signature="0:125" ph="/* &lt;copyright file=&quot;DismissDialogActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395766110" expanded="true" signature="159:4436" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="171:263" ph="..." />
-                <marker date="1561395766110" expanded="true" signature="269:356" ph="/// A test fixture for dismissing a dialog action. ... " />
-                <marker date="1561395766110" expanded="true" signature="418:4434" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="433:519" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395766110" expanded="true" signature="574:738" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="749:875" ph="/// Tests the dismiss alert when an invalid option is selected returns a failure. ... " />
-                <marker date="1561395766110" expanded="true" signature="971:1549" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="1559:1653" ph="/// dismiss alert when the OK button is selected. ... " />
-                <marker date="1561395766110" expanded="true" signature="1746:2210" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="2220:2314" ph="/// dismiss alert when the OK button is selected. ... " />
-                <marker date="1561395766110" expanded="true" signature="2421:2889" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="2899:3065" ph="/// dismiss alert when the text is null, to make sure it's translated into an empty string and the OK button is s ... " />
-                <marker date="1561395766110" expanded="true" signature="3181:3659" ph="{...}" />
-                <marker date="1561395766110" expanded="true" signature="3669:3835" ph="/// dismiss alert when the text is null, to make sure it's translated into an empty string and the OK button is s ... " />
-                <marker date="1561395766110" expanded="true" signature="3944:4428" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/EnterDataActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="83" column="66" selection-start-line="83" selection-start-column="66" selection-end-line="83" selection-end-column="66" />
-              <folding>
-                <marker date="1561395765184" expanded="true" signature="0:121" ph="/* &lt;copyright file=&quot;EnterDataActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395765184" expanded="true" signature="155:5923" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="168:335" ph="..." />
-                <marker date="1561395765184" expanded="true" signature="341:422" ph="/// A test fixture for the data entry action ... " />
-                <marker date="1561395765184" expanded="true" signature="480:5921" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="495:581" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395765184" expanded="true" signature="636:788" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="798:917" ph="/// Tests the get item action with a field on the page that doesn't exist. ... " />
-                <marker date="1561395765184" expanded="true" signature="1008:2152" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="1573:1684" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="2021:2139" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="2162:2281" ph="/// Tests the get item action with a field on the page that doesn't exist. ... " />
-                <marker date="1561395765184" expanded="true" signature="2377:3243" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="2627:2738" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="3033:3230" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="3253:3356" ph="/// Tests the get item action with a property that exists. ... " />
-                <marker date="1561395765184" expanded="true" signature="3445:4536" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="4111:4222" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="4546:4649" ph="/// Tests the get item action with a property that exists. ... " />
-                <marker date="1561395765184" expanded="true" signature="4744:5915" ph="{...}" />
-                <marker date="1561395765184" expanded="true" signature="5538:5601" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetElementAsPageActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
-              <folding>
-                <marker date="1561395765449" expanded="true" signature="0:128" ph="/* &lt;copyright file=&quot;GetElementAsPageActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395765449" expanded="true" signature="162:5223" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="176:298" ph="..." />
-                <marker date="1561395765449" expanded="true" signature="304:385" ph="/// A test fixture for a button click action ... " />
-                <marker date="1561395765449" expanded="true" signature="450:5221" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="465:551" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395765449" expanded="true" signature="606:772" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="782:905" ph="/// Tests the get element as page with a field on the page that doesn't exist. ... " />
-                <marker date="1561395765449" expanded="true" signature="980:1696" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="1287:1406" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="1706:1841" ph="/// Tests the get element as page with an element that exists is a list returns a failure. ... " />
-                <marker date="1561395765449" expanded="true" signature="1929:2815" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="2375:2438" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="2825:2967" ph="/// Tests the get element as page with an element that exists but returns null returns a failure. ... " />
-                <marker date="1561395765449" expanded="true" signature="3054:4050" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="3574:3637" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="4060:4179" ph="/// Tests the get element as page with an element that exists is returned. ... " />
-                <marker date="1561395765449" expanded="true" signature="4244:5215" ph="{...}" />
-                <marker date="1561395765449" expanded="true" signature="4788:4907" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetListItemByIndexActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="74" column="48" selection-start-line="74" selection-start-column="48" selection-end-line="74" selection-end-column="48" />
-              <folding>
-                <marker date="1561395766140" expanded="true" signature="0:130" ph="/* &lt;copyright file=&quot;GetListItemByIndexActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395766140" expanded="true" signature="164:5574" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="178:300" ph="..." />
-                <marker date="1561395766140" expanded="true" signature="306:402" ph="/// A test fixture for an action that gets an item by index ... " />
-                <marker date="1561395766140" expanded="true" signature="469:5572" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="484:570" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395766140" expanded="true" signature="625:795" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="805:928" ph="/// Tests the get element as page with a field on the page that doesn't exist. ... " />
-                <marker date="1561395766140" expanded="true" signature="1003:1759" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="1313:1432" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="1769:1908" ph="/// Tests the get element as page with an element that exists is not a list returns a failure. ... " />
-                <marker date="1561395766140" expanded="true" signature="1999:3010" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="2477:2596" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="3020:3162" ph="/// Tests the get element as page with an element that exists but returns null returns a failure. ... " />
-                <marker date="1561395766140" expanded="true" signature="3249:4360" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="3801:3920" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="4370:4489" ph="/// Tests the get element as page with an element that exists is returned. ... " />
-                <marker date="1561395766140" expanded="true" signature="4554:5566" ph="{...}" />
-                <marker date="1561395766140" expanded="true" signature="5102:5221" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/SetTokenFromValueActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="79" column="63" selection-start-line="79" selection-start-column="63" selection-end-line="79" selection-end-column="63" />
-              <folding>
-                <marker date="1561395765334" expanded="true" signature="0:129" ph="/* &lt;copyright file=&quot;SetTokenFromValueActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395765334" expanded="true" signature="163:4321" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="176:343" ph="..." />
-                <marker date="1561395765334" expanded="true" signature="349:430" ph="/// A test fixture for a button click action ... " />
-                <marker date="1561395765334" expanded="true" signature="496:4319" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="511:597" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395765334" expanded="true" signature="652:816" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="826:945" ph="/// Tests the get item action with a field on the page that doesn't exist. ... " />
-                <marker date="1561395765334" expanded="true" signature="1036:2017" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="1439:1558" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="1886:2004" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="2027:2146" ph="/// Tests the get item action with a field on the page that doesn't exist. ... " />
-                <marker date="1561395765334" expanded="true" signature="2242:3045" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="2498:2561" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="2850:3032" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="3055:3158" ph="/// Tests the get item action with a property that exists. ... " />
-                <marker date="1561395765334" expanded="true" signature="3225:4313" ph="{...}" />
-                <marker date="1561395765334" expanded="true" signature="3813:3932" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateItemActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
-              <folding>
-                <marker date="1561395765722" expanded="true" signature="0:124" ph="/* &lt;copyright file=&quot;ValidateItemActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395765722" expanded="true" signature="158:8687" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="168:359" ph="..." />
-                <marker date="1561395765722" expanded="true" signature="362:438" ph="/// A test fixture for a validate item action ... " />
-                <marker date="1561395765722" expanded="true" signature="496:8685" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="511:597" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395765722" expanded="true" signature="652:810" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="820:930" ph="/// Tests the execute method with a property that does not exist. ... " />
-                <marker date="1561395765722" expanded="true" signature="1014:1970" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="1339:1458" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="1980:2109" ph="/// Tests the execute method with a property that does not exist on the model fails. ... " />
-                <marker date="1561395765722" expanded="true" signature="2218:3123" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="2516:2579" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="3133:3276" ph="/// Tests the execute method with a property that exists and is valid returns a successful result. ... " />
-                <marker date="1561395765722" expanded="true" signature="3364:4371" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="4070:4133" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="4381:4521" ph="/// Tests the execute method with a property that exists and is valid returns a failure result. ... " />
-                <marker date="1561395765722" expanded="true" signature="4612:5737" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="5317:5380" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="5742:5920" ph="/// Tests the RetryValidationUntilTimeout configuration attribute, ... " />
-                <marker date="1561395765722" expanded="true" signature="6009:7193" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="6020:7044" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="6807:6851" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="7055:7189" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="7197:7375" ph="/// Tests the RetryValidationUntilTimeout configuration attribute, ... " />
-                <marker date="1561395765722" expanded="true" signature="7458:8682" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="7469:8533" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="8295:8339" ph="{...}" />
-                <marker date="1561395765722" expanded="true" signature="8544:8678" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateTokenActionFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
-              <folding>
-                <marker date="1561395766159" expanded="true" signature="0:126" ph="/* &lt;copyright file=&quot;ValidateTokenActionFixture.cs&quot;&gt; ... */" />
-                <marker date="1561395766159" expanded="true" signature="160:2496" ph="{...}" />
-                <marker date="1561395766159" expanded="true" signature="174:300" ph="..." />
-                <marker date="1561395766159" expanded="true" signature="306:389" ph="/// A test fixture for a validate token action ... " />
-                <marker date="1561395766159" expanded="true" signature="451:2494" ph="{...}" />
-                <marker date="1561395766159" expanded="true" signature="466:552" ph="/// Tests getting the name of the action. ... " />
-                <marker date="1561395766159" expanded="true" signature="607:771" ph="{...}" />
-                <marker date="1561395766159" expanded="true" signature="781:891" ph="/// Tests the execute method with a property that does not exist. ... " />
-                <marker date="1561395766159" expanded="true" signature="974:1692" ph="{...}" />
-                <marker date="1561395766159" expanded="true" signature="1702:1821" ph="/// Tests the execute method with a valid token and value returns success. ... " />
-                <marker date="1561395766159" expanded="true" signature="1910:2487" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="213" selection-start-line="213" selection-end-line="213" />
+            <state relative-caret-position="116">
+              <caret line="130" selection-start-line="130" selection-end-line="130" />
               <folding>
-                <marker date="1560961854590" expanded="true" signature="0:127" ph="/* &lt;copyright file=&quot;ActionPipelineServiceFixture.cs&quot;&gt; ... */" />
-                <marker date="1560961854590" expanded="true" signature="168:10636" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="178:337" ph="..." />
-                <marker date="1560961854590" expanded="true" signature="340:420" ph="/// A test fixture for the ActionPipelineService. ... " />
-                <marker date="1560961854590" expanded="true" signature="478:10634" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="484:590" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
-                <marker date="1560961854590" expanded="true" signature="669:2016" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="2020:2126" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
-                <marker date="1560961854590" expanded="true" signature="2233:3636" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="3643:3779" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws that failure. ... " />
-                <marker date="1560961854590" expanded="true" signature="3897:5282" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="5289:5435" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws an aggregate exception. ... " />
-                <marker date="1560961854590" expanded="true" signature="5565:7310" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="7320:7458" ph="/// Tests the pipeline call creates the action, invokes all pipeline steps and does not fail. ... " />
-                <marker date="1560961854590" expanded="true" signature="7565:8885" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="8895:8964" ph="/// A mock action class. ... " />
-                <marker date="1560961854590" expanded="true" signature="9006:9643" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="9026:9148" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
-                <marker date="1560961854590" expanded="true" signature="9218:9246" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="9260:9480" ph="/// Executes this instance action. ... " />
-                <marker date="1560961854590" expanded="true" signature="9558:9636" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="9653:9722" ph="/// A mock action class. ... " />
-                <marker date="1560961854590" expanded="true" signature="9769:10628" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="9829:9951" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
-                <marker date="1560961854590" expanded="true" signature="10032:10060" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="10074:10294" ph="/// Executes this instance action. ... " />
-                <marker date="1560961854590" expanded="true" signature="10372:10618" ph="{...}" />
-                <marker date="1560961854590" expanded="true" signature="10423:10553" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="0:127" ph="/* &lt;copyright file=&quot;ActionPipelineServiceFixture.cs&quot;&gt; ... */" />
+                <marker date="1561397783268" expanded="true" signature="168:10867" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="178:337" ph="..." />
+                <marker date="1561397783268" expanded="true" signature="340:420" ph="/// A test fixture for the ActionPipelineService. ... " />
+                <marker date="1561397783268" expanded="true" signature="478:10865" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="484:590" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
+                <marker date="1561397783268" expanded="true" signature="669:2058" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="2062:2168" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
+                <marker date="1561397783268" expanded="true" signature="2275:3720" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="3727:3863" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws that failure. ... " />
+                <marker date="1561397783268" expanded="true" signature="3981:5414" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="5421:5567" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws an aggregate exception. ... " />
+                <marker date="1561397783268" expanded="true" signature="5697:7490" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="7500:7638" ph="/// Tests the pipeline call creates the action, invokes all pipeline steps and does not fail. ... " />
+                <marker date="1561397783268" expanded="true" signature="7745:9116" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="9126:9195" ph="/// A mock action class. ... " />
+                <marker date="1561397783268" expanded="true" signature="9237:9874" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="9257:9379" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
+                <marker date="1561397783268" expanded="true" signature="9449:9477" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="9491:9711" ph="/// Executes this instance action. ... " />
+                <marker date="1561397783268" expanded="true" signature="9789:9867" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="9884:9953" ph="/// A mock action class. ... " />
+                <marker date="1561397783268" expanded="true" signature="10000:10859" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="10060:10182" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
+                <marker date="1561397783268" expanded="true" signature="10263:10291" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="10305:10525" ph="/// Executes this instance action. ... " />
+                <marker date="1561397783268" expanded="true" signature="10603:10849" ph="{...}" />
+                <marker date="1561397783268" expanded="true" signature="10654:10784" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs">
+        <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="72" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="272">
+              <caret line="223" column="55" lean-forward="true" selection-start-line="223" selection-start-column="55" selection-end-line="223" selection-end-column="55" />
               <folding>
-                <marker date="1560961648530" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;WebDriverSupportFixture.cs&quot;&gt; ... */" />
-                <marker date="1560961648530" expanded="true" signature="148:16313" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="161:483" ph="..." />
-                <marker date="1560961648530" expanded="true" signature="489:570" ph="/// A test fixture for the Web Driver class. ... " />
-                <marker date="1560961648530" expanded="true" signature="629:16311" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="644:727" ph="/// Tests the teardown with no errors. ... " />
-                <marker date="1560961648530" expanded="true" signature="784:2056" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="2066:2156" ph="/// Tests the check for screen shot no error. ... " />
-                <marker date="1560961648530" expanded="true" signature="2223:2981" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="2991:3102" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
-                <marker date="1560961648530" expanded="true" signature="3197:4658" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="4668:4779" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
-                <marker date="1560961648530" expanded="true" signature="4892:6719" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="6128:6189" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="6729:6840" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
-                <marker date="1560961648530" expanded="true" signature="6935:8089" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="8099:8239" ph="/// Tests the teardown with an error that then takes a screenshot but does not write a message. ... " />
-                <marker date="1560961648530" expanded="true" signature="8350:9603" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="9613:9693" ph="/// Tests the tear down after test. ... " />
-                <marker date="1560961648530" expanded="true" signature="9752:10035" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="10045:10156" ph="/// Tests the tear down after scenario when reuse browser is true. ... " />
-                <marker date="1560961648530" expanded="true" signature="10241:10861" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="10369:10420" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="10871:10983" ph="/// Tests the tear down after scenario when reuse browser is false. ... " />
-                <marker date="1560961648530" expanded="true" signature="11069:11707" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="11196:11248" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="11717:11837" ph="/// Tests WaitForAngular with a successful result, when nothing is pending. ... " />
-                <marker date="1560961648530" expanded="true" signature="11911:12481" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="12491:12613" ph="/// Tests WaitForAngular with a successful result, when something is pending. ... " />
-                <marker date="1560961648530" expanded="true" signature="12689:13314" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="13324:13443" ph="/// Tests WaitForjQuery with a successful result, when nothing is pending. ... " />
-                <marker date="1560961648530" expanded="true" signature="13516:14085" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="14095:14216" ph="/// Tests WaitForjQuery with a successful result, when something is pending. ... " />
-                <marker date="1560961648530" expanded="true" signature="14291:14915" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="14925:15027" ph="/// Tests WaitForjQuery when the browser can get the URL. ... " />
-                <marker date="1560961648530" expanded="true" signature="15111:15680" ph="{...}" />
-                <marker date="1560961648530" expanded="true" signature="15690:15795" ph="/// Tests WaitForjQuery when the browser cannot get the URL. ... " />
-                <marker date="1560961648530" expanded="true" signature="15891:16305" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;BrowserBaseFixture.cs&quot;&gt; ... */" />
+                <marker date="1561567323943" expanded="true" signature="143:10142" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="153:365" ph="..." />
+                <marker date="1561567323943" expanded="true" signature="368:458" ph="/// A test fixture for the &lt;see cref=&quot;BrowserBase&quot;/&gt; class. ... " />
+                <marker date="1561567323943" expanded="true" signature="509:10140" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="524:658" ph="/// Tests the GetPage generic method as an interface creates the page from a native page. ... " />
+                <marker date="1561567323943" expanded="true" signature="745:1296" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="1306:1432" ph="/// Tests the GetPage method as an interface creates the page from a native page. ... " />
+                <marker date="1561567323943" expanded="true" signature="1508:2065" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="2075:2201" ph="/// Tests the GetPage method as an interface creates the page from a native page. ... " />
+                <marker date="1561567323943" expanded="true" signature="2282:2679" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="2689:2799" ph="/// Tests the EnsureOnPage method when it is on the correct page. ... " />
+                <marker date="1561567323943" expanded="true" signature="2879:3440" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="3450:3584" ph="/// Tests the EnsureOnPage method when it is not on the correct page throws an exception. ... " />
+                <marker date="1561567323943" expanded="true" signature="3671:5886" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="5233:5873" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="5896:6015" ph="/// Tests the GoToPage method when it needs to navigate to the page first. ... " />
+                <marker date="1561567323943" expanded="true" signature="6116:6916" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="6926:7043" ph="/// Tests the GoToPage method when navigation fails throws an exception. ... " />
+                <marker date="1561567323943" expanded="true" signature="7146:8271" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="7981:8258" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="8281:8374" ph="/// Tests the close method when dispose is true. ... " />
+                <marker date="1561567323943" expanded="true" signature="8438:9088" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="9098:9192" ph="/// Tests the close method when dispose is false. ... " />
+                <marker date="1561567323943" expanded="true" signature="9257:9901" ph="{...}" />
+                <marker date="1561567323943" expanded="true" signature="9912:9987" ph="/// A test class for the page. ... " />
+                <marker date="1561567323943" expanded="true" signature="10114:10134" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4106">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+              <folding>
+                <marker date="1560799854252" expanded="true" signature="0:110" ph="/* &lt;copyright file=&quot;BrowserBase.cs&quot;&gt; ... */" />
+                <marker date="1560799854252" expanded="true" signature="145:10741" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="158:344" ph="..." />
+                <marker date="1560799854252" expanded="true" signature="350:460" ph="/// A set of extension methods for the &lt;see cref=&quot;IBrowser&quot; /&gt; interface. ... " />
+                <marker date="1560799854252" expanded="true" signature="509:10739" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="597:765" ph="/// Initializes a new instance of the &lt;see cref=&quot;BrowserBase&quot;/&gt; class. ... " />
+                <marker date="1560799854252" expanded="true" signature="811:865" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="875:1009" ph="/// Gets the type of the base page. ... " />
+                <marker date="1560799854252" expanded="true" signature="1070:1231" ph="/// Gets the url of the current page. ... " />
+                <marker date="1560799854252" expanded="true" signature="1285:1401" ph="/// Gets a value indicating whether or not the browser has been closed. ... " />
+                <marker date="1560799854252" expanded="true" signature="1462:1573" ph="/// Gets a value indicating whether or not the browser is created. ... " />
+                <marker date="1560799854252" expanded="true" signature="1631:1858" ph="/// Gets a value indicating whether this instance is disposed. ... " />
+                <marker date="1560799854252" expanded="true" signature="1889:1951" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="1961:2424" ph="/// Adds the cookie to the browser. ... " />
+                <marker date="1560799854252" expanded="true" signature="2568:2762" ph="/// Get a cookie from the browser ... " />
+                <marker date="1560799854252" expanded="true" signature="2827:2901" ph="/// Clear all browser cookies ... " />
+                <marker date="1560799854252" expanded="true" signature="2956:3020" ph="/// Clears the URL. ... " />
+                <marker date="1560799854252" expanded="true" signature="3071:3261" ph="/// Determines whether the URL can be retrieved. ... " />
+                <marker date="1560799854252" expanded="true" signature="3313:3383" ph="/// Closes this instance. ... " />
+                <marker date="1560799854252" expanded="true" signature="3431:3626" ph="/// Closes the instance and optionally dispose of all resources ... " />
+                <marker date="1560799854252" expanded="true" signature="3666:3833" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="3728:3788" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="3843:4023" ph="/// Dismisses the alert. ... " />
+                <marker date="1560799854252" expanded="true" signature="4112:4298" ph="/// Navigates the browser to the given &lt;paramref name=&quot;url&quot; /&gt;. ... " />
+                <marker date="1560799854252" expanded="true" signature="4352:4500" ph="/// Ensures the page is current in the browser window. ... " />
+                <marker date="1560799854252" expanded="true" signature="4545:4841" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="4711:4831" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="4851:5105" ph="/// Executes the script. ... " />
+                <marker date="1560799854252" expanded="true" signature="5198:5452" ph="/// Gets the URI for the page if supported by the browser. ... " />
+                <marker date="1560799854252" expanded="true" signature="5515:5560" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="5570:5906" ph="/// Navigates to the specified URL defined by the page. ... " />
+                <marker date="1560799854252" expanded="true" signature="5991:6495" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="6096:6243" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="6276:6426" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="6505:6694" ph="/// Pages this instance. ... " />
+                <marker date="1560799854252" expanded="true" signature="6749:6814" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="6824:7048" ph="/// Gets the page instance from the browser. ... " />
+                <marker date="1560799854252" expanded="true" signature="7089:7168" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="7178:7331" ph="/// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. ... " />
+                <marker date="1560799854252" expanded="true" signature="7361:7452" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="7462:7776" ph="/// Takes the screenshot from the native browser. ... " />
+                <marker date="1560799854252" expanded="true" signature="7874:8193" ph="/// Save the html from the native browser. ... " />
+                <marker date="1560799854252" expanded="true" signature="8291:8730" ph="/// Checks whether the page matches the current browser URL. ... " />
+                <marker date="1560799854252" expanded="true" signature="8842:9179" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="9189:9449" ph="/// Releases unmanaged and - optionally - managed resources. ... " />
+                <marker date="1560799854252" expanded="true" signature="9496:9678" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="9537:9589" ph="{...}" />
+                <marker date="1560799854252" expanded="true" signature="9688:9891" ph="/// Gets the native page location. ... " />
+                <marker date="1560799854252" expanded="true" signature="9977:10263" ph="/// Creates the native page. ... " />
+                <marker date="1560799854252" expanded="true" signature="10364:10670" ph="/// Releases windows and driver specific resources. This method is already protected by the base instance. ... " />
               </folding>
             </state>
           </provider>
@@ -428,7 +228,10 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionPipelineService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IActionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ElementLocator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Plugin/ISpecBindConfigurationProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ApplicationConfigurationElement.cs" root0="FORCE_HIGHLIGHTING" />
@@ -470,8 +273,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/HoverOverElementActionFixture.cs" />
-        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/NavigationPostActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/PageNavigationActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/SetCookiePreActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateComboBoxActionFixture.cs" />
@@ -509,7 +310,6 @@
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/ValidationTablePreActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SpecBind.Tests.NetStandard.csproj" />
         <option value="$PROJECT_DIR$/SpecBind.NetStandard/Properties/AssemblyInfo.cs" />
-        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/UriHelperFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SetCookieAttributeFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/DataStepsFixture.cs" />
@@ -521,6 +321,9 @@
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/SetTokenFromValueActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateItemActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateTokenActionFixture.cs" />
+        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" />
+        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs" />
+        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" />
       </list>
     </option>
   </component>
@@ -557,6 +360,19 @@
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
               <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpecBind.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpecBind.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="BrowserSupport" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
@@ -599,12 +415,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560800022712</updated>
-      <workItem from="1560800032738" duration="28448000" />
+      <workItem from="1560800032738" duration="31462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28448000" />
+    <option name="totallyTimeSpent" value="31462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,14 +436,14 @@
     <layout>
       <window_info id="Azure Explorer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" sideWeight="0.49881518" weight="0.329849" />
       <window_info anchor="bottom" id="Azure Activity Log" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.329849" />
-      <window_info anchor="bottom" id="Unit Tests" visible="true" weight="0.329849" />
+      <window_info active="true" anchor="bottom" id="Unit Tests" visible="true" weight="0.329849" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5011848" side_tool="true" weight="0.329849" />
       <window_info anchor="bottom" id="Performance Profiler" />
@@ -722,126 +538,36 @@
           </properties>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs</url>
+          <line>61</line>
+          <properties documentPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" initialLine="61">
+            <startOffsets>
+              <option value="2264" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2340" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs</url>
+          <line>407</line>
+          <properties documentPath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs" initialLine="407">
+            <startOffsets>
+              <option value="12024" />
+            </startOffsets>
+            <endOffsets>
+              <option value="12070" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/GreaterThanComparerFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-          <folding>
-            <marker date="1561207459389" expanded="true" signature="0:125" ph="/* &lt;copyright file=&quot;GreaterThanComparerFixture.cs&quot;&gt; ... */" />
-            <marker date="1561207459389" expanded="true" signature="162:2283" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="175:245" ph="..." />
-            <marker date="1561207459389" expanded="true" signature="251:367" ph="/// A test fixture for the greater than comparison across supported data types. ... " />
-            <marker date="1561207459389" expanded="true" signature="471:2281" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="486:584" ph="/// Tests the rule key property for the correct tags. ... " />
-            <marker date="1561207459389" expanded="true" signature="653:817" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="827:958" ph="/// Tests the comparison with string members returns false because it's not supported. ... " />
-            <marker date="1561207459389" expanded="true" signature="1033:1106" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="1116:1233" ph="/// Tests the comparison with greater than integer members returns true. ... " />
-            <marker date="1561207459389" expanded="true" signature="1315:1383" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="1393:1502" ph="/// Tests the comparison with equal double members returns true. ... " />
-            <marker date="1561207459389" expanded="true" signature="1587:1659" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="1669:1801" ph="/// Tests the comparison with boolean members returns false because it's not supported. ... " />
-            <marker date="1561207459389" expanded="true" signature="1892:1968" ph="{...}" />
-            <marker date="1561207459389" expanded="true" signature="1978:2097" ph="/// Tests the comparison with greater than date time members returns true. ... " />
-            <marker date="1561207459389" expanded="true" signature="2183:2275" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/GreaterThanEqualsComparerFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1327">
-          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-          <folding>
-            <marker date="1561207483245" expanded="true" signature="0:131" ph="/* &lt;copyright file=&quot;GreaterThanEqualsComparerFixture.cs&quot;&gt; ... */" />
-            <marker date="1561207483245" expanded="true" signature="168:3168" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="181:251" ph="..." />
-            <marker date="1561207483245" expanded="true" signature="257:383" ph="/// A test fixture for the greater than or equals comparison across supported data types. ... " />
-            <marker date="1561207483245" expanded="true" signature="499:3166" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="514:612" ph="/// Tests the rule key property for the correct tags. ... " />
-            <marker date="1561207483245" expanded="true" signature="681:879" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="889:1020" ph="/// Tests the comparison with string members returns false because it's not supported. ... " />
-            <marker date="1561207483245" expanded="true" signature="1095:1168" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="1178:1295" ph="/// Tests the comparison with greater than integer members returns true. ... " />
-            <marker date="1561207483245" expanded="true" signature="1377:1445" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="1455:1570" ph="/// Tests the comparison with equal than integer members returns true. ... " />
-            <marker date="1561207483245" expanded="true" signature="1646:1714" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="1724:1840" ph="/// Tests the comparison with greater than double members returns true. ... " />
-            <marker date="1561207483245" expanded="true" signature="1925:1997" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="2007:2116" ph="/// Tests the comparison with equal double members returns true. ... " />
-            <marker date="1561207483245" expanded="true" signature="2195:2265" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="2275:2407" ph="/// Tests the comparison with boolean members returns false because it's not supported. ... " />
-            <marker date="1561207483245" expanded="true" signature="2483:2559" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="2569:2688" ph="/// Tests the comparison with greater than date time members returns true. ... " />
-            <marker date="1561207483245" expanded="true" signature="2774:2866" ph="{...}" />
-            <marker date="1561207483245" expanded="true" signature="2876:2988" ph="/// Tests the comparison with equal date time members returns true. ... " />
-            <marker date="1561207483245" expanded="true" signature="3068:3160" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/ItemValidationFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1727">
-          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
-          <folding>
-            <marker date="1561207567166" expanded="true" signature="0:120" ph="/* &lt;copyright file=&quot;ItemValidationFixture.cs&quot;&gt; ... */" />
-            <marker date="1561207567166" expanded="true" signature="156:4221" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="169:257" ph="..." />
-            <marker date="1561207567166" expanded="true" signature="263:356" ph="/// A test fixture for the &lt;see cref=&quot;ItemValidation&quot;/&gt; class. ... " />
-            <marker date="1561207567166" expanded="true" signature="407:4219" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="419:516" ph="/// Tests the compare method for simple comparisons. ... " />
-            <marker date="1561207567166" expanded="true" signature="595:918" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="928:1025" ph="/// Tests the compare method for simple comparisons. ... " />
-            <marker date="1561207567166" expanded="true" signature="1112:1480" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="1490:1594" ph="/// Tests the constructor for trimming whitespace on values ... " />
-            <marker date="1561207567166" expanded="true" signature="1700:1981" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="1991:2120" ph="/// Tests the compare method that it returns true when a valid comparison is called. ... " />
-            <marker date="1561207567166" expanded="true" signature="2201:2760" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="2315:2518" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="2770:2866" ph="/// Tests the compare method that it returns false. ... " />
-            <marker date="1561207567166" expanded="true" signature="2943:3412" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="3042:3169" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="3422:3526" ph="/// Tests the ToString method to return the correct string. ... " />
-            <marker date="1561207567166" expanded="true" signature="3599:3799" ph="{...}" />
-            <marker date="1561207567166" expanded="true" signature="3809:3931" ph="/// Tests the ToString method with a null value to return the correct string. ... " />
-            <marker date="1561207567166" expanded="true" signature="4017:4213" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/LessThanComparerFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1052">
-          <caret line="76" column="4" selection-start-line="76" selection-start-column="4" selection-end-line="76" selection-end-column="4" />
-          <folding>
-            <marker date="1561207585832" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;LessThanComparerFixture.cs&quot;&gt; ... */" />
-            <marker date="1561207585832" expanded="true" signature="159:2617" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="172:242" ph="..." />
-            <marker date="1561207585832" expanded="true" signature="248:361" ph="/// A test fixture for the less than comparison across supported data types. ... " />
-            <marker date="1561207585832" expanded="true" signature="459:2615" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="474:572" ph="/// Tests the rule key property for the correct tags. ... " />
-            <marker date="1561207585832" expanded="true" signature="641:799" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="809:940" ph="/// Tests the comparison with string members returns false because it's not supported. ... " />
-            <marker date="1561207585832" expanded="true" signature="1015:1088" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="1098:1215" ph="/// Tests the comparison with greater than integer members returns true. ... " />
-            <marker date="1561207585832" expanded="true" signature="1294:1362" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="1372:1481" ph="/// Tests the comparison with equal double members returns true. ... " />
-            <marker date="1561207585832" expanded="true" signature="1563:1635" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="1645:1777" ph="/// Tests the comparison with boolean members returns false because it's not supported. ... " />
-            <marker date="1561207585832" expanded="true" signature="1868:1944" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="1954:2073" ph="/// Tests the comparison with greater than date time members returns true. ... " />
-            <marker date="1561207585832" expanded="true" signature="2156:2248" ph="{...}" />
-            <marker date="1561207585832" expanded="true" signature="2258:2358" ph="/// Tests the ToString method for an expected response. ... " />
-            <marker date="1561207585832" expanded="true" signature="2429:2609" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/LessThanEqualsComparerFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1337">
@@ -1052,27 +778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Support/MockBrowserFactory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-          <folding>
-            <marker date="1560799854230" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;MockBrowserFactory.cs&quot;&gt; ... */" />
-            <marker date="1560799854230" expanded="true" signature="151:1483" ph="{...}" />
-            <marker date="1560799854230" expanded="true" signature="164:284" ph="..." />
-            <marker date="1560799854230" expanded="true" signature="290:371" ph="/// A Mock Browser Factory used for testing. ... " />
-            <marker date="1560799854230" expanded="true" signature="424:1481" ph="{...}" />
-            <marker date="1560799854230" expanded="true" signature="439:561" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockBrowserFactory&quot;/&gt; class. ... " />
-            <marker date="1560799854230" expanded="true" signature="651:671" ph="{...}" />
-            <marker date="1560799854230" expanded="true" signature="681:787" ph="/// Gets the browser. ... " />
-            <marker date="1560799854230" expanded="true" signature="861:983" ph="/// Resets the driver. ... " />
-            <marker date="1560799854230" expanded="true" signature="1042:1111" ph="{...}" />
-            <marker date="1560799854230" expanded="true" signature="1121:1292" ph="/// Creates the browser. ... " />
-            <marker date="1560799854230" expanded="true" signature="1358:1475" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ApplicationConfigurationElement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1242,115 +947,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="68" column="63" lean-forward="true" selection-start-line="68" selection-start-column="63" selection-end-line="68" selection-end-column="63" />
-          <folding>
-            <marker date="1560799854254" expanded="true" signature="0:115" ph="/* &lt;copyright file=&quot;WebDriverSupport.cs&quot;&gt; ... */" />
-            <marker date="1560799854254" expanded="true" signature="150:15403" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="163:466" ph="..." />
-            <marker date="1560799854254" expanded="true" signature="472:554" ph="/// A hooks support class for the web driver. ... " />
-            <marker date="1560799854254" expanded="true" signature="632:15401" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="861:1054" ph="/// Initializes a new instance of the &lt;see cref=&quot;WebDriverSupport&quot; /&gt; class. ... " />
-            <marker date="1560799854254" expanded="true" signature="1120:1192" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="1202:1285" ph="/// Things to do before each test run. ... " />
-            <marker date="1560799854254" expanded="true" signature="1352:1448" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="1458:1540" ph="/// Things to do after each test run. ... " />
-            <marker date="1560799854254" expanded="true" signature="1605:1669" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="1679:1781" ph="/// Checks the browser factory for any necessary drivers. ... " />
-            <marker date="1560799854254" expanded="true" signature="1849:2040" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="1968:2030" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="2050:2132" ph="/// Things to do before each feature. ... " />
-            <marker date="1560799854254" expanded="true" signature="2175:2279" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="2289:2478" ph="/// Initializes the browser. ... " />
-            <marker date="1560799854254" expanded="true" signature="2561:3402" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="2712:2907" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="2973:3154" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="3064:3140" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="3274:3363" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="3412:3479" ph="/// Resets the driver. ... " />
-            <marker date="1560799854254" expanded="true" signature="3520:3589" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="3599:3792" ph="/// Wait for all Angular pending AJAX requests to complete ... " />
-            <marker date="1560799854254" expanded="true" signature="3858:5376" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="3901:3953" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="3990:4042" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="4077:4129" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="4168:4220" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="4270:4322" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="4526:5188" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="4619:5172" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="4749:4842" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="5225:5366" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="5386:5578" ph="/// Wait for all jQuery pending AJAX requests to complete ... " />
-            <marker date="1560799854254" expanded="true" signature="5643:6955" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="5686:5738" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="5775:5827" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="5862:5914" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="5953:6005" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="6055:6107" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="6311:6776" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="6404:6760" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="6512:6605" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="6813:6945" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="6965:7039" ph="/// Tears down the web driver ... " />
-            <marker date="1560799854254" expanded="true" signature="7121:7269" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7164:7216" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7279:7382" ph="/// Tear down the web driver after scenario, if applicable ... " />
-            <marker date="1560799854254" expanded="true" signature="7433:7927" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7476:7528" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7545:7700" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7622:7686" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7731:7746" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7763:7837" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7857:7917" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="7937:8020" ph="/// Things to do before each scenario. ... " />
-            <marker date="1560799854254" expanded="true" signature="8095:8239" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="8249:8355" ph="/// Initializes the page mapper at the start of the test run. ... " />
-            <marker date="1560799854254" expanded="true" signature="8394:9607" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="8898:8966" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="9617:9697" ph="/// Things to do before every step. ... " />
-            <marker date="1560799854254" expanded="true" signature="9751:10028" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="9822:10016" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="10038:10117" ph="/// Things to do after every step. ... " />
-            <marker date="1560799854254" expanded="true" signature="10169:10605" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="10276:10595" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="10615:10802" ph="/// Wait for all Angular pending AJAX requests to complete ... " />
-            <marker date="1560799854254" expanded="true" signature="10855:10942" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="10952:11138" ph="/// Wait for all jQuery pending AJAX requests to complete ... " />
-            <marker date="1560799854254" expanded="true" signature="11190:11276" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="11286:11388" ph="/// Performs AfterScenario actions in a controlled order. ... " />
-            <marker date="1560799854254" expanded="true" signature="11466:11879" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="11509:11561" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="11578:11649" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="11682:11780" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="11800:11869" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="11889:11960" ph="/// Checks for screenshot. ... " />
-            <marker date="1560799854254" expanded="true" signature="12001:13383" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="12070:12122" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="12321:12487" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="12409:12473" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="12504:12634" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="12923:13202" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="13064:13188" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="13219:13293" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="13313:13373" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="13393:13544" ph="/// Sets the browser factory. ... " />
-            <marker date="1560799854254" expanded="true" signature="13625:13693" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="13703:13839" ph="/// Sets the current browser. ... " />
-            <marker date="1560799854254" expanded="true" signature="13907:13961" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="14021:14632" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="14047:14302" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="14351:14622" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="14678:15166" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="14704:14879" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="14928:15156" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="15235:15395" ph="{...}" />
-            <marker date="1560799854254" expanded="true" signature="15283:15335" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -1397,13 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="273" column="20" selection-start-line="273" selection-start-column="20" selection-end-line="273" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageNavigationAttribute.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1419,42 +1008,6 @@
             <marker date="1560799734771" expanded="true" signature="854:1104" ph="/// Gets or sets a value indicating whether the &lt;see cref=&quot;Url&quot;/&gt; property is a fully qualified URL or not. ... " />
             <marker date="1560799734771" expanded="true" signature="1153:1262" ph="/// Gets the URL to navigate to. ... " />
             <marker date="1560799734771" expanded="true" signature="1308:1472" ph="/// Gets or sets the fill template to use if a pattern is needed for the URI. ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="182" column="23" selection-start-line="182" selection-start-column="23" selection-end-line="182" selection-end-column="23" />
-          <folding>
-            <marker date="1561394778093" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;BrowserBaseFixture.cs&quot;&gt; ... */" />
-            <marker date="1561394778093" expanded="true" signature="143:10118" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="153:365" ph="..." />
-            <marker date="1561394778093" expanded="true" signature="368:458" ph="/// A test fixture for the &lt;see cref=&quot;BrowserBase&quot;/&gt; class. ... " />
-            <marker date="1561394778093" expanded="true" signature="509:10116" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="524:658" ph="/// Tests the GetPage generic method as an interface creates the page from a native page. ... " />
-            <marker date="1561394778093" expanded="true" signature="745:1296" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="1306:1432" ph="/// Tests the GetPage method as an interface creates the page from a native page. ... " />
-            <marker date="1561394778093" expanded="true" signature="1508:2065" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="2075:2201" ph="/// Tests the GetPage method as an interface creates the page from a native page. ... " />
-            <marker date="1561394778093" expanded="true" signature="2282:2679" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="2689:2799" ph="/// Tests the EnsureOnPage method when it is on the correct page. ... " />
-            <marker date="1561394778093" expanded="true" signature="2879:3440" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="3450:3584" ph="/// Tests the EnsureOnPage method when it is not on the correct page throws an exception. ... " />
-            <marker date="1561394778093" expanded="true" signature="3671:5886" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="5233:5873" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="5896:6015" ph="/// Tests the GoToPage method when it needs to navigate to the page first. ... " />
-            <marker date="1561394778093" expanded="true" signature="6116:6916" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="6926:7043" ph="/// Tests the GoToPage method when navigation fails throws an exception. ... " />
-            <marker date="1561394778093" expanded="true" signature="7146:8271" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="7981:8258" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="8281:8374" ph="/// Tests the close method when dispose is true. ... " />
-            <marker date="1561394778093" expanded="true" signature="8438:9076" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="9086:9180" ph="/// Tests the close method when dispose is false. ... " />
-            <marker date="1561394778093" expanded="true" signature="9245:9877" ph="{...}" />
-            <marker date="1561394778093" expanded="true" signature="9888:9963" ph="/// A test class for the page. ... " />
-            <marker date="1561394778093" expanded="true" signature="10090:10110" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1551,65 +1104,6 @@
             <marker date="1560799734765" expanded="true" signature="7961:8089" ph="/// Gets the fill pattern. ... " />
             <marker date="1560799734765" expanded="true" signature="8163:8376" ph="/// Gets a value indicating whether this instance is absolute. ... " />
             <marker date="1560799734765" expanded="true" signature="8444:8556" ph="/// Gets the path. ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="187" column="16" selection-start-line="187" selection-start-column="16" selection-end-line="187" selection-end-column="16" />
-          <folding>
-            <marker date="1560799854252" expanded="true" signature="0:110" ph="/* &lt;copyright file=&quot;BrowserBase.cs&quot;&gt; ... */" />
-            <marker date="1560799854252" expanded="true" signature="145:10741" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="158:344" ph="..." />
-            <marker date="1560799854252" expanded="true" signature="350:460" ph="/// A set of extension methods for the &lt;see cref=&quot;IBrowser&quot; /&gt; interface. ... " />
-            <marker date="1560799854252" expanded="true" signature="509:10739" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="597:765" ph="/// Initializes a new instance of the &lt;see cref=&quot;BrowserBase&quot;/&gt; class. ... " />
-            <marker date="1560799854252" expanded="true" signature="811:865" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="875:1009" ph="/// Gets the type of the base page. ... " />
-            <marker date="1560799854252" expanded="true" signature="1070:1231" ph="/// Gets the url of the current page. ... " />
-            <marker date="1560799854252" expanded="true" signature="1285:1401" ph="/// Gets a value indicating whether or not the browser has been closed. ... " />
-            <marker date="1560799854252" expanded="true" signature="1462:1573" ph="/// Gets a value indicating whether or not the browser is created. ... " />
-            <marker date="1560799854252" expanded="true" signature="1631:1858" ph="/// Gets a value indicating whether this instance is disposed. ... " />
-            <marker date="1560799854252" expanded="true" signature="1889:1951" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="1961:2424" ph="/// Adds the cookie to the browser. ... " />
-            <marker date="1560799854252" expanded="true" signature="2568:2762" ph="/// Get a cookie from the browser ... " />
-            <marker date="1560799854252" expanded="true" signature="2827:2901" ph="/// Clear all browser cookies ... " />
-            <marker date="1560799854252" expanded="true" signature="2956:3020" ph="/// Clears the URL. ... " />
-            <marker date="1560799854252" expanded="true" signature="3071:3261" ph="/// Determines whether the URL can be retrieved. ... " />
-            <marker date="1560799854252" expanded="true" signature="3313:3383" ph="/// Closes this instance. ... " />
-            <marker date="1560799854252" expanded="true" signature="3431:3626" ph="/// Closes the instance and optionally dispose of all resources ... " />
-            <marker date="1560799854252" expanded="true" signature="3666:3833" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="3728:3788" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="3843:4023" ph="/// Dismisses the alert. ... " />
-            <marker date="1560799854252" expanded="true" signature="4112:4298" ph="/// Navigates the browser to the given &lt;paramref name=&quot;url&quot; /&gt;. ... " />
-            <marker date="1560799854252" expanded="true" signature="4352:4500" ph="/// Ensures the page is current in the browser window. ... " />
-            <marker date="1560799854252" expanded="true" signature="4545:4841" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="4711:4831" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="4851:5105" ph="/// Executes the script. ... " />
-            <marker date="1560799854252" expanded="true" signature="5198:5452" ph="/// Gets the URI for the page if supported by the browser. ... " />
-            <marker date="1560799854252" expanded="true" signature="5515:5560" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="5570:5906" ph="/// Navigates to the specified URL defined by the page. ... " />
-            <marker date="1560799854252" expanded="true" signature="5991:6495" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="6096:6243" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="6276:6426" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="6505:6694" ph="/// Pages this instance. ... " />
-            <marker date="1560799854252" expanded="true" signature="6749:6814" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="6824:7048" ph="/// Gets the page instance from the browser. ... " />
-            <marker date="1560799854252" expanded="true" signature="7089:7168" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="7178:7331" ph="/// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. ... " />
-            <marker date="1560799854252" expanded="true" signature="7361:7452" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="7462:7776" ph="/// Takes the screenshot from the native browser. ... " />
-            <marker date="1560799854252" expanded="true" signature="7874:8193" ph="/// Save the html from the native browser. ... " />
-            <marker date="1560799854252" expanded="true" signature="8291:8730" ph="/// Checks whether the page matches the current browser URL. ... " />
-            <marker date="1560799854252" expanded="true" signature="8842:9179" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="9189:9449" ph="/// Releases unmanaged and - optionally - managed resources. ... " />
-            <marker date="1560799854252" expanded="true" signature="9496:9678" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="9537:9589" ph="{...}" />
-            <marker date="1560799854252" expanded="true" signature="9688:9891" ph="/// Gets the native page location. ... " />
-            <marker date="1560799854252" expanded="true" signature="9977:10263" ph="/// Creates the native page. ... " />
-            <marker date="1560799854252" expanded="true" signature="10364:10670" ph="/// Releases windows and driver specific resources. This method is already protected by the base instance. ... " />
           </folding>
         </state>
       </provider>
@@ -2182,86 +1676,446 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs">
+    <entry file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-          <folding>
-            <marker date="1560961854590" expanded="true" signature="0:127" ph="/* &lt;copyright file=&quot;ActionPipelineServiceFixture.cs&quot;&gt; ... */" />
-            <marker date="1560961854590" expanded="true" signature="168:10636" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="178:337" ph="..." />
-            <marker date="1560961854590" expanded="true" signature="340:420" ph="/// A test fixture for the ActionPipelineService. ... " />
-            <marker date="1560961854590" expanded="true" signature="478:10634" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="484:590" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
-            <marker date="1560961854590" expanded="true" signature="669:2016" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="2020:2126" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
-            <marker date="1560961854590" expanded="true" signature="2233:3636" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="3643:3779" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws that failure. ... " />
-            <marker date="1560961854590" expanded="true" signature="3897:5282" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="5289:5435" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws an aggregate exception. ... " />
-            <marker date="1560961854590" expanded="true" signature="5565:7310" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="7320:7458" ph="/// Tests the pipeline call creates the action, invokes all pipeline steps and does not fail. ... " />
-            <marker date="1560961854590" expanded="true" signature="7565:8885" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="8895:8964" ph="/// A mock action class. ... " />
-            <marker date="1560961854590" expanded="true" signature="9006:9643" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="9026:9148" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
-            <marker date="1560961854590" expanded="true" signature="9218:9246" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="9260:9480" ph="/// Executes this instance action. ... " />
-            <marker date="1560961854590" expanded="true" signature="9558:9636" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="9653:9722" ph="/// A mock action class. ... " />
-            <marker date="1560961854590" expanded="true" signature="9769:10628" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="9829:9951" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
-            <marker date="1560961854590" expanded="true" signature="10032:10060" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="10074:10294" ph="/// Executes this instance action. ... " />
-            <marker date="1560961854590" expanded="true" signature="10372:10618" ph="{...}" />
-            <marker date="1560961854590" expanded="true" signature="10423:10553" ph="{...}" />
-          </folding>
+        <state relative-caret-position="164">
+          <caret line="271" column="16" selection-start-line="271" selection-start-column="16" selection-end-line="271" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="300">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
-            <marker date="1560961648530" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;WebDriverSupportFixture.cs&quot;&gt; ... */" />
-            <marker date="1560961648530" expanded="true" signature="148:16313" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="161:483" ph="..." />
-            <marker date="1560961648530" expanded="true" signature="489:570" ph="/// A test fixture for the Web Driver class. ... " />
-            <marker date="1560961648530" expanded="true" signature="629:16311" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="644:727" ph="/// Tests the teardown with no errors. ... " />
-            <marker date="1560961648530" expanded="true" signature="784:2056" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="2066:2156" ph="/// Tests the check for screen shot no error. ... " />
-            <marker date="1560961648530" expanded="true" signature="2223:2981" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="2991:3102" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
-            <marker date="1560961648530" expanded="true" signature="3197:4658" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="4668:4779" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
-            <marker date="1560961648530" expanded="true" signature="4892:6719" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="6128:6189" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="6729:6840" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
-            <marker date="1560961648530" expanded="true" signature="6935:8089" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="8099:8239" ph="/// Tests the teardown with an error that then takes a screenshot but does not write a message. ... " />
-            <marker date="1560961648530" expanded="true" signature="8350:9603" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="9613:9693" ph="/// Tests the tear down after test. ... " />
-            <marker date="1560961648530" expanded="true" signature="9752:10035" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="10045:10156" ph="/// Tests the tear down after scenario when reuse browser is true. ... " />
-            <marker date="1560961648530" expanded="true" signature="10241:10861" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="10369:10420" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="10871:10983" ph="/// Tests the tear down after scenario when reuse browser is false. ... " />
-            <marker date="1560961648530" expanded="true" signature="11069:11707" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="11196:11248" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="11717:11837" ph="/// Tests WaitForAngular with a successful result, when nothing is pending. ... " />
-            <marker date="1560961648530" expanded="true" signature="11911:12481" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="12491:12613" ph="/// Tests WaitForAngular with a successful result, when something is pending. ... " />
-            <marker date="1560961648530" expanded="true" signature="12689:13314" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="13324:13443" ph="/// Tests WaitForjQuery with a successful result, when nothing is pending. ... " />
-            <marker date="1560961648530" expanded="true" signature="13516:14085" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="14095:14216" ph="/// Tests WaitForjQuery with a successful result, when something is pending. ... " />
-            <marker date="1560961648530" expanded="true" signature="14291:14915" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="14925:15027" ph="/// Tests WaitForjQuery when the browser can get the URL. ... " />
-            <marker date="1560961648530" expanded="true" signature="15111:15680" ph="{...}" />
-            <marker date="1560961648530" expanded="true" signature="15690:15795" ph="/// Tests WaitForjQuery when the browser cannot get the URL. ... " />
-            <marker date="1560961648530" expanded="true" signature="15891:16305" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;WebDriverSupportFixture.cs&quot;&gt; ... */" />
+            <marker date="1561397268694" expanded="true" signature="148:16419" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="161:501" ph="..." />
+            <marker date="1561397268694" expanded="true" signature="507:588" ph="/// A test fixture for the Web Driver class. ... " />
+            <marker date="1561397268694" expanded="true" signature="647:16417" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="662:745" ph="/// Tests the teardown with no errors. ... " />
+            <marker date="1561397268694" expanded="true" signature="802:2074" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="2084:2174" ph="/// Tests the check for screen shot no error. ... " />
+            <marker date="1561397268694" expanded="true" signature="2241:3087" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="3097:3208" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
+            <marker date="1561397268694" expanded="true" signature="3303:4764" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="4774:4885" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
+            <marker date="1561397268694" expanded="true" signature="4998:6825" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="6234:6295" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="6835:6946" ph="/// Tests the teardown with an error that then takes a screenshot. ... " />
+            <marker date="1561397268694" expanded="true" signature="7041:8195" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="8205:8345" ph="/// Tests the teardown with an error that then takes a screenshot but does not write a message. ... " />
+            <marker date="1561397268694" expanded="true" signature="8456:9709" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="9719:9799" ph="/// Tests the tear down after test. ... " />
+            <marker date="1561397268694" expanded="true" signature="9858:10141" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="10151:10262" ph="/// Tests the tear down after scenario when reuse browser is true. ... " />
+            <marker date="1561397268694" expanded="true" signature="10347:10967" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="10475:10526" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="10977:11089" ph="/// Tests the tear down after scenario when reuse browser is false. ... " />
+            <marker date="1561397268694" expanded="true" signature="11175:11813" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="11302:11354" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="11823:11943" ph="/// Tests WaitForAngular with a successful result, when nothing is pending. ... " />
+            <marker date="1561397268694" expanded="true" signature="12017:12587" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="12597:12719" ph="/// Tests WaitForAngular with a successful result, when something is pending. ... " />
+            <marker date="1561397268694" expanded="true" signature="12795:13420" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="13430:13549" ph="/// Tests WaitForjQuery with a successful result, when nothing is pending. ... " />
+            <marker date="1561397268694" expanded="true" signature="13622:14191" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="14201:14322" ph="/// Tests WaitForjQuery with a successful result, when something is pending. ... " />
+            <marker date="1561397268694" expanded="true" signature="14397:15021" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="15031:15133" ph="/// Tests WaitForjQuery when the browser can get the URL. ... " />
+            <marker date="1561397268694" expanded="true" signature="15217:15786" ph="{...}" />
+            <marker date="1561397268694" expanded="true" signature="15796:15901" ph="/// Tests WaitForjQuery when the browser cannot get the URL. ... " />
+            <marker date="1561397268694" expanded="true" signature="15997:16411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Support/MockBrowserFactory.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <marker date="1560799854230" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;MockBrowserFactory.cs&quot;&gt; ... */" />
+            <marker date="1560799854230" expanded="true" signature="151:1483" ph="{...}" />
+            <marker date="1560799854230" expanded="true" signature="164:284" ph="..." />
+            <marker date="1560799854230" expanded="true" signature="290:371" ph="/// A Mock Browser Factory used for testing. ... " />
+            <marker date="1560799854230" expanded="true" signature="424:1481" ph="{...}" />
+            <marker date="1560799854230" expanded="true" signature="439:561" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockBrowserFactory&quot;/&gt; class. ... " />
+            <marker date="1560799854230" expanded="true" signature="651:671" ph="{...}" />
+            <marker date="1560799854230" expanded="true" signature="681:787" ph="/// Gets the browser. ... " />
+            <marker date="1560799854230" expanded="true" signature="861:983" ph="/// Resets the driver. ... " />
+            <marker date="1560799854230" expanded="true" signature="1042:1111" ph="{...}" />
+            <marker date="1560799854230" expanded="true" signature="1121:1292" ph="/// Creates the browser. ... " />
+            <marker date="1560799854230" expanded="true" signature="1358:1475" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="464" column="22" lean-forward="true" selection-start-line="464" selection-start-column="22" selection-end-line="464" selection-end-column="22" />
+          <folding>
+            <marker date="1560799854254" expanded="true" signature="0:115" ph="/* &lt;copyright file=&quot;WebDriverSupport.cs&quot;&gt; ... */" />
+            <marker date="1560799854254" expanded="true" signature="150:15403" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="163:466" ph="..." />
+            <marker date="1560799854254" expanded="true" signature="472:554" ph="/// A hooks support class for the web driver. ... " />
+            <marker date="1560799854254" expanded="true" signature="632:15401" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="861:1054" ph="/// Initializes a new instance of the &lt;see cref=&quot;WebDriverSupport&quot; /&gt; class. ... " />
+            <marker date="1560799854254" expanded="true" signature="1120:1192" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="1202:1285" ph="/// Things to do before each test run. ... " />
+            <marker date="1560799854254" expanded="true" signature="1352:1448" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="1458:1540" ph="/// Things to do after each test run. ... " />
+            <marker date="1560799854254" expanded="true" signature="1605:1669" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="1679:1781" ph="/// Checks the browser factory for any necessary drivers. ... " />
+            <marker date="1560799854254" expanded="true" signature="1849:2040" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="1968:2030" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="2050:2132" ph="/// Things to do before each feature. ... " />
+            <marker date="1560799854254" expanded="true" signature="2175:2279" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="2289:2478" ph="/// Initializes the browser. ... " />
+            <marker date="1560799854254" expanded="true" signature="2561:3402" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="2712:2907" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="2973:3154" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="3064:3140" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="3274:3363" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="3412:3479" ph="/// Resets the driver. ... " />
+            <marker date="1560799854254" expanded="true" signature="3520:3589" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="3599:3792" ph="/// Wait for all Angular pending AJAX requests to complete ... " />
+            <marker date="1560799854254" expanded="true" signature="3858:5376" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="3901:3953" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="3990:4042" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="4077:4129" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="4168:4220" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="4270:4322" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="4526:5188" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="4619:5172" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="4749:4842" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="5225:5366" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="5386:5578" ph="/// Wait for all jQuery pending AJAX requests to complete ... " />
+            <marker date="1560799854254" expanded="true" signature="5643:6955" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="5686:5738" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="5775:5827" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="5862:5914" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="5953:6005" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="6055:6107" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="6311:6776" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="6404:6760" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="6512:6605" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="6813:6945" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="6965:7039" ph="/// Tears down the web driver ... " />
+            <marker date="1560799854254" expanded="true" signature="7121:7269" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7164:7216" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7279:7382" ph="/// Tear down the web driver after scenario, if applicable ... " />
+            <marker date="1560799854254" expanded="true" signature="7433:7927" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7476:7528" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7545:7700" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7622:7686" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7731:7746" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7763:7837" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7857:7917" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="7937:8020" ph="/// Things to do before each scenario. ... " />
+            <marker date="1560799854254" expanded="true" signature="8095:8239" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="8249:8355" ph="/// Initializes the page mapper at the start of the test run. ... " />
+            <marker date="1560799854254" expanded="true" signature="8394:9607" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="8898:8966" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="9617:9697" ph="/// Things to do before every step. ... " />
+            <marker date="1560799854254" expanded="true" signature="9751:10028" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="9822:10016" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="10038:10117" ph="/// Things to do after every step. ... " />
+            <marker date="1560799854254" expanded="true" signature="10169:10605" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="10276:10595" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="10615:10802" ph="/// Wait for all Angular pending AJAX requests to complete ... " />
+            <marker date="1560799854254" expanded="true" signature="10855:10942" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="10952:11138" ph="/// Wait for all jQuery pending AJAX requests to complete ... " />
+            <marker date="1560799854254" expanded="true" signature="11190:11276" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="11286:11388" ph="/// Performs AfterScenario actions in a controlled order. ... " />
+            <marker date="1560799854254" expanded="true" signature="11466:11879" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="11509:11561" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="11578:11649" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="11682:11780" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="11800:11869" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="11889:11960" ph="/// Checks for screenshot. ... " />
+            <marker date="1560799854254" expanded="true" signature="12001:13383" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="12070:12122" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="12321:12487" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="12409:12473" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="12504:12634" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="12923:13202" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="13064:13188" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="13219:13293" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="13313:13373" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="13393:13544" ph="/// Sets the browser factory. ... " />
+            <marker date="1560799854254" expanded="true" signature="13625:13693" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="13703:13839" ph="/// Sets the current browser. ... " />
+            <marker date="1560799854254" expanded="true" signature="13907:13961" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="14021:14632" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="14047:14302" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="14351:14622" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="14678:15166" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="14704:14879" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="14928:15156" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="15235:15395" ph="{...}" />
+            <marker date="1560799854254" expanded="true" signature="15283:15335" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionPipelineService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
+          <folding>
+            <marker date="1560799854232" expanded="true" signature="0:120" ph="/* &lt;copyright file=&quot;ActionPipelineService.cs&quot;&gt; ... */" />
+            <marker date="1560799854232" expanded="true" signature="155:4879" ph="{...}" />
+            <marker date="1560799854232" expanded="false" signature="165:251" ph="..." />
+            <marker date="1560799854232" expanded="true" signature="254:763" ph="/// A class that manages actions that should be taken during parts of the process ... " />
+            <marker date="1560799854232" expanded="true" signature="826:4877" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="945:1126" ph="/// Initializes a new instance of the &lt;see cref=&quot;ActionPipelineService&quot;/&gt; class. ... " />
+            <marker date="1560799854232" expanded="true" signature="1193:1300" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="1310:1614" ph="/// Performs the action. ... " />
+            <marker date="1560799854232" expanded="true" signature="1733:1887" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="1897:2179" ph="/// Performs the action. ... " />
+            <marker date="1560799854232" expanded="true" signature="2269:2888" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2324:2462" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2633:2674" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2682:2730" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2754:2803" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2892:3056" ph="/// Creates the element locater. ... " />
+            <marker date="1560799854232" expanded="true" signature="3115:3240" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3250:3562" ph="/// Performs any actions ahead of the actual action. ... " />
+            <marker date="1560799854232" expanded="true" signature="3644:4356" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3775:4019" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3800:3901" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3938:4014" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4058:4346" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4366:4628" ph="/// Performs any actions after the actual action. ... " />
+            <marker date="1560799854232" expanded="true" signature="4724:4871" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4798:4867" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ElementLocator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+          <folding>
+            <marker date="1560799734718" expanded="true" signature="0:113" ph="/* &lt;copyright file=&quot;ElementLocator.cs&quot;&gt; ... */" />
+            <marker date="1560799734718" expanded="true" signature="148:4150" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="158:224" ph="..." />
+            <marker date="1560799734718" expanded="true" signature="227:385" ph="/// An implementation of &lt;see cref=&quot;IElementLocator&quot;/&gt; that uses the page model ... " />
+            <marker date="1560799734718" expanded="true" signature="434:4148" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="527:739" ph="/// Initializes a new instance of the &lt;see cref=&quot;ElementLocator&quot; /&gt; class. ... " />
+            <marker date="1560799734718" expanded="true" signature="818:912" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="916:1215" ph="/// Gets the element from the context. ... " />
+            <marker date="1560799734718" expanded="true" signature="1270:1486" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="1365:1457" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="1490:1686" ph="/// Gets the property from the context. ... " />
+            <marker date="1560799734718" expanded="true" signature="1742:1952" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="1838:1923" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="1956:2213" ph="/// Tries the get the element. ... " />
+            <marker date="1560799734718" expanded="true" signature="2294:2628" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="2351:2403" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="2531:2605" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="2632:2890" ph="/// Tries the get the property. ... " />
+            <marker date="1560799734718" expanded="true" signature="2972:3307" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="3029:3081" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="3210:3284" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="3311:3594" ph="/// Gets the element not found exception. ... " />
+            <marker date="1560799734718" expanded="true" signature="3727:4145" ph="{...}" />
+            <marker date="1560799734718" expanded="true" signature="3919:3960" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
+          <folding>
+            <marker date="1560799854232" expanded="true" signature="0:115" ph="/* &lt;copyright file=&quot;ActionRepository.cs&quot;&gt; ... */" />
+            <marker date="1560799854232" expanded="true" signature="150:5222" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="163:371" ph="..." />
+            <marker date="1560799854232" expanded="true" signature="377:462" ph="/// The action repository for plugins in the pipeline. ... " />
+            <marker date="1560799854232" expanded="true" signature="515:5220" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="834:1027" ph="/// Initializes a new instance of the &lt;see cref=&quot;ActionRepository&quot; /&gt; class. ... " />
+            <marker date="1560799854232" expanded="true" signature="1093:1412" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="1422:1622" ph="/// Creates the action. ... " />
+            <marker date="1560799854232" expanded="true" signature="1669:1751" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="1758:1887" ph="/// Gets the post-execute actions. ... " />
+            <marker date="1560799854232" expanded="true" signature="1938:1987" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="1991:2119" ph="/// Gets the pre-execute actions. ... " />
+            <marker date="1560799854232" expanded="true" signature="2168:2216" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2226:2401" ph="/// Gets the comparison actions used to process various types. ... " />
+            <marker date="1560799854232" expanded="true" signature="2478:2558" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2562:2686" ph="/// Gets the locator actions. ... " />
+            <marker date="1560799854232" expanded="true" signature="2743:2795" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="2805:2880" ph="/// Initializes this instance. ... " />
+            <marker date="1560799854232" expanded="true" signature="2910:3869" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3396:3862" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3430:3679" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3565:3661" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3716:3848" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="3879:4040" ph="/// Registers the type in the pipeline. ... " />
+            <marker date="1560799854232" expanded="true" signature="4084:4787" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4153:4253" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4314:4416" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4480:4588" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4657:4777" ph="{...}" />
+            <marker date="1560799854232" expanded="true" signature="4797:5080" ph="/// Creates the item through the DI container. ... " />
+            <marker date="1560799854232" expanded="true" signature="5131:5217" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IActionRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding>
+            <marker date="1560799854251" expanded="true" signature="0:233" ph="/* &lt;copyright file=&quot;IActionRepository.cs&quot;&gt; ... */" />
+            <marker date="1560799854251" expanded="true" signature="268:1622" ph="{...}" />
+            <marker date="1560799854251" expanded="true" signature="278:334" ph="..." />
+            <marker date="1560799854251" expanded="true" signature="340:443" ph="/// Contains a cache of available actions, pre-actions and post-actions. ... " />
+            <marker date="1560799854251" expanded="true" signature="479:1620" ph="{...}" />
+            <marker date="1560799854251" expanded="true" signature="491:566" ph="/// Initializes this instance. ... " />
+            <marker date="1560799854251" expanded="true" signature="603:803" ph="/// Creates the action. ... " />
+            <marker date="1560799854251" expanded="true" signature="848:977" ph="/// Gets the post-execute actions. ... " />
+            <marker date="1560799854251" expanded="true" signature="1026:1154" ph="/// Gets the pre-execute actions. ... " />
+            <marker date="1560799854251" expanded="true" signature="1201:1325" ph="/// Gets the locator actions. ... " />
+            <marker date="1560799854251" expanded="true" signature="1383:1549" ph="/// Gets the comparison actions used to process various types. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
+          <folding>
+            <marker date="1561397783268" expanded="true" signature="0:127" ph="/* &lt;copyright file=&quot;ActionPipelineServiceFixture.cs&quot;&gt; ... */" />
+            <marker date="1561397783268" expanded="true" signature="168:10867" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="178:337" ph="..." />
+            <marker date="1561397783268" expanded="true" signature="340:420" ph="/// A test fixture for the ActionPipelineService. ... " />
+            <marker date="1561397783268" expanded="true" signature="478:10865" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="484:590" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
+            <marker date="1561397783268" expanded="true" signature="669:2058" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="2062:2168" ph="/// Tests the pipeline call invokes all pipeline steps and does not fail. ... " />
+            <marker date="1561397783268" expanded="true" signature="2275:3720" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="3727:3863" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws that failure. ... " />
+            <marker date="1561397783268" expanded="true" signature="3981:5414" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="5421:5567" ph="/// Tests the pipeline call invokes all pre-steps even if one fails and then throws an aggregate exception. ... " />
+            <marker date="1561397783268" expanded="true" signature="5697:7490" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="7500:7638" ph="/// Tests the pipeline call creates the action, invokes all pipeline steps and does not fail. ... " />
+            <marker date="1561397783268" expanded="true" signature="7745:9116" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="9126:9195" ph="/// A mock action class. ... " />
+            <marker date="1561397783268" expanded="true" signature="9237:9874" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="9257:9379" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
+            <marker date="1561397783268" expanded="true" signature="9449:9477" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="9491:9711" ph="/// Executes this instance action. ... " />
+            <marker date="1561397783268" expanded="true" signature="9789:9867" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="9884:9953" ph="/// A mock action class. ... " />
+            <marker date="1561397783268" expanded="true" signature="10000:10859" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="10060:10182" ph="/// Initializes a new instance of the &lt;see cref=&quot;MockAction&quot;/&gt; class. ... " />
+            <marker date="1561397783268" expanded="true" signature="10263:10291" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="10305:10525" ph="/// Executes this instance action. ... " />
+            <marker date="1561397783268" expanded="true" signature="10603:10849" ph="{...}" />
+            <marker date="1561397783268" expanded="true" signature="10654:10784" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4106">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding>
+            <marker date="1560799854252" expanded="true" signature="0:110" ph="/* &lt;copyright file=&quot;BrowserBase.cs&quot;&gt; ... */" />
+            <marker date="1560799854252" expanded="true" signature="145:10741" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="158:344" ph="..." />
+            <marker date="1560799854252" expanded="true" signature="350:460" ph="/// A set of extension methods for the &lt;see cref=&quot;IBrowser&quot; /&gt; interface. ... " />
+            <marker date="1560799854252" expanded="true" signature="509:10739" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="597:765" ph="/// Initializes a new instance of the &lt;see cref=&quot;BrowserBase&quot;/&gt; class. ... " />
+            <marker date="1560799854252" expanded="true" signature="811:865" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="875:1009" ph="/// Gets the type of the base page. ... " />
+            <marker date="1560799854252" expanded="true" signature="1070:1231" ph="/// Gets the url of the current page. ... " />
+            <marker date="1560799854252" expanded="true" signature="1285:1401" ph="/// Gets a value indicating whether or not the browser has been closed. ... " />
+            <marker date="1560799854252" expanded="true" signature="1462:1573" ph="/// Gets a value indicating whether or not the browser is created. ... " />
+            <marker date="1560799854252" expanded="true" signature="1631:1858" ph="/// Gets a value indicating whether this instance is disposed. ... " />
+            <marker date="1560799854252" expanded="true" signature="1889:1951" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="1961:2424" ph="/// Adds the cookie to the browser. ... " />
+            <marker date="1560799854252" expanded="true" signature="2568:2762" ph="/// Get a cookie from the browser ... " />
+            <marker date="1560799854252" expanded="true" signature="2827:2901" ph="/// Clear all browser cookies ... " />
+            <marker date="1560799854252" expanded="true" signature="2956:3020" ph="/// Clears the URL. ... " />
+            <marker date="1560799854252" expanded="true" signature="3071:3261" ph="/// Determines whether the URL can be retrieved. ... " />
+            <marker date="1560799854252" expanded="true" signature="3313:3383" ph="/// Closes this instance. ... " />
+            <marker date="1560799854252" expanded="true" signature="3431:3626" ph="/// Closes the instance and optionally dispose of all resources ... " />
+            <marker date="1560799854252" expanded="true" signature="3666:3833" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="3728:3788" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="3843:4023" ph="/// Dismisses the alert. ... " />
+            <marker date="1560799854252" expanded="true" signature="4112:4298" ph="/// Navigates the browser to the given &lt;paramref name=&quot;url&quot; /&gt;. ... " />
+            <marker date="1560799854252" expanded="true" signature="4352:4500" ph="/// Ensures the page is current in the browser window. ... " />
+            <marker date="1560799854252" expanded="true" signature="4545:4841" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="4711:4831" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="4851:5105" ph="/// Executes the script. ... " />
+            <marker date="1560799854252" expanded="true" signature="5198:5452" ph="/// Gets the URI for the page if supported by the browser. ... " />
+            <marker date="1560799854252" expanded="true" signature="5515:5560" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="5570:5906" ph="/// Navigates to the specified URL defined by the page. ... " />
+            <marker date="1560799854252" expanded="true" signature="5991:6495" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="6096:6243" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="6276:6426" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="6505:6694" ph="/// Pages this instance. ... " />
+            <marker date="1560799854252" expanded="true" signature="6749:6814" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="6824:7048" ph="/// Gets the page instance from the browser. ... " />
+            <marker date="1560799854252" expanded="true" signature="7089:7168" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="7178:7331" ph="/// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources. ... " />
+            <marker date="1560799854252" expanded="true" signature="7361:7452" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="7462:7776" ph="/// Takes the screenshot from the native browser. ... " />
+            <marker date="1560799854252" expanded="true" signature="7874:8193" ph="/// Save the html from the native browser. ... " />
+            <marker date="1560799854252" expanded="true" signature="8291:8730" ph="/// Checks whether the page matches the current browser URL. ... " />
+            <marker date="1560799854252" expanded="true" signature="8842:9179" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="9189:9449" ph="/// Releases unmanaged and - optionally - managed resources. ... " />
+            <marker date="1560799854252" expanded="true" signature="9496:9678" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="9537:9589" ph="{...}" />
+            <marker date="1560799854252" expanded="true" signature="9688:9891" ph="/// Gets the native page location. ... " />
+            <marker date="1560799854252" expanded="true" signature="9977:10263" ph="/// Creates the native page. ... " />
+            <marker date="1560799854252" expanded="true" signature="10364:10670" ph="/// Releases windows and driver specific resources. This method is already protected by the base instance. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="223" column="55" lean-forward="true" selection-start-line="223" selection-start-column="55" selection-end-line="223" selection-end-column="55" />
+          <folding>
+            <marker date="1561567323943" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;BrowserBaseFixture.cs&quot;&gt; ... */" />
+            <marker date="1561567323943" expanded="true" signature="143:10142" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="153:365" ph="..." />
+            <marker date="1561567323943" expanded="true" signature="368:458" ph="/// A test fixture for the &lt;see cref=&quot;BrowserBase&quot;/&gt; class. ... " />
+            <marker date="1561567323943" expanded="true" signature="509:10140" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="524:658" ph="/// Tests the GetPage generic method as an interface creates the page from a native page. ... " />
+            <marker date="1561567323943" expanded="true" signature="745:1296" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="1306:1432" ph="/// Tests the GetPage method as an interface creates the page from a native page. ... " />
+            <marker date="1561567323943" expanded="true" signature="1508:2065" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="2075:2201" ph="/// Tests the GetPage method as an interface creates the page from a native page. ... " />
+            <marker date="1561567323943" expanded="true" signature="2282:2679" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="2689:2799" ph="/// Tests the EnsureOnPage method when it is on the correct page. ... " />
+            <marker date="1561567323943" expanded="true" signature="2879:3440" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="3450:3584" ph="/// Tests the EnsureOnPage method when it is not on the correct page throws an exception. ... " />
+            <marker date="1561567323943" expanded="true" signature="3671:5886" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="5233:5873" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="5896:6015" ph="/// Tests the GoToPage method when it needs to navigate to the page first. ... " />
+            <marker date="1561567323943" expanded="true" signature="6116:6916" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="6926:7043" ph="/// Tests the GoToPage method when navigation fails throws an exception. ... " />
+            <marker date="1561567323943" expanded="true" signature="7146:8271" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="7981:8258" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="8281:8374" ph="/// Tests the close method when dispose is true. ... " />
+            <marker date="1561567323943" expanded="true" signature="8438:9088" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="9098:9192" ph="/// Tests the close method when dispose is false. ... " />
+            <marker date="1561567323943" expanded="true" signature="9257:9901" ph="{...}" />
+            <marker date="1561567323943" expanded="true" signature="9912:9987" ph="/// A test class for the page. ... " />
+            <marker date="1561567323943" expanded="true" signature="10114:10134" ph="{...}" />
           </folding>
         </state>
       </provider>

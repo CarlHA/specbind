@@ -17,7 +17,7 @@ namespace SpecBind.Tests
     using SpecBind.Helpers;
     using SpecBind.Pages;
     using SpecBind.Validation;
-
+    using Support;
     using TechTalk.SpecFlow.Tracing;
 
     /// <summary>
@@ -64,6 +64,9 @@ namespace SpecBind.Tests
 
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
             container.Setup(c => c.Resolve<IScenarioContextHelper>()).Returns(scenarioContext.Object);
+
+            
+            WebDriverSupport.SetBrowserFactory(new MockBrowserFactory());
 
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
             browser.Setup(b => b.IsCreated).Returns(true);
