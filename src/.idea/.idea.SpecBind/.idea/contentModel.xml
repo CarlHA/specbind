@@ -17,12 +17,7 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="Selenium" t="Include" />
       <e p="Solution Items" t="Include" />
-      <e p="specbind/Configuration/ApplicationConfigurationElement.cs" t="Include" />
-      <e p="specbind/Configuration/AssemblyCollection.cs" t="Include" />
-      <e p="specbind/Configuration/AssemblyElement.cs" t="Include" />
-      <e p="specbind/Configuration/BrowserFactoryConfigurationElement.cs" t="Include" />
-      <e p="specbind/Configuration/ConfigurationSectionHandler.cs" t="Include" />
-      <e p="SpecBind.NetStandard" t="IncludeRecursive">
+      <e p="specbind" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionContext.cs" t="Include" />
           <e p="ActionPipelineService.cs" t="Include" />
@@ -165,7 +160,7 @@
           <e p="VirtualPropertyData.cs" t="Include" />
         </e>
         <e p="SelectionSteps.cs" t="Include" />
-        <e p="SpecBind.NetStandard.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.csproj" t="IncludeRecursive" />
         <e p="SpecBind.nuspec" t="Include" />
         <e p="TokenSteps.cs" t="Include" />
         <e p="Validation" t="Include">
@@ -362,7 +357,7 @@
         <e p="SpecBind.Selenium.Tests.NetStandard.csproj" t="IncludeRecursive" />
       </e>
       <e p="SpecBind.sln" t="IncludeFlat" />
-      <e p="SpecBind.Tests.NetStandard" t="IncludeRecursive">
+      <e p="SpecBind.Tests" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionPipelineServiceFixture.cs" t="Include" />
           <e p="ActionRepositoryFixture.cs" t="Include" />
@@ -412,8 +407,8 @@
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
-              <e p="SpecBind.Tests.NetStandard.AssemblyInfo.cs" t="Include" />
-              <e p="SpecBind.Tests.NetStandard.Program.cs" t="Include" />
+              <e p="SpecBind.Tests.AssemblyInfo.cs" t="Include" />
+              <e p="SpecBind.Tests.Program.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -432,7 +427,7 @@
         </e>
         <e p="SelectionStepsFixture.cs" t="Include" />
         <e p="SetCookieAttributeFixture.cs" t="Include" />
-        <e p="SpecBind.Tests.NetStandard.csproj" t="IncludeRecursive" />
+        <e p="SpecBind.Tests.csproj" t="IncludeRecursive" />
         <e p="StringLookupExtensionsFixture.cs" t="Include" />
         <e p="Support" t="Include">
           <e p="BaseElement.cs" t="Include" />

@@ -2,9 +2,156 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be005213-33b5-424c-bb18-3d20c8ab11b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ActionContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionPipelineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ActionPipelineService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ActionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ActionResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionResultExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ActionResultExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ElementLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ElementLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/IAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IActionPipelineService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/IActionPipelineService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IActionRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/IActionRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IElementLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/IElementLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ILocatorAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/ILocatorAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IPostAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/IPostAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IPreAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/ActionPipeline/IPreAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ActionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ActionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/BasicValidationChecksActionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/BasicValidationChecksActionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ButtonClickAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ButtonClickAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ClearDataAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ClearDataAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ComboComparisonType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ComboComparisonType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ContextActionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ContextActionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/DismissDialogAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/DismissDialogAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/EnterDataAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/EnterDataAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/GetElementAsPageAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/GetElementAsPageAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/GetListItemByCriteriaAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/GetListItemByCriteriaAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/GetListItemByIndexAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/GetListItemByIndexAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/HighlightLocatorAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/HighlightLocatorAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/HoverOverElementAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/HoverOverElementAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ILogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ILogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/NavigationPostAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/NavigationPostAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/PageNavigationAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/PageNavigationAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/SetCookiePreAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/SetCookiePreAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/SetTokenFromValueAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/SetTokenFromValueAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateActionBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateActionBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateComboBoxAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateComboBoxAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateElementEnabledAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateElementEnabledAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateElementExistsAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateElementExistsAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateItemAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateItemAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateListAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateListAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateListRowCountAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateListRowCountAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidateTokenAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidateTokenAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/ValidationCheckContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/ValidationCheckContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/WaitConditions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/WaitConditions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/WaitForElementAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/WaitForElementAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/WaitForListItemsAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/WaitForListItemsAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Actions/WaitForPageAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Actions/WaitForPageAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/AlertBoxSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/AlertBoxSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/AlertBoxAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/AlertBoxAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/IBrowser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/IBrowser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/NullLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/NullLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/ProxyLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/ProxyLogger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/BrowserSupport/WebDriverSupport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ApplicationConfigurationElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Configuration/ApplicationConfigurationElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Configuration/AssemblyCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Configuration/AssemblyElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Configuration/BrowserFactoryConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Configuration/BrowserFactoryConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Configuration/BrowserFactoryConfigurationElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Configuration/BrowserFactoryConfigurationElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ConfigurationSectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Configuration/ConfigurationSectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/DataSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/DataSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Deployment/App.config.install.xdt" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Deployment/App.config.install.xdt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Deployment/App.config.uninstall.xdt" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Deployment/App.config.uninstall.xdt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Extensions/NameValueConfigurationCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Extensions/NameValueConfigurationCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/AssemblyLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/AssemblyLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/AttributeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/AttributeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/FileUploadHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/FileUploadHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/IScenarioContextHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/IScenarioContextHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/ISettingHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/ISettingHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/ITokenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/ITokenManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/ResourceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/ResourceLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/ScenarioContextHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/ScenarioContextHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/SettingHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/SettingHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/StringLookupExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/StringLookupExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/TableFormater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/TableFormater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/TableItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/TableItemType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/TokenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/TokenManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/UriHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/UriHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/ValidationTableExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/ValidationTableExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/Waiter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/Waiter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/WrappedSettingHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Helpers/WrappedSettingHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PageNavigationSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PageNavigationSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PageStepBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PageStepBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ComboBoxItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ComboBoxItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ComparisonType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ComparisonType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ElementDescription.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ElementDescription.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ElementExecuteException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ElementExecuteException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ElementLocatorAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ElementLocatorAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ExpressionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ExpressionData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IActiveCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IActiveCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IDataControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IDataControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IElementList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IElementList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IElementProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IElementProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IPage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IPage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IPageElementHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IPageElementHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IPageMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IPageMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/IPropertyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/IPropertyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ListElementWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ListElementWrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/NumericComparisonType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/NumericComparisonType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageAliasAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageAliasAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageBuilderBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageBuilderBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageBuilderContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageBuilderContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageNavigationAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageNavigationAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageNavigationException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/PageNavigationException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/SetCookieAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/SetCookieAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/TableElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/TableElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/TagConstants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/TagConstants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/TypeExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/TypeExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ValidationItemResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ValidationItemResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/ValidationResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/ValidationResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Pages/VirtualPropertyAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Pages/VirtualPropertyAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PropertyHandlers/ElementPropertyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PropertyHandlers/ElementPropertyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PropertyHandlers/ListPropertyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PropertyHandlers/ListPropertyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PropertyHandlers/PagePropertyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PropertyHandlers/PagePropertyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PropertyHandlers/PropertyDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PropertyHandlers/PropertyDataBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/PropertyHandlers/VirtualPropertyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/PropertyHandlers/VirtualPropertyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/SelectionSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/SelectionSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/SpecBind.NetStandard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/SpecBind.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/SpecBind.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/SpecBind.nuspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/TokenSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/TokenSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ContainsComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ContainsComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/DoesNotContainComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/DoesNotContainComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/DoesNotExistComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/DoesNotExistComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/EnabledComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/EnabledComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/EndsWithComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/EndsWithComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/EqualsComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/EqualsComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ExistsComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ExistsComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/GreaterThanComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/GreaterThanComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/GreaterThanEqualsComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/GreaterThanEqualsComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/IValidationComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/IValidationComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/IValidationTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/IValidationTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ItemValidation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ItemValidation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/LessThanComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/LessThanComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/LessThanEqualsComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/LessThanEqualsComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/NotEnabledComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/NotEnabledComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/NotEqualsComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/NotEqualsComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/StartsWithComparer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/StartsWithComparer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ValidateTableHelpers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ValidateTableHelpers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ValidationComparerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ValidationComparerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ValidationTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ValidationTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ValidationTablePreAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ValidationTablePreAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/Validation/ValueComparerBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/Validation/ValueComparerBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.NetStandard/WaitingSteps.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind/WaitingSteps.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SpecBind.Tests.NetStandard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Tests.NetStandard/SpecBind.Tests.NetStandard.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.sln" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +204,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="223" column="55" lean-forward="true" selection-start-line="223" selection-start-column="55" selection-end-line="223" selection-end-column="55" />
+            <state relative-caret-position="182">
+              <caret line="217" column="42" selection-start-line="217" selection-start-column="42" selection-end-line="217" selection-end-column="42" />
               <folding>
                 <marker date="1561567323943" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;BrowserBaseFixture.cs&quot;&gt; ... */" />
                 <marker date="1561567323943" expanded="true" signature="143:10142" ph="{...}" />
@@ -93,7 +240,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs">
+        <entry file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserBase.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-4106">
               <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
@@ -170,7 +317,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/ExistsComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/LessThanComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Helpers/SettingHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Helpers/SettingHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Support/MockBrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Helpers/TableFormatterFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Helpers/AttributeExtensionsFixture.cs" root0="FORCE_HIGHLIGHTING" />
@@ -190,7 +337,7 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetListItemByIndexActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/HighlightLocatorActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateElementExistsActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageNavigationAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Pages/PageNavigationAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/WaitForElementActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetListItemByCriteriaActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/GetElementAsPageActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
@@ -202,7 +349,7 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/SetCookieAttributeFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/AlertBoxStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/AlertBoxSteps.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/AlertBoxSteps.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.nuget/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/PageExtensionsFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/testhost.dll.config" root0="FORCE_HIGHLIGHTING" />
@@ -224,21 +371,21 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/SelectionStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumPage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/ExceptionHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionPipelineService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IActionRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ElementLocator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/WebDriverSupport.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ActionPipelineService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/IActionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ActionRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ActionContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ElementLocator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Configuration/AssemblyElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Plugin/ISpecBindConfigurationProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ApplicationConfigurationElement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ConfigurationSectionHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyCollection.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/BrowserFactoryConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/BrowserFactoryConfigurationElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Configuration/ApplicationConfigurationElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Configuration/ConfigurationSectionHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Configuration/AssemblyCollection.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Configuration/BrowserFactoryConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Configuration/BrowserFactoryConfigurationElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/PropertyHandlers/VirtualPropertyDataFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/PropertyHandlers/ListPropertyDataFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/PropertyHandlers/ElementPropertyDataFixture.cs" root0="FORCE_HIGHLIGHTING" />
@@ -263,17 +410,16 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/ValidationTablePreActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/GreaterThanComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/ComparisonTestBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/LessThanEqualsComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/DoesNotContainComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/.local/share/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/SimpleWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.NetStandard/Helpers/UriHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind/Helpers/UriHelper.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/PageNavigationActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/SetCookiePreActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateComboBoxActionFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/Actions/ValidateElementEnabledActionFixture.cs" />
@@ -324,6 +470,7 @@
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/WebDriverSupportFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/ActionPipeline/ActionPipelineServiceFixture.cs" />
         <option value="$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs" />
+        <option value="$PROJECT_DIR$/SpecBind.Tests.Framework/Tests.cs" />
       </list>
     </option>
   </component>
@@ -361,25 +508,6 @@
               <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
               <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="SpecBind.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="SpecBind.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BrowserSupport" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="SpecBind.Tests.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -394,7 +522,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -415,12 +543,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1560800022712</updated>
-      <workItem from="1560800032738" duration="31462000" />
+      <workItem from="1560800032738" duration="32005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31462000" />
+    <option name="totallyTimeSpent" value="32005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,14 +564,14 @@
     <layout>
       <window_info id="Azure Explorer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" sideWeight="0.49881518" weight="0.329849" />
       <window_info anchor="bottom" id="Azure Activity Log" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.329849" />
-      <window_info active="true" anchor="bottom" id="Unit Tests" visible="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Unit Tests" visible="true" weight="0.329849" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.5011848" side_tool="true" weight="0.329849" />
       <window_info anchor="bottom" id="Performance Profiler" />
@@ -474,7 +602,7 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs</url>
+          <url>file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserFactory.cs</url>
           <line>72</line>
           <properties documentPath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs" initialLine="72">
             <startOffsets>
@@ -487,7 +615,7 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpecBind.NetStandard/Helpers/SettingHelper.cs</url>
+          <url>file://$PROJECT_DIR$/SpecBind/Helpers/SettingHelper.cs</url>
           <line>24</line>
           <properties documentPath="$PROJECT_DIR$/SpecBind.NetStandard/Helpers/SettingHelper.cs" initialLine="24">
             <startOffsets>
@@ -513,7 +641,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs</url>
+          <url>file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserBase.cs</url>
           <line>179</line>
           <properties documentPath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs" initialLine="179">
             <startOffsets>
@@ -552,7 +680,7 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs</url>
+          <url>file://$PROJECT_DIR$/SpecBind/BrowserSupport/WebDriverSupport.cs</url>
           <line>407</line>
           <properties documentPath="$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs" initialLine="407">
             <startOffsets>
@@ -568,59 +696,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/LessThanEqualsComparerFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1337">
-          <caret line="95" column="4" selection-start-line="95" selection-start-column="4" selection-end-line="95" selection-end-column="4" />
-          <folding>
-            <marker date="1561207607055" expanded="true" signature="0:128" ph="/* &lt;copyright file=&quot;LessThanEqualsComparerFixture.cs&quot;&gt; ... */" />
-            <marker date="1561207607055" expanded="true" signature="166:3145" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="179:249" ph="..." />
-            <marker date="1561207607055" expanded="true" signature="255:378" ph="/// A test fixture for the less than or equals comparison across supported data types. ... " />
-            <marker date="1561207607055" expanded="true" signature="488:3143" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="503:601" ph="/// Tests the rule key property for the correct tags. ... " />
-            <marker date="1561207607055" expanded="true" signature="670:859" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="869:1000" ph="/// Tests the comparison with string members returns false because it's not supported. ... " />
-            <marker date="1561207607055" expanded="true" signature="1075:1148" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="1158:1272" ph="/// Tests the comparison with less than integer members returns true. ... " />
-            <marker date="1561207607055" expanded="true" signature="1351:1419" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="1429:1544" ph="/// Tests the comparison with equal than integer members returns true. ... " />
-            <marker date="1561207607055" expanded="true" signature="1620:1688" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="1698:1811" ph="/// Tests the comparison with less than double members returns true. ... " />
-            <marker date="1561207607055" expanded="true" signature="1893:1965" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="1975:2084" ph="/// Tests the comparison with equal double members returns true. ... " />
-            <marker date="1561207607055" expanded="true" signature="2163:2233" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="2243:2375" ph="/// Tests the comparison with boolean members returns false because it's not supported. ... " />
-            <marker date="1561207607055" expanded="true" signature="2466:2542" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="2552:2668" ph="/// Tests the comparison with less than date time members returns true. ... " />
-            <marker date="1561207607055" expanded="true" signature="2751:2843" ph="{...}" />
-            <marker date="1561207607055" expanded="true" signature="2853:2965" ph="/// Tests the comparison with equal date time members returns true. ... " />
-            <marker date="1561207607055" expanded="true" signature="3045:3137" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/NotEnabledComparerFixture.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
-          <folding>
-            <marker date="1561207627743" expanded="true" signature="35:1987" ph="{...}" />
-            <marker date="1561207627743" expanded="true" signature="48:160" ph="..." />
-            <marker date="1561207627743" expanded="true" signature="166:253" ph="/// A test fixture for the not enabled comparison. ... " />
-            <marker date="1561207627743" expanded="true" signature="355:1985" ph="{...}" />
-            <marker date="1561207627743" expanded="true" signature="370:468" ph="/// Tests the rule key property for the correct tags. ... " />
-            <marker date="1561207627743" expanded="true" signature="537:727" ph="{...}" />
-            <marker date="1561207627743" expanded="true" signature="737:834" ph="/// Tests the compare method for simple comparisons. ... " />
-            <marker date="1561207627743" expanded="true" signature="897:1136" ph="{...}" />
-            <marker date="1561207627743" expanded="true" signature="1146:1243" ph="/// Tests the compare method for simple comparisons. ... " />
-            <marker date="1561207627743" expanded="true" signature="1303:1542" ph="{...}" />
-            <marker date="1561207627743" expanded="true" signature="1552:1649" ph="/// Tests the compare method for simple comparisons. ... " />
-            <marker date="1561207627743" expanded="true" signature="1737:1979" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/Validation/NotEqualsComparerFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1140">
@@ -757,7 +832,7 @@
     <entry file="file://$PROJECT_DIR$/SpecBind.Tests/Properties/AssemblyInfo.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Properties/AssemblyInfo.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Properties/AssemblyInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
@@ -778,7 +853,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ApplicationConfigurationElement.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Configuration/ApplicationConfigurationElement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
@@ -805,7 +880,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyCollection.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Configuration/AssemblyCollection.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
@@ -822,7 +897,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/AssemblyElement.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Configuration/AssemblyElement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
@@ -839,7 +914,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/BrowserFactoryConfiguration.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Configuration/BrowserFactoryConfiguration.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-72">
           <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
@@ -866,7 +941,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/BrowserFactoryConfigurationElement.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Configuration/BrowserFactoryConfigurationElement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2831">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
@@ -922,7 +997,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Configuration/ConfigurationSectionHandler.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Configuration/ConfigurationSectionHandler.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-621">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
@@ -947,7 +1022,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserFactory.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserFactory.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
@@ -993,7 +1068,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Pages/PageNavigationAttribute.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Pages/PageNavigationAttribute.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
@@ -1030,7 +1105,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Helpers/SettingHelper.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Helpers/SettingHelper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
@@ -1060,7 +1135,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/Helpers/UriHelper.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/Helpers/UriHelper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="51" column="51" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
@@ -1751,7 +1826,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/WebDriverSupport.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/WebDriverSupport.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
           <caret line="464" column="22" lean-forward="true" selection-start-line="464" selection-start-column="22" selection-end-line="464" selection-end-column="22" />
@@ -1860,7 +1935,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionPipelineService.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ActionPipelineService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="101" column="33" selection-start-line="101" selection-start-column="33" selection-end-line="101" selection-end-column="33" />
@@ -1895,7 +1970,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ElementLocator.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ElementLocator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
           <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
@@ -1928,7 +2003,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/ActionRepository.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/ActionRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
@@ -1968,7 +2043,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/ActionPipeline/IActionRepository.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/ActionPipeline/IActionRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
@@ -2025,7 +2100,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.NetStandard/BrowserSupport/BrowserBase.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserBase.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4106">
           <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
@@ -2084,10 +2159,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.Framework/Properties/AssemblyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Tests.Framework/Tests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Tests.NetStandard/BrowserBaseFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="223" column="55" lean-forward="true" selection-start-line="223" selection-start-column="55" selection-end-line="223" selection-end-column="55" />
+        <state relative-caret-position="182">
+          <caret line="217" column="42" selection-start-line="217" selection-start-column="42" selection-end-line="217" selection-end-column="42" />
           <folding>
             <marker date="1561567323943" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;BrowserBaseFixture.cs&quot;&gt; ... */" />
             <marker date="1561567323943" expanded="true" signature="143:10142" ph="{...}" />

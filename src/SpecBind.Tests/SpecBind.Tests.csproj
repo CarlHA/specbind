@@ -15,16 +15,16 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SpecBind.NetStandard\SpecBind.NetStandard.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="WithExcludedAssemblyConfig.config">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
       <None Update="testhost.dll.config">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SpecBind\SpecBind.csproj" />
     </ItemGroup>
 
 </Project>
