@@ -40,7 +40,7 @@ namespace SpecBind.Plugin
             WriteLine(string.Format("Found Configuration Section: {0}", config != null ? "true" : "false"));
             if (config == null || config.BrowserFactory == null || string.IsNullOrEmpty(config.BrowserFactory.Provider))
             {
-                return Constants.CodedUiDriverAssembly;
+                return Constants.SeleniumDriverAssembly;
             }
 
             WriteLine(string.Format("Provider Name: {0}", config.BrowserFactory.Provider));

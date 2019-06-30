@@ -200,37 +200,6 @@
         </e>
         <e p="WaitingSteps.cs" t="Include" />
       </e>
-      <e p="SpecBind.Plugin" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Configuration" t="Include" />
-        <e p="Constants.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
-        <e p="SpecBind.Plugin.csproj" t="IncludeRecursive" />
-      </e>
-      <e p="SpecBind.Plugin.NetStandard" t="IncludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="Configuration" t="Include" />
-        <e p="Deployment" t="Include">
-          <e p="App.config.install.xdt" t="Include" />
-          <e p="App.config.uninstall.xdt" t="Include" />
-        </e>
-        <e p="ISpecBindConfigurationProvider.cs" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netstandard2.0" t="Include">
-              <e p="SpecBind.Plugin.NetStandard.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="Properties" t="Include">
-          <e p="AssemblyInfo.cs" t="Include" />
-        </e>
-        <e p="SpecBind.Plugin.NetStandard.csproj" t="IncludeRecursive" />
-        <e p="SpecBind.Plugin.nuspec" t="Include" />
-        <e p="SpecBindConfigurationProvider.cs" t="Include" />
-        <e p="SpecBindGeneratorPlugin.cs" t="Include" />
-      </e>
       <e p="SpecBind.Selenium" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Deployment" t="Include">
@@ -331,6 +300,27 @@
         <e p="WebElementFixture.cs" t="Include" />
       </e>
       <e p="SpecBind.sln" t="IncludeFlat" />
+      <e p="SpecBind.SpecFlowPlugin" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configuration" t="Include" />
+        <e p="Constants.cs" t="Include" />
+        <e p="Deployment" t="Include">
+          <e p="App.config.install.xdt" t="Include" />
+          <e p="App.config.uninstall.xdt" t="Include" />
+        </e>
+        <e p="ISpecBindConfigurationProvider.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="SpecBind.SpecFlowPlugin.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="SpecBind.Plugin.nuspec" t="Include" />
+        <e p="SpecBind.SpecFlowPlugin.csproj" t="IncludeRecursive" />
+        <e p="SpecBindConfigurationProvider.cs" t="Include" />
+        <e p="SpecBindGeneratorPlugin.cs" t="Include" />
+      </e>
       <e p="SpecBind.Tests" t="IncludeRecursive">
         <e p="ActionPipeline" t="Include">
           <e p="ActionPipelineServiceFixture.cs" t="Include" />
@@ -439,7 +429,6 @@
         <e p="WebDriverSupportFixture.cs" t="Include" />
         <e p="WithExcludedAssemblyConfig.config" t="Include" />
       </e>
-      <e p="stylecop.json" t="Include" />
       <e p="test.runsettings" t="Include" />
     </e>
   </component>

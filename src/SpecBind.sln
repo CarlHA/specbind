@@ -10,19 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{355684
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Selenium", "Selenium", "{ECD281AC-2075-4F3A-B24A-D8B96E8CE56E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.Plugin", "SpecBind.Plugin\SpecBind.Plugin.csproj", "{0BCFC808-1647-448E-A9DC-99B3D9D336B5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FE3A1D8C-DC30-443E-873A-99F9207267FB}"
 	ProjectSection(SolutionItems) = preProject
 		..\appveyor.yml = ..\appveyor.yml
 		test.runsettings = test.runsettings
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetStandard", "NetStandard", "{AD4F910E-B24B-4181-8DA9-57634A8FA538}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind", "SpecBind\SpecBind.csproj", "{03428D94-B5E7-4C9C-AB62-CA91FF7A49A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.Plugin.NetStandard", "SpecBind.Plugin.NetStandard\SpecBind.Plugin.NetStandard.csproj", "{6112205E-4E73-455F-BD11-4B5AD579F796}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.SpecFlowPlugin", "SpecBind.SpecFlowPlugin\SpecBind.SpecFlowPlugin.csproj", "{6112205E-4E73-455F-BD11-4B5AD579F796}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecBind.Tests", "SpecBind.Tests\SpecBind.Tests.csproj", "{BFA0D5D3-43F5-4B24-88C9-9BC96880E6C6}"
 EndProject
@@ -38,10 +34,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0BCFC808-1647-448E-A9DC-99B3D9D336B5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03428D94-B5E7-4C9C-AB62-CA91FF7A49A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03428D94-B5E7-4C9C-AB62-CA91FF7A49A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03428D94-B5E7-4C9C-AB62-CA91FF7A49A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -71,7 +63,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6112205E-4E73-455F-BD11-4B5AD579F796} = {AD4F910E-B24B-4181-8DA9-57634A8FA538}
 		{ABBFFD25-9085-4461-92F1-D18943DB62BA} = {ECD281AC-2075-4F3A-B24A-D8B96E8CE56E}
 		{74EE2964-A3E1-486A-A80F-88501F13DF33} = {ECD281AC-2075-4F3A-B24A-D8B96E8CE56E}
 		{D57E0450-8948-4B34-9CE4-51375B9318DD} = {ECD281AC-2075-4F3A-B24A-D8B96E8CE56E}

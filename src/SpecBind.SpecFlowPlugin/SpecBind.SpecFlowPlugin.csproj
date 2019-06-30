@@ -2,8 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <AssemblyName>SpecBind.Plugin</AssemblyName>
-        <RootNamespace>SpecBind.Plugin</RootNamespace>
+        <LangVersion>7.3</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

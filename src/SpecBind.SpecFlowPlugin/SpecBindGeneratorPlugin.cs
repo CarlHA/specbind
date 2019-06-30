@@ -1,12 +1,15 @@
 ﻿// <copyright file="SpecBindGeneratorPlugin.cs">
 //    Copyright © 2013 Dan Piessens.  All rights reserved.
 // </copyright>
+
+using SpecBind.Plugin;
+using TechTalk.SpecFlow.Infrastructure;
+
+[assembly: GeneratorPlugin(typeof(SpecBindGeneratorPlugin))]
+
 namespace SpecBind.Plugin
 {
-    using System;
-
     using TechTalk.SpecFlow.Generator.Plugins;
-    using TechTalk.SpecFlow.Generator.UnitTestProvider;
     using TechTalk.SpecFlow.UnitTestProvider;
 
     /// <summary>
