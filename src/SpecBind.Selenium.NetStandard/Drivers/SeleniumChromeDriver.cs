@@ -26,6 +26,14 @@ namespace SpecBind.Selenium.Drivers
             this.AdditionalArguments = new List<string>();
         }
 
+        public SeleniumChromeDriver(string args) : this()
+        {
+            foreach (var arg in args.Split(';'))
+            {
+                AdditionalArguments.Add(arg);
+            }
+        }
+
         /// <summary>
         /// Gets or sets the additional arguments.
         /// </summary>
@@ -58,7 +66,7 @@ namespace SpecBind.Selenium.Drivers
                 chromeOptions.AddArgument(additionArgument);
             }
 
-            var chromeDriverService = ChromeDriverService.CreateDefaultService();
+            var chromeDriverService = ChromeDriverService.CreateDefaultService(".");
             chromeDriverService.HideCommandPromptWindow = true;
 
             foreach (var preference in browserFactoryConfiguration.UserProfilePreferences)

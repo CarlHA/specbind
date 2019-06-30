@@ -106,7 +106,7 @@ namespace SpecBind.Selenium
                 case BrowserType.Chrome:
                     return new SeleniumChromeDriver();
                 case BrowserType.ChromeHeadless:
-                    return new SeleniumChromeDriver();
+                    return new SeleniumChromeDriver("--headless");
                  default:
                     throw new InvalidOperationException(
                         $"Browser type '{this.Configuration.BrowserType}' is not supported in Selenium local mode. Did you mean to configure a remote driver?");

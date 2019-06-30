@@ -13,6 +13,7 @@
       <PackageReference Include="NUnit" Version="3.12.0" />
       <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
       <PackageReference Include="Selenium.Support" Version="3.141.0" />
+      <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="75.0.3770.90" />
       <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0006" />
      </ItemGroup>
 
@@ -25,6 +26,11 @@
       <None Remove="Resources\TestImage.jpg" />
       <EmbeddedResource Include="Resources\TestImage.jpg" />
       <None Remove="chromedriver" />
+     </ItemGroup>
+    <ItemGroup>
+        <None Update="testhost.dll.config">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
 </Project>
