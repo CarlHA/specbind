@@ -5,6 +5,15 @@
         <AssemblyName>SpecBind.Selenium</AssemblyName>
         <RootNamespace>SpecBind.Selenium</RootNamespace>
         <LangVersion>7.3</LangVersion>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SpecBind\SpecBind.csproj" />
+    </ItemGroup>
 
 </Project>

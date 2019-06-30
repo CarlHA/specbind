@@ -6,4 +6,29 @@
         <RootNamespace>SpecBind.Plugin</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      <PackageReference Include="SpecFlow" Version="3.0.220" />
+      <PackageReference Include="SpecFlow.CustomPlugin" Version="3.0.220" />
+      <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="..\SpecBind\Configuration\ApplicationConfigurationElement.cs">
+        <Link>Configuration\ApplicationConfigurationElement.cs</Link>
+      </Compile>
+      <Compile Include="..\SpecBind\Configuration\AssemblyCollection.cs">
+        <Link>Configuration\AssemblyCollection.cs</Link>
+      </Compile>
+      <Compile Include="..\SpecBind\Configuration\AssemblyElement.cs">
+        <Link>Configuration\AssemblyElement.cs</Link>
+      </Compile>
+      <Compile Include="..\SpecBind\Configuration\BrowserFactoryConfigurationElement.cs">
+        <Link>Configuration\BrowserFactoryConfigurationElement.cs</Link>
+      </Compile>
+      <Compile Include="..\SpecBind\Configuration\ConfigurationSectionHandler.cs">
+        <Link>Configuration\ConfigurationSectionHandler.cs</Link>
+      </Compile>
+    </ItemGroup>
+
 </Project>

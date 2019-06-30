@@ -160,7 +160,7 @@ namespace SpecBind.BrowserSupport
                 return browserTypeEnum;
             }
 
-            return BrowserType.IE;
+            return BrowserType.Chrome;
         }
     }
 }
