@@ -18,7 +18,7 @@
      </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SpecBind.Selenium.NetStandard\SpecBind.Selenium.NetStandard.csproj" />
+      <ProjectReference Include="..\SpecBind.Selenium\SpecBind.Selenium.csproj" />
       <ProjectReference Include="..\SpecBind\SpecBind.csproj" />
     </ItemGroup>
 
