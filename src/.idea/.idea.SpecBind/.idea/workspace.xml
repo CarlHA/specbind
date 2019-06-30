@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be005213-33b5-424c-bb18-3d20c8ab11b9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SpecBind.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SpecBind/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SpecBind/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/SpecBind.Selenium.IntegrationTests.NetStandard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/SpecBind.Selenium.IntegrationTests.NetStandard.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/AlertTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/AlertTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/AlertTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/AlertTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/InputTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/InputTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/InputTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/InputTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/ListTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/ListTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/ListTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/ListTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/NavigationTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/NavigationTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/NavigationTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/NavigationTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/SelectionTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/SelectionTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/SelectionTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/SelectionTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/TableDriverValidationTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/TableDriverValidationTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/TableDriverValidationTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/TableDriverValidationTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/ValidationTests.feature" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/ValidationTests.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Features/ValidationTests.feature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/Features/ValidationTests.feature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/SpecBind.Selenium.IntegrationTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/SpecBind.Selenium.IntegrationTests.csproj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,256 +32,9 @@
   <component name="ChangesViewManager" show_ignored="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumBrowserFixture.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="632" column="53" selection-start-line="632" selection-start-column="53" selection-end-line="632" selection-end-column="53" />
-              <folding>
-                <marker date="1561895163641" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;SeleniumBrowserFixture.cs&quot;&gt; ... */" />
-                <marker date="1561895163641" expanded="true" signature="156:21035" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="166:559" ph="..." />
-                <marker date="1561895163641" expanded="true" signature="562:1130" ph="/// A test fixture for the Selenium Browser. ... " />
-                <marker date="1561895163641" expanded="true" signature="1209:21033" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="1215:1321" ph="/// Tests the getting of the page base type, expecting it to return null. ... " />
-                <marker date="1561895163641" expanded="true" signature="1377:1577" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="1499:1571" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="1581:1690" ph="/// Tests the getting of the Url property returns the value from the window. ... " />
-                <marker date="1561895163641" expanded="true" signature="1743:2056" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="1973:2050" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="2060:2168" ph="/// Tests the getting of the goto page calls the appropriate driver method. ... " />
-                <marker date="1561895163641" expanded="true" signature="2223:2621" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="2558:2587" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="2625:2703" ph="/// Tests the add cookie calls driver method. ... " />
-                <marker date="1561895163641" expanded="true" signature="2780:3542" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="3401:3487" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="3546:3624" ph="/// Tests the add cookie calls driver method. ... " />
-                <marker date="1561895163641" expanded="true" signature="3720:4565" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="4424:4510" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="4569:4637" ph="/// Tests the clear cookies method. ... " />
-                <marker date="1561895163641" expanded="true" signature="4679:5168" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="5079:5113" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="5172:5263" ph="/// Tests the GetCookie method returns a System.Net.Cookie ... " />
-                <marker date="1561895163641" expanded="true" signature="5325:6097" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="5900:5950" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="6101:6223" ph="/// Tests the GetCookie method returns null when a cookie with a given name was not found ... " />
-                <marker date="1561895163641" expanded="true" signature="6295:6906" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="6771:6825" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="6910:6974" ph="/// Tests the clear URL method. ... " />
-                <marker date="1561895163641" expanded="true" signature="7012:7370" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="7258:7358" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="7380:7489" ph="/// Tests the can get URL method without an alert box displayed. ... " />
-                <marker date="1561895163641" expanded="true" signature="7573:8299" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="8185:8287" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="8309:8415" ph="/// Tests the can get URL method with an alert box displayed. ... " />
-                <marker date="1561895163641" expanded="true" signature="8497:9292" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="9177:9280" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="9302:9406" ph="/// Tests the dismiss alert calls accept when ok is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="9476:9531" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="9535:9628" ph="/// Tests the dismiss alert calls accept when yes is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="9693:9749" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="9753:9848" ph="/// Tests the dismiss alert calls accept when retry is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="9915:9973" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="9977:10073" ph="/// Tests the dismiss alert calls accept when cancel is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="10141:10201" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="10205:10300" ph="/// Tests the dismiss alert calls accept when close is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="10367:10426" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="10430:10526" ph="/// Tests the dismiss alert calls accept when ignore is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="10594:10654" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="10658:10750" ph="/// Tests the dismiss alert calls accept when no is chosen. ... " />
-                <marker date="1561895163641" expanded="true" signature="10814:10870" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="10874:10986" ph="/// Tests the dismiss alert calls accept when ok is chosen after entering text. ... " />
-                <marker date="1561895163641" expanded="true" signature="11063:11620" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="11503:11565" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="11624:11733" ph="/// Tests the close method does nothing when the driver has not been called. ... " />
-                <marker date="1561895163641" expanded="true" signature="11806:11950" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="11917:11944" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="11954:12052" ph="/// Tests the close method is called if the driver has been used. ... " />
-                <marker date="1561895163641" expanded="true" signature="12118:12322" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="12289:12316" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="12326:12421" ph="/// Tests the getting the page location returns the url value. ... " />
-                <marker date="1561895163641" expanded="true" signature="12482:12721" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="12673:12715" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="12725:12836" ph="/// Tests the dispose method does nothing when the driver has not been called. ... " />
-                <marker date="1561895163641" expanded="true" signature="12910:13044" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="13032:13038" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="13048:13148" ph="/// Tests the dispose method is called if the driver has been used. ... " />
-                <marker date="1561895163641" expanded="true" signature="13221:13371" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="13359:13365" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="13375:13450" ph="/// Tests the dispose is only called once. ... " />
-                <marker date="1561895163641" expanded="true" signature="13518:13797" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="13656:13685" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="13801:13901" ph="/// Tests the execute script method for the browser when it exists. ... " />
-                <marker date="1561895163641" expanded="true" signature="13973:14395" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="14271:14389" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="14399:14499" ph="/// Tests the execute script method for the browser when it exists. ... " />
-                <marker date="1561895163641" expanded="true" signature="14584:15121" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="14919:15091" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="15125:15234" ph="/// Tests the execute script method when it doesn't support it returns null. ... " />
-                <marker date="1561895163641" expanded="true" signature="15318:15572" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="15456:15566" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="15576:15695" ph="/// Tests the take screenshot method does nothing when the interface is not supported. ... " />
-                <marker date="1561895163641" expanded="true" signature="15766:15998" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="15885:15992" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="16002:16121" ph="/// Tests the take screenshot method does nothing when the interface is not supported. ... " />
-                <marker date="1561895163641" expanded="true" signature="16199:16531" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="16418:16525" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="16535:16636" ph="/// Tests the take screenshot method performs the appropriate calls. ... " />
-                <marker date="1561895163641" expanded="true" signature="16717:17698" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="16941:17261" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="17093:17256" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="17425:17692" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="17463:17535" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="17547:17654" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="17605:17648" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="17782:18057" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="18139:18513" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="18625:18678" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="18765:18819" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="18929:19257" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="19021:19071" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="19204:19229" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="19330:19705" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="19398:19615" ph="/* NOTE: the SeleniumBrowser quits and disposes its driver as part of its destructor, ... */" />
-                <marker date="1561895163641" expanded="true" signature="19781:19842" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="19846:20073" ph="/// Tests the alert scenario. ... " />
-                <marker date="1561895163641" expanded="true" signature="20148:20866" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="20254:20330" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="20347:20424" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="20741:20787" ph="{...}" />
-                <marker date="1561895163641" expanded="true" signature="20876:20943" ph="/// A test page class. ... " />
-                <marker date="1561895163641" expanded="true" signature="21007:21027" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/testhost.dll.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBrowserFactory.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
-              <folding>
-                <marker date="1561904663746" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;SeleniumBrowserFactory.cs&quot;&gt; ... */" />
-                <marker date="1561904663746" expanded="true" signature="147:6301" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="160:410" ph="..." />
-                <marker date="1561904663746" expanded="true" signature="416:500" ph="/// A browser factory class for Selenium tests. ... " />
-                <marker date="1561904663746" expanded="true" signature="619:6299" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="694:820" ph="/// Initializes static members of the &lt;see cref=&quot;SeleniumBrowserFactory&quot;/&gt; class. ... " />
-                <marker date="1561904663746" expanded="true" signature="860:934" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="944:1070" ph="/// Initializes a new instance of the &lt;see cref=&quot;SeleniumBrowserFactory&quot;/&gt; class. ... " />
-                <marker date="1561904663746" expanded="true" signature="1150:1170" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="1180:1302" ph="/// Gets the selenium driver. ... " />
-                <marker date="1561904663746" expanded="true" signature="1386:1508" ph="/// Resets the driver. ... " />
-                <marker date="1561904663746" expanded="true" signature="1567:1930" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="1648:1755" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="1940:2349" ph="/// Creates the web driver. ... " />
-                <marker date="1561904663746" expanded="true" signature="2482:3506" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="3351:3468" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="3516:3645" ph="/// Creates the selenium driver. ... " />
-                <marker date="1561904663746" expanded="true" signature="3701:4257" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="3763:4247" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="4267:4396" ph="/// Validates the driver setup. ... " />
-                <marker date="1561904663746" expanded="true" signature="4464:4636" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="4646:4937" ph="/// Creates the browser. ... " />
-                <marker date="1561904663746" expanded="true" signature="5003:5447" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="5180:5287" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="5457:5587" ph="/// Sets up the driver folder. ... " />
-                <marker date="1561904663746" expanded="true" signature="5637:6293" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="5740:6164" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="5799:5888" ph="{...}" />
-                <marker date="1561904663746" expanded="true" signature="6200:6257" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumChromeDriver.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
-              <folding>
-                <marker date="1561904663947" expanded="true" signature="0:124" ph="/* &lt;copyright file=&quot;SeleniumChromeDriver.cs&quot;&gt; ... */" />
-                <marker date="1561904663947" expanded="true" signature="161:4247" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="174:318" ph="..." />
-                <marker date="1561904663947" expanded="true" signature="324:388" ph="/// Selenium Chrome Driver. ... " />
-                <marker date="1561904663947" expanded="true" signature="449:4245" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="624:749" ph="/// Initializes a new instance of the &lt;see cref=&quot;SeleniumChromeDriver&quot; /&gt; class. ... " />
-                <marker date="1561904663947" expanded="true" signature="787:866" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="925:1068" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="984:1058" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="1078:1218" ph="/// Gets or sets the additional arguments. ... " />
-                <marker date="1561904663947" expanded="true" signature="1293:1569" ph="/// Creates the web driver from the specified browser factory configuration. ... " />
-                <marker date="1561904663947" expanded="true" signature="1682:2866" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="1865:2258" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="2041:2244" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="2126:2226" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="2333:2422" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="2664:2782" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="2876:3032" ph="/// Downloads the chrome driver. ... " />
-                <marker date="1561904663947" expanded="true" signature="3100:3553" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="3199:3456" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="3563:3787" ph="/// Creates the driver options. ... " />
-                <marker date="1561904663947" expanded="true" signature="3911:4239" ph="{...}" />
-                <marker date="1561904663947" expanded="true" signature="4076:4194" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumDriverBase.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-              <folding>
-                <marker date="1560799854222" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;SeleniumDriverBase.cs&quot;&gt; ... */" />
-                <marker date="1560799854222" expanded="true" signature="159:7274" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="172:419" ph="..." />
-                <marker date="1560799854222" expanded="true" signature="425:502" ph="/// The base class for Selenium Drivers. ... " />
-                <marker date="1560799854222" expanded="true" signature="567:7272" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="644:767" ph="/// Initializes a new instance of the &lt;see cref=&quot;SeleniumDriverBase&quot; /&gt; class. ... " />
-                <marker date="1560799854222" expanded="true" signature="803:863" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="873:1077" ph="/// Gets or sets a value indicating whether to maximize the window. ... " />
-                <marker date="1560799854222" expanded="true" signature="1136:1370" ph="/// Creates the remote driver. ... " />
-                <marker date="1560799854222" expanded="true" signature="1460:2792" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="1587:1691" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="2280:2688" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="2472:2597" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="2802:3081" ph="/// Validates the specified browser factory configuration. ... " />
-                <marker date="1560799854222" expanded="true" signature="3194:4083" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="3347:3399" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="3454:3591" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="3645:4073" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="3707:3847" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="3868:3959" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="3993:4059" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="4093:4162" ph="/// Stops this instance. ... " />
-                <marker date="1560799854222" expanded="true" signature="4197:4217" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="4227:4510" ph="/// Downloads the specified file from the URL and extracts it to the path. ... " />
-                <marker date="1560799854222" expanded="true" signature="4607:5105" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="4682:5095" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="5115:5397" ph="/// Creates the local web driver from the specified browser factory configuration. ... " />
-                <marker date="1560799854222" expanded="true" signature="5521:5675" ph="/// Downloads the driver to the specified path. ... " />
-                <marker date="1560799854222" expanded="true" signature="5746:5970" ph="/// Creates the driver options. ... " />
-                <marker date="1560799854222" expanded="true" signature="6105:6489" ph="/// Gets the remote driver URI. ... " />
-                <marker date="1560799854222" expanded="true" signature="6585:7266" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="6680:6737" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="6884:6941" ph="{...}" />
-                <marker date="1560799854222" expanded="true" signature="7049:7225" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/App.config">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -312,9 +84,11 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Actions/ValidateComboBoxActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Actions/NavigationPostActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Actions/PageNavigationActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Actions/ValidateListRowCountActionFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BFA06CC1-3021-4FAA-A49F-A6D0D4259ABD/43/d0180c21/ChromeDriverService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/SetCookieAttributeFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/App.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/AlertBoxStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/WebDriverSupportFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/92979BC4-9F8E-45FD-93CF-BF57CF67BABD/17/NUnit3TestGeneratorProvider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -324,46 +98,46 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/PageExtensionsFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/testhost.dll.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/TokenStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/testhost.dll.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/testhost.dll.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/BrowserBaseFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/NativeAttributeBuilderFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumPageFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumTableDriverFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/NativeAttributeBuilderFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumPageFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumTableDriverFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/UriHelperFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/WebElementFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/LocatorBuilderFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumPageBuilderFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/WebElementFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/LocatorBuilderFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumPageBuilderFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/PageNavigationStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumBrowserFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumBrowserFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/PageBuilderBaseFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/WaitingStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/DataStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/ISeleniumDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/ISeleniumDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/PageMapperFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumChromeDriver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumChromeHeadlessDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/SeleniumChromeDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/SeleniumChromeHeadlessDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/WithExcludedAssemblyConfig.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumDriverBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/SeleniumDriverBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/StringLookupExtensionsFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/PageBuilderContextFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/TokenManagerFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumListElementWrapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/RemoteScreenshotWebDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumListElementWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/RemoteScreenshotWebDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/ValidationResultFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/ConfigurationFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/WebElement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumPageBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/WebElement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumPageBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/PageBaseFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/LocatorBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/LocatorBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/SelectionStepsFixture.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumPage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumPage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/ExceptionHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumTableDriver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBrowser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/NativeAttributeBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumTableDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBrowser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium/NativeAttributeBuilder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/WebDriverSupport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/BrowserFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind/BrowserSupport/ProxyLogger.cs" root0="FORCE_HIGHLIGHTING" />
@@ -399,6 +173,7 @@
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/BrowserSuport/ProxyLoggerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Validation/EnabledComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Validation/NotEnabledComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Validation/ItemValidationFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Validation/EndsWithComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SpecBind.Tests/Validation/GreaterThanEqualsComparerFixture.cs" root0="FORCE_HIGHLIGHTING" />
@@ -509,7 +284,26 @@
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpecBind.Selenium.IntegrationTests.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpecBind.Selenium.IntegrationTests.NetStandard" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Features" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Selenium" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="SpecBind" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Selenium" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="SpecBind.Selenium.IntegrationTests" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -550,12 +344,12 @@
       <updated>1560800022712</updated>
       <workItem from="1560800032738" duration="43511000" />
       <workItem from="1561887776094" duration="1522000" />
-      <workItem from="1561889362238" duration="9936000" />
+      <workItem from="1561889362238" duration="10825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54969000" />
+    <option name="totallyTimeSpent" value="55858000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -580,15 +374,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.49822274" weight="0.329849" />
+      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.49822274" visible="true" weight="0.28222996" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" />
       <window_info anchor="bottom" id="Azure Activity Log" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.329849" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Unit Tests" order="13" sideWeight="0.49881518" visible="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" sideWeight="0.49881518" weight="0.329849" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.329849" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5011848" side_tool="true" weight="0.329849" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50177723" side_tool="true" weight="0.329849" />
       <window_info anchor="bottom" id="Build" order="16" sideWeight="0.49822274" weight="0.329849" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -674,7 +468,7 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBase.cs</url>
+          <url>file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBase.cs</url>
           <line>103</line>
           <properties documentPath="$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBase.cs" initialLine="103">
             <startOffsets>
@@ -703,26 +497,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SpecBind.Plugin.NetStandard/Deployment/App.config.uninstall.xdt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Plugin.NetStandard/Deployment/App.config.install.xdt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Plugin.NetStandard/ISpecBindConfigurationProvider.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <marker date="1560799734425" expanded="true" signature="0:130" ph="/* &lt;copyright file=&quot;ISpecBindConfigurationProvider.cs&quot;&gt; ... */" />
-            <marker date="1560799734425" expanded="true" signature="157:530" ph="{...}" />
-            <marker date="1560799734425" expanded="true" signature="164:263" ph="/// A provider interface to get the type of driver being used. ... " />
-            <marker date="1560799734425" expanded="true" signature="315:528" ph="{...}" />
-            <marker date="1560799734425" expanded="true" signature="330:483" ph="/// Gets the type of the browser driver. ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Plugin.NetStandard/SpecBindTestGeneratorProvider.cs" />
     <entry file="file://$PROJECT_DIR$/SpecBind.Plugin.NetStandard/SpecBindGeneratorPlugin.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -743,7 +517,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/packages.config" />
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Properties/AssemblyInfo.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/Properties/AssemblyInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -773,7 +547,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SpecBind.Selenium.NetStandard.csproj">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SpecBind.Selenium.csproj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
@@ -790,7 +564,7 @@
     <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/packages.config">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/LocatorBuilderFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/LocatorBuilderFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
           <caret line="296" selection-start-line="296" selection-end-line="296" />
@@ -842,7 +616,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/NativeAttributeBuilderFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/NativeAttributeBuilderFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
@@ -874,7 +648,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumPageBuilderFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumPageBuilderFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2228">
           <caret line="308" column="21" lean-forward="true" selection-start-line="308" selection-start-column="21" selection-end-line="308" selection-end-column="21" />
@@ -975,7 +749,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumPageFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumPageFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11063">
           <caret line="748" column="4" selection-start-line="748" selection-start-column="4" selection-end-line="748" selection-end-column="4" />
@@ -1071,7 +845,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumTableDriverFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumTableDriverFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1408">
           <caret line="225" column="42" lean-forward="true" selection-start-line="225" selection-start-column="42" selection-end-line="225" selection-end-column="42" />
@@ -1097,7 +871,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/WebElementFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/WebElementFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-290">
           <caret line="454" selection-start-line="454" selection-end-line="454" />
@@ -1171,7 +945,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/Resources/TestResource.resx" />
     <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/Resources/TestResource.Designer.cs" />
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/LocatorBuilder.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/LocatorBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
@@ -1214,7 +988,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/NativeAttributeBuilder.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/NativeAttributeBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
@@ -1231,7 +1005,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/RemoteScreenshotWebDriver.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/RemoteScreenshotWebDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
@@ -1247,7 +1021,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumListElementWrapper.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumListElementWrapper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
@@ -1279,7 +1053,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumPage.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumPage.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
@@ -1379,7 +1153,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumPageBuilder.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumPageBuilder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
@@ -1415,7 +1189,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumTableDriver.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumTableDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
@@ -1449,7 +1223,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/WebElement.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/WebElement.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-173">
           <caret line="282" column="65" selection-start-line="282" selection-start-column="65" selection-end-line="282" selection-end-column="65" />
@@ -1532,7 +1306,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/ISeleniumDriver.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/ISeleniumDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
@@ -1550,7 +1324,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumChromeHeadlessDriver.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/SeleniumChromeHeadlessDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
@@ -1615,7 +1389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBrowser.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBrowser.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3141">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
@@ -1759,7 +1533,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBase.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBase.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="122" selection-start-line="122" selection-end-line="122" />
@@ -1814,7 +1588,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SpecBind.Selenium.Tests.NetStandard.csproj">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SpecBind.Selenium.Tests.csproj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
@@ -1952,7 +1726,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/SeleniumBrowserFixture.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/SeleniumBrowserFixture.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
           <caret line="632" column="53" selection-start-line="632" selection-start-column="53" selection-end-line="632" selection-end-column="53" />
@@ -2077,9 +1851,9 @@
     <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/Properties/AssemblyInfo.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumDriverBase.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/SeleniumDriverBase.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="270">
           <caret line="48" column="36" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
           <folding>
             <marker date="1560799854222" expanded="true" signature="0:122" ph="/* &lt;copyright file=&quot;SeleniumDriverBase.cs&quot;&gt; ... */" />
@@ -2120,7 +1894,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/Drivers/SeleniumChromeDriver.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/Drivers/SeleniumChromeDriver.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
@@ -2152,9 +1926,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.NetStandard/SeleniumBrowserFactory.cs">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium/SeleniumBrowserFactory.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="362">
           <caret line="108" column="63" selection-start-line="108" selection-start-column="63" selection-end-line="108" selection-end-column="63" />
           <folding>
             <marker date="1561904663746" expanded="true" signature="0:118" ph="/* &lt;copyright file=&quot;SeleniumBrowserFactory.cs&quot;&gt; ... */" />
@@ -2190,12 +1964,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests.NetStandard/testhost.dll.config">
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.Tests/testhost.dll.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/packages.config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests/Properties/AssemblyInfo.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1560799734493" expanded="true" signature="0:110" ph="/* &lt;copyright file=&quot;AssemblyInfo.cs&quot;&gt; ... */" />
+            <marker date="1560799734493" expanded="true" signature="118:174" ph="..." />
+            <marker date="1560799734493" expanded="true" signature="176:362" ph="/* General Information about an assembly is controlled through the following ... */" />
+            <marker date="1560799734493" expanded="true" signature="717:925" ph="/* Setting ComVisible to false makes the types in this assembly not visible ... */" />
+            <marker date="1560799734493" expanded="true" signature="1100:1425" ph="/* Version information for an assembly consists of the following four values: ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpecBind.Selenium.IntegrationTests.NetStandard/App.config">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

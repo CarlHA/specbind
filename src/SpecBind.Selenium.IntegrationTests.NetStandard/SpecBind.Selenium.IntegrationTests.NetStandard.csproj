@@ -1,10 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
         <AssemblyName>SpecBind.Selenium.IntegrationTests</AssemblyName>
         <RootNamespace>SpecBind.Selenium.IntegrationTests</RootNamespace>
         <LangVersion>7.3</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Selenium.Support" Version="3.141.0" />
+      <PackageReference Include="SpecFlow" Version="3.0.220" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SpecBind.Selenium\SpecBind.Selenium.csproj" />
+      <ProjectReference Include="..\SpecBind\SpecBind.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Features\AlertTests.feature.cs" />
+    </ItemGroup>
 
 </Project>
