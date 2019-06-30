@@ -6,8 +6,7 @@ using TechTalk.SpecFlow;
 
 namespace SpecBind.Selenium.IntegrationTests.Steps
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Helpers;
     using SpecBind.Pages;
@@ -39,6 +38,7 @@ namespace SpecBind.Selenium.IntegrationTests.Steps
         [When("I enter invalid data")]
         public void WhenIEnterInvalidData(Table data)
         {
+            
             try
             {
                 this.dataSteps.WhenIEnterDataInFieldsStep(data);
@@ -47,8 +47,9 @@ namespace SpecBind.Selenium.IntegrationTests.Steps
             {
                 return;
             }
-
-            throw new AssertFailedException("Step should have thrown a NoSuchElementException due to invalid data");
+            
+    
+            throw new AssertionException("Step should have thrown a NoSuchElementException due to invalid data");
         }
     }
 }

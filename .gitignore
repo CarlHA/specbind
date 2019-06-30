@@ -215,3 +215,5 @@ fabric.properties
 # JetBrains templates
 **___jb_tmp___
 
+
+src/SpecBind\.Selenium\.IntegrationTests/Features/*\.feature\.cs
