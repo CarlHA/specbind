@@ -18,6 +18,7 @@ namespace SpecBind.Tests
     using SpecBind.Pages;
     using SpecBind.Validation;
     using Support;
+    using TechTalk.SpecFlow;
     using TechTalk.SpecFlow.Tracing;
 
     /// <summary>
@@ -33,7 +34,6 @@ namespace SpecBind.Tests
         public void TestInitializeTests()
         {
             var logger = new Mock<ILogger>();
-
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
             container.Setup(c => c.RegisterInstanceAs(It.IsAny<BrowserFactory>(), null, true));
             container.Setup(c => c.RegisterFactoryAs(It.IsAny<Func<IObjectContainer, IBrowser>>(), null));
