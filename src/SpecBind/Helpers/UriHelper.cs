@@ -23,9 +23,9 @@ namespace SpecBind.Helpers
 		/// </summary>
 		static UriHelper()
 		{
-			var configSection = SettingHelper.GetConfigurationSection();
+            var configSection = SettingHelper.GetConfigurationSection();
 
-			Uri parsedUri;
+            Uri parsedUri;
             var envValue = SettingHelper.GetEnvironmentVariable(EnvironmentSettingName);
             if (!string.IsNullOrEmpty(envValue) && Uri.TryCreate(configSection.Application.StartUrl, UriKind.Absolute, out parsedUri))
             {

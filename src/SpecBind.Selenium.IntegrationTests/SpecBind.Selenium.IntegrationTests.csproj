@@ -8,10 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="NUnit" Version="3.12.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+        <PackageReference Include="NUnit" Version="3.12.0" />
       <PackageReference Include="Selenium.Support" Version="3.141.0" />
       <PackageReference Include="SpecFlow" Version="3.0.220" />
-      <PackageReference Include="SpecFlow.NUnit.Runners" Version="3.0.220" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
       <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.220" />
     </ItemGroup>
 
@@ -28,6 +29,12 @@
       <Content Include="Features\SelectionTests.feature" />
       <Content Include="Features\TableDriverValidationTests.feature" />
       <Content Include="Features\ValidationTests.feature" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="specflow.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

@@ -10,8 +10,6 @@ namespace SpecBind.ActionPipeline
     using System.Reflection;
 
     using BoDi;
-
-    using SpecBind.Configuration;
     using SpecBind.Helpers;
     using SpecBind.Validation;
 
@@ -94,7 +92,7 @@ namespace SpecBind.ActionPipeline
 	    public void Initialize()
         {
             var configSection = SettingHelper.GetConfigurationSection();
-            var excludedAssemblies = configSection.Application.ExcludedAssemblies.Cast<AssemblyElement>().Select(a => a.Name);
+            var excludedAssemblies = configSection.Application.ExcludedAssemblies.Select(a => a.Name);
             // Get all items from the current assemblies
             var assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(a => !a.IsDynamic && !a.GlobalAssemblyCache && !excludedAssemblies.Contains(a.FullName));
             foreach (Assembly assembly in assemblies)

@@ -15,10 +15,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="WithExcludedAssemblyConfig.config">
+      <None Update="specBind.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="testhost.dll.config">
+      <None Update="WithExcludedAssemblyConfig.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>

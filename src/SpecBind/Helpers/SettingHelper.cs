@@ -8,22 +8,30 @@ namespace SpecBind.Helpers
 	using System.Configuration;
 	using System.IO;
 	using System.Resources;
-
-	using SpecBind.Configuration;
+    using Microsoft.Extensions.Configuration;
+    using SpecBind.Configuration;
 
 	/// <summary>A helper class to get settings from the configuration file.</summary>
 	public static class SettingHelper
 	{
-		#region Methods
+        private static readonly IConfigurationRoot ConfigurationRoot;
+
+        static SettingHelper()
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("specBind.json", optional: false, reloadOnChange: true);
+            ConfigurationRoot = builder.Build();
+        }
 
 		/// <summary>
 		/// Gets the configuration section.
 		/// </summary>
 		/// <returns>The configuration section or <c>null</c>.</returns>
-		public static ConfigurationSectionHandler GetConfigurationSection()
+		public static SpecBindConfiguration GetConfigurationSection()
 		{
-			return ConfigurationManager.GetSection("specBind") as ConfigurationSectionHandler;
-		}
+            return ConfigurationRoot.GetSection("specBind").Get<SpecBindConfiguration>();
+ 		}
 
         /// <summary>
         /// Gets an environment variable from the system. If it does not exist, <paramref name="defaultValue"/> is returned.
@@ -105,6 +113,5 @@ namespace SpecBind.Helpers
 			}
 		}
 
-		#endregion
 	}
 }

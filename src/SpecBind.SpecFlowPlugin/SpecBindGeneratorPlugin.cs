@@ -18,16 +18,6 @@ namespace SpecBind.Plugin
     // ReSharper disable once InconsistentNaming
     public class SpecBindGeneratorPlugin : IGeneratorPlugin
     {
-        /// <summary>
-        /// Initializes the plugin to change the behavior of the generator
-        /// </summary>
-        /// <param name="generatorPluginEvents">The generator plugin events.</param>
-        /// <param name="generatorPluginParameters">Parameters to the generator.</param>
-        public void Initialize(GeneratorPluginEvents generatorPluginEvents, GeneratorPluginParameters generatorPluginParameters)
-        {
-            generatorPluginEvents.CustomizeDependencies += CustomizeDependencies;
-        }
-
         private static void CustomizeDependencies(object sender, CustomizeDependenciesEventArgs eventArgs)
         {
             var container = eventArgs.ObjectContainer;
