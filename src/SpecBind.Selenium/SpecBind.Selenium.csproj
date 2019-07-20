@@ -6,6 +6,16 @@
         <RootNamespace>SpecBind.Selenium</RootNamespace>
         <LangVersion>7.3</LangVersion>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <Authors>dpiessens</Authors>
+        <PackageVersion>$version$</PackageVersion>
+        <Copyright>dpiessens</Copyright>
+        <NeutralLanguage>en-GB</NeutralLanguage>
+        <Owners>dpiessens</Owners>
+        <Summary>An extension to SpecBind that allows it to integrate with Selenium</Summary>
+        <Title>SpecBind Selenium Module</Title>
+        <Description>An extension to SpecBind that allows it to integrate with Selenium</Description>
+        <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/CarlHA/specbind</PackageProjectUrl>
     </PropertyGroup>
 
     <ItemGroup>

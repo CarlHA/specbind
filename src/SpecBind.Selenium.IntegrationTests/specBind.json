@@ -8,9 +8,9 @@
             "browserType": "chrome",
             "reuseBrowser": "true",
             "validateWebDriver": true,
-            //"settings": {
-            //    "ChromeArguments": "--headless"
-            //}
+            "settings": {
+                "ChromeArguments": "--headless"
+            }
         }
     }
 }
