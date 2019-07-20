@@ -108,26 +108,7 @@ namespace SpecBind.BrowserSupport
         /// <returns>The browser factory configuration.</returns>
         protected static BrowserFactoryConfiguration LoadConfiguration()
         {
-            //BrowserFactoryConfiguration configuration = new BrowserFactoryConfiguration();
-
             var configSection = SettingHelper.GetConfigurationSection();
-
-            //if (configSection != null && configSection.BrowserFactory != null)
-            //{
-            //    BrowserFactoryConfigurationElement browserFactoryConfiguration = configSection.BrowserFactory;
-            //    configuration.BrowserType = GetBrowserType(browserFactoryConfiguration.BrowserType);
-            //    configuration.CreateScreenshotOnExit = browserFactoryConfiguration.CreateScreenshotOnExit;
-            //    configuration.ElementLocateTimeout = browserFactoryConfiguration.ElementLocateTimeout;
-            //    configuration.EnsureCleanSession = browserFactoryConfiguration.EnsureCleanSession;
-            //    configuration.PageLoadTimeout = browserFactoryConfiguration.PageLoadTimeout;
-            //    configuration.Provider = browserFactoryConfiguration.Provider;
-            //    configuration.ReuseBrowser = browserFactoryConfiguration.ReuseBrowser;
-            //    configuration.ValidateWebDriver = browserFactoryConfiguration.ValidateWebDriver;
-            //    configuration.WaitForPendingAjaxCallsVia = browserFactoryConfiguration.WaitForPendingAjaxCallsVia;
-            //    configuration.Settings = browserFactoryConfiguration.Settings.ToKeyValuePairs().ToDictionary(x => x.Key, x => x.Value);
-            //    configuration.UserProfilePreferences = browserFactoryConfiguration.UserProfilePreferences.ToKeyValuePairs().ToDictionary(x => x.Key, x => x.Value);
-            //}
-
             return configSection.BrowserFactory;
         }
 

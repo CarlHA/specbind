@@ -11,6 +11,7 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
         <PackageReference Include="NUnit" Version="3.12.0" />
       <PackageReference Include="Selenium.Support" Version="3.141.0" />
+   <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="75.0.3770.90" />
       <PackageReference Include="SpecFlow" Version="3.0.220" />
         <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
       <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.220" />
@@ -34,6 +35,9 @@
     <ItemGroup>
       <None Update="specflow.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="specBind.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 

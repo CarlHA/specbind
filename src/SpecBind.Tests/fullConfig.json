@@ -1,0 +1,22 @@
+﻿{
+    "specBind": {
+        "application": {
+            "startUrl": "http://localhost",
+            "waitForStillElementBeforeClicking": true,
+            "RetryValidationUntilTimeout": true,
+            "excludedAssemblies": [
+                {
+                    "name": "MyCoolApp, Version=1.2.3.0, Culture=neutral, PublicKeyToken=null"
+                }
+            ]
+        },
+        "browserFactory": {
+            "provider": "SpecBind.Tests.Support.MockBrowserFactory, SpecBind.Tests",
+            "browserType": "ChromeHeadless",
+            "settings": {
+                "IgnoreProtectedModeSettings": true
+            }
+        }
+    }
+}
+ß

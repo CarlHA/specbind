@@ -9,7 +9,7 @@ namespace SpecBind.Selenium.IntegrationTests.Pages
     /// <summary>
     /// The instructors page.
     /// </summary>
-    [PageNavigation("/Instructor")]
+    [PageNavigation("/Instructors")]
     public class InstructorSearchPage
     {
         /// <summary>

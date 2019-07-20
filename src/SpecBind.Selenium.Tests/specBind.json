@@ -1,0 +1,14 @@
+﻿{
+    "specBind": {
+        "application": {
+            "startUrl": "http://localhost:2222"
+        },
+        "browserFactory": {
+            "provider": "SpecBind.Tests.Support.MockBrowserFactory, SpecBind.Tests",
+            "browserType": "ChromeHeadless",
+            "settings": {
+                "IgnoreProtectedModeSettings": true
+            }
+        }
+    }
+}

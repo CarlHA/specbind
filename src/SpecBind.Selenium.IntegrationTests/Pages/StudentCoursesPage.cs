@@ -11,7 +11,7 @@ namespace SpecBind.Selenium.IntegrationTests.Pages
 	/// <summary>
 	/// The student courses page
 	/// </summary>
-	[PageNavigation("/Student/Courses")]
+	[PageNavigation("/Students/Courses")]
 	public class StudentCoursesPage
 	{
         /// <summary>

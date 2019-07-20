@@ -28,8 +28,8 @@
       <None Remove="chromedriver" />
      </ItemGroup>
     <ItemGroup>
-        <None Update="testhost.dll.config">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <None Update="specBind.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>
 
