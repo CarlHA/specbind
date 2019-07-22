@@ -6,10 +6,8 @@ namespace SpecBind.Tests.Actions
 {
 	using System.Linq;
 
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using Moq;
-
+	using NUnit.Framework;
 	using SpecBind.ActionPipeline;
 	using SpecBind.Actions;
 	using SpecBind.Pages;
@@ -19,13 +17,13 @@ namespace SpecBind.Tests.Actions
 	/// <summary>
 	/// A test fixture for a validate item action
 	/// </summary>
-	[TestClass]
+	[TestFixture]
     public class ValidateItemActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new ValidateItemAction();
@@ -36,7 +34,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method with a property that does not exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistReturnsFailure()
         {
             IPropertyData propertyData;
@@ -59,7 +57,7 @@ namespace SpecBind.Tests.Actions
             Assert.AreEqual(false, result.Success);
 
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "doesnotexist");
+            StringAssert.Contains("doesnotexist", result.Exception.Message);
 
             locator.VerifyAll();
         }
@@ -67,7 +65,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method with a property that does not exist on the model fails.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistAndIsDoesNotExistComparerReturnsFailure()
         {
             IPropertyData propertyData;
@@ -90,7 +88,7 @@ namespace SpecBind.Tests.Actions
             Assert.AreEqual(false, result.Success);
 
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "[Not Found]");
+            StringAssert.Contains("[Not Found]", result.Exception.Message);
 
             locator.VerifyAll();
         }
@@ -98,7 +96,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method with a property that exists and is valid returns a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenFieldExistsAndIsValidReturnsSuccess()
         {
             var table = new ValidationTable();
@@ -131,7 +129,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method with a property that exists and is valid returns a failure result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenFieldExistsButIsNotValidReturnsFailure()
         {
             var table = new ValidationTable();
@@ -158,7 +156,7 @@ namespace SpecBind.Tests.Actions
 
             Assert.AreEqual(false, result.Success);
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "wrong");
+            StringAssert.Contains("wrong", result.Exception.Message);
 
             locator.VerifyAll();
         }
@@ -168,7 +166,7 @@ namespace SpecBind.Tests.Actions
 		/// Tests the RetryValidationUntilTimeout configuration attribute,
 		/// with initial failure but subsequent success returned before the timeout.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestRetryValidationUntilTimeoutWithEventualSuccessBeforeTimeout()
 		{
 			try
@@ -214,7 +212,7 @@ namespace SpecBind.Tests.Actions
 		/// Tests the RetryValidationUntilTimeout configuration attribute,
 		/// with initial failure but subsequent success returned before the timeout.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestRetryValidationUntilTimeoutWithNoSuccessBeforeTimeout()
 		{
 			try

@@ -5,10 +5,8 @@ namespace SpecBind.Tests.Validation
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Pages;
     using SpecBind.Validation;
 

@@ -6,10 +6,8 @@ namespace SpecBind.Tests.Actions
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -17,13 +15,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a button click action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ValidateListRowCountActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var rowCountAction = new ValidateListRowCountAction();
@@ -34,8 +32,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         ///     Tests the fill field with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistThrowsAnException()
         {
             var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -47,14 +44,15 @@ namespace SpecBind.Tests.Actions
                                         };
 
             var context = new ValidateListRowCountAction.ValidateListRowCountContext("doesnotexist", NumericComparisonType.Equals, 1);
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => rowCountAction.Execute(context), e => locator.VerifyAll());
+                () => rowCountAction.Execute(context), e => locator.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the execute method when the property is not a list returns a failure result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyIsNotAListReturnsFailureResult()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -82,7 +80,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns a validation failure returns an error.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsErrorsReturnsFailureResult()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -112,7 +110,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns no validation failures returns an successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsSuccessReturnsASuccess()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);

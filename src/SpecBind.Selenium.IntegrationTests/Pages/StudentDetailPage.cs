@@ -12,7 +12,7 @@ namespace SpecBind.Selenium.IntegrationTests.Pages
     /// <summary>
     /// The student detail page
     /// </summary>
-    [PageNavigation("/Student/Details/[0-9]+", UrlTemplate = "/Student/Details/{Id}")]
+    [PageNavigation("/Students/Details/[0-9]+", UrlTemplate = "/Students/Details/{Id}")]
     public class StudentDetailPage
     {
         /// <summary>

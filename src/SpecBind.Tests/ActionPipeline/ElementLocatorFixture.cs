@@ -6,23 +6,21 @@ namespace SpecBind.Tests.ActionPipeline
 {
 	using System;
 
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using Moq;
-
+	using NUnit.Framework;
 	using SpecBind.ActionPipeline;
 	using SpecBind.Pages;
 
 	/// <summary>
 	/// A test fixture for the ElementLocator class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class ElementLocatorFixture
 	{
 		/// <summary>
 		/// Tests the get element method when the element get is successful.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetElementWhenElementGetIsSuccessful()
 		{
 			var resultPropertyData = new Mock<IPropertyData>().Object;
@@ -48,8 +46,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests the get element method when the element get fails.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ElementExecuteException))]
+		[Test]
 		public void TestGetElementWhenElementGetFails()
 		{
 			IPropertyData resultPropertyData;
@@ -65,22 +62,25 @@ namespace SpecBind.Tests.ActionPipeline
 
 			var locator = new ElementLocator(page.Object, new[] { locatorAction.Object });
 
-			try
-			{
-				locator.GetElement("MyElement");
-			}
-			catch (ElementExecuteException)
-			{
-				page.VerifyAll();
-				locatorAction.VerifyAll();
-				throw;
-			}
+			Assert.Throws<ElementExecuteException>(() =>
+			                                       {
+				                                       try
+				                                       {
+					                                       locator.GetElement("MyElement");
+				                                       }
+				                                       catch (ElementExecuteException)
+				                                       {
+					                                       page.VerifyAll();
+					                                       locatorAction.VerifyAll();
+					                                       throw;
+				                                       }
+			                                       });
 		}
 
 		/// <summary>
 		/// Tests the try get element method when the element get is successful.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetElementWhenElementGetIsSuccessful()
 		{
 			var resultPropertyData = new Mock<IPropertyData>().Object;
@@ -108,7 +108,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests the try get element method when the element get fails.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetElementWhenElementGetFails()
 		{
 			IPropertyData resultPropertyData;
@@ -135,7 +135,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests the get property method when the property get is successful.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetPropertyWhenPropertyGetIsSuccessful()
 		{
 			var resultPropertyData = new Mock<IPropertyData>().Object;
@@ -161,8 +161,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests the get Property method when the property get fails.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ElementExecuteException))]
+		[Test]
 		public void TestGetPropertyWhenPropertyGetFails()
 		{
 			IPropertyData resultPropertyData;
@@ -178,22 +177,25 @@ namespace SpecBind.Tests.ActionPipeline
 
 			var locator = new ElementLocator(page.Object, new[] { locatorAction.Object });
 
-			try
-			{
-				locator.GetProperty("MyProperty");
-			}
-			catch (ElementExecuteException)
-			{
-				page.VerifyAll();
-				locatorAction.VerifyAll();
-				throw;
-			}
+			Assert.Throws<ElementExecuteException>(() =>
+			                                       {
+				                                       try
+				                                       {
+					                                       locator.GetProperty("MyProperty");
+				                                       }
+				                                       catch (ElementExecuteException)
+				                                       {
+					                                       page.VerifyAll();
+					                                       locatorAction.VerifyAll();
+					                                       throw;
+				                                       }
+			                                       });
 		}
 
 		/// <summary>
 		/// Tests the try get Property method when the property get is successful.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetPropertyWhenPropertyGetIsSuccessful()
 		{
 			var resultPropertyData = new Mock<IPropertyData>().Object;
@@ -221,7 +223,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests the try get Property method when the property get fails.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetPropertyWhenPropertyGetFails()
 		{
 			IPropertyData resultPropertyData;

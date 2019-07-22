@@ -17,6 +17,7 @@ namespace SpecBind.BrowserSupport
     using SpecBind.Pages;
 
     using TechTalk.SpecFlow;
+    using TechTalk.SpecFlow.Infrastructure;
     using TechTalk.SpecFlow.Tracing;
 
     /// <summary>
@@ -75,9 +76,9 @@ namespace SpecBind.BrowserSupport
         /// <summary>
         /// Things to do before each feature.
         /// </summary>
-        public static void BeforeFeature()
+        public static void BeforeFeature(FeatureContext featureContext)
         {
-            LogDebug(() => "Feature: " + FeatureContext.Current.FeatureInfo.Title);
+            LogDebug(() => "Feature: " + featureContext.FeatureInfo.Title);
         }
 
         /// <summary>
@@ -87,11 +88,13 @@ namespace SpecBind.BrowserSupport
         /// <returns>The browser.</returns>
         public static IBrowser InitializeBrowser(IObjectContainer objectContainer)
         {
+            var scenarioContext = objectContainer.Resolve<IContextManager>().ScenarioContext;
+
             bool reusingBrowser = true;
             if (!browserFactory.Configuration.ReuseBrowser || browser == null || browser.IsDisposed)
             {
                 browser = browserFactory.GetBrowser();
-                ScenarioContext.Current.Set(browser, "CurrentBrowser");
+                scenarioContext.Set(browser, "CurrentBrowser");
                 reusingBrowser = false;
             }
 
@@ -148,7 +151,7 @@ namespace SpecBind.BrowserSupport
                 return;
             }
 
-            if (!browser.Url.StartsWith("http"))
+            if (!browser.Url.StartsWith("http", StringComparison.Ordinal))
             {
                 return;
             }
@@ -208,7 +211,7 @@ namespace SpecBind.BrowserSupport
                 return;
             }
 
-            if (!browser.Url.StartsWith("http"))
+            if (!browser.Url.StartsWith("http", StringComparison.Ordinal))
             {
                 return;
             }
@@ -287,9 +290,9 @@ namespace SpecBind.BrowserSupport
         /// Things to do before each scenario.
         /// </summary>
         [BeforeScenario(Order = 100)]
-        public void BeforeScenario()
+        public void BeforeScenario(ScenarioContext scenarioContext)
         {
-            LogDebug(() => "Scenario: " + ScenarioContext.Current.ScenarioInfo.Title);
+            LogDebug(() => "Scenario: " + scenarioContext.ScenarioInfo.Title);
             this.InitializeDriver();
         }
 

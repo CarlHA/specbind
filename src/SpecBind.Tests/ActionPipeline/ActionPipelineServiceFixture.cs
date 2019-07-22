@@ -7,10 +7,8 @@ namespace SpecBind.Tests.ActionPipeline
 	using System;
 	using System.Collections.Generic;
 
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using Moq;
-
+	using NUnit.Framework;
 	using SpecBind.ActionPipeline;
 	using SpecBind.Actions;
 	using SpecBind.Pages;
@@ -18,13 +16,13 @@ namespace SpecBind.Tests.ActionPipeline
 	/// <summary>
 	/// A test fixture for the ActionPipelineService.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class ActionPipelineServiceFixture
 	{
 		/// <summary>
 		/// Tests the pipeline call invokes all pipeline steps and does not fail.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPipelineCallInvokesAllPipelineStepsAndDoesNotFail()
 		{
 		    var context = new ActionContext("MyProperty");
@@ -46,6 +44,7 @@ namespace SpecBind.Tests.ActionPipeline
 			repository.Setup(r => r.GetPreActions()).Returns(new[] { preAction.Object });
 			repository.Setup(r => r.GetPostActions()).Returns(new[] { postAction.Object });
 			repository.Setup(r => r.GetLocatorActions()).Returns(new List<ILocatorAction>());
+			repository.Setup(r => r.Initialize());
 
 			var service = new ActionPipelineService(repository.Object);
 
@@ -65,7 +64,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests the pipeline call invokes all pipeline steps and does not fail.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPipelineCallInvokesAllPipelineStepsAndSetsStatusToFailedWhenExceptionIsThrown()
 		{
             var context = new ActionContext("MyProperty");
@@ -87,6 +86,7 @@ namespace SpecBind.Tests.ActionPipeline
 			repository.Setup(r => r.GetPreActions()).Returns(new[] { preAction.Object });
 			repository.Setup(r => r.GetPostActions()).Returns(new[] { postAction.Object });
 			repository.Setup(r => r.GetLocatorActions()).Returns(new List<ILocatorAction>());
+			repository.Setup(r => r.Initialize());
 
 			var service = new ActionPipelineService(repository.Object);
 
@@ -106,7 +106,7 @@ namespace SpecBind.Tests.ActionPipeline
 	    /// <summary>
 	    /// Tests the pipeline call invokes all pre-steps even if one fails and then throws that failure.
 	    /// </summary>
-	    [TestMethod]
+	    [Test]
 	    public void TestPipelineCallInvokesAllPrePipelineStepsIfTheyExistAndThrowsExceptionOnSingleFailure()
 	    {
 	        var context = new ActionContext("MyProperty");
@@ -127,6 +127,7 @@ namespace SpecBind.Tests.ActionPipeline
             var repository = new Mock<IActionRepository>(MockBehavior.Strict);
 	        repository.Setup(r => r.GetPreActions()).Returns(new[] { preAction1.Object, preAction2.Object });
 	        repository.Setup(r => r.GetLocatorActions()).Returns(new List<ILocatorAction>());
+	        repository.Setup(r => r.Initialize());
 
 	        var service = new ActionPipelineService(repository.Object);
 
@@ -146,7 +147,7 @@ namespace SpecBind.Tests.ActionPipeline
 	    /// <summary>
 	    /// Tests the pipeline call invokes all pre-steps even if one fails and then throws an aggregate exception.
 	    /// </summary>
-	    [TestMethod]
+	    [Test]
 	    public void TestPipelineCallInvokesAllPrePipelineStepsIfTheyExistAndThrowsAggregateExceptionOnMultipleFailures()
 	    {
 	        var context = new ActionContext("MyProperty");
@@ -168,6 +169,7 @@ namespace SpecBind.Tests.ActionPipeline
 	        var repository = new Mock<IActionRepository>(MockBehavior.Strict);
 	        repository.Setup(r => r.GetPreActions()).Returns(new[] { preAction1.Object, preAction2.Object });
 	        repository.Setup(r => r.GetLocatorActions()).Returns(new List<ILocatorAction>());
+	        repository.Setup(r => r.Initialize());
 
 	        var service = new ActionPipelineService(repository.Object);
 
@@ -176,7 +178,7 @@ namespace SpecBind.Tests.ActionPipeline
 	        Assert.IsNotNull(result);
 	        Assert.AreEqual(false, result.Success);
 
-            Assert.IsInstanceOfType(result.Exception, typeof(AggregateException));
+            Assert.IsInstanceOf(typeof(AggregateException), result.Exception);
 
 	        var aggregateException = (AggregateException)result.Exception;
             Assert.AreSame(exception1, aggregateException.InnerExceptions[0]);
@@ -192,7 +194,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the pipeline call creates the action, invokes all pipeline steps and does not fail.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestPipelineCallCreatesActionAndInvokesAllPipelineStepsAndDoesNotFail()
         {
             var context = new ActionContext("MyProperty");
@@ -210,6 +212,7 @@ namespace SpecBind.Tests.ActionPipeline
             repository.Setup(r => r.GetPostActions()).Returns(new[] { postAction.Object });
             repository.Setup(r => r.GetLocatorActions()).Returns(new List<ILocatorAction>());
             repository.Setup(r => r.CreateAction<MockAction>()).Returns(new MockAction());
+            repository.Setup(r => r.Initialize());
 
             var service = new ActionPipelineService(repository.Object);
 

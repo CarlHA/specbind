@@ -4,24 +4,22 @@
 
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Moq;
-
-    using SpecBind.ActionPipeline;
+     using Moq;
+     using NUnit.Framework;
+     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for a button click action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class GetElementAsPageActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new GetElementAsPageAction();
@@ -32,8 +30,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the get element as page with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestGetElementAsPageFieldDoesNotExist()
         {
             var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -46,14 +43,15 @@ namespace SpecBind.Tests.Actions
 
             var context = new ActionContext("doesnotexist");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => buttonClickAction.Execute(context), e => locator.VerifyAll());
+                () => buttonClickAction.Execute(context), e => locator.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the get element as page with an element that exists is a list returns a failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementAsPageWhenPageIsAListReturnsAFailure()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -74,7 +72,7 @@ namespace SpecBind.Tests.Actions
             Assert.AreEqual(false, result.Success);
 
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "MyProperty");
+            StringAssert.Contains("MyProperty", result.Exception.Message);
 
             locator.VerifyAll();
             propData.VerifyAll();
@@ -83,7 +81,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the get element as page with an element that exists but returns null returns a failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementAsPageWhenPageIsNullReturnsAFailure()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -114,7 +112,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the get element as page with an element that exists is returned.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementAsPageSuccess()
         {
             var page = new Mock<IPage>(MockBehavior.Strict);

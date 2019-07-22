@@ -6,22 +6,20 @@ namespace SpecBind.Tests
 {
 	using System;
 	using System.Text;
-
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
+	using NUnit.Framework;
 	using SpecBind.Pages;
 	using SpecBind.Tests.Validation;
 
     /// <summary>
 	/// A test fixture for the ValidationResult class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class ValidationResultFixture
 	{
 		/// <summary>
 		/// Tests the get comparison table by rule when multiple results throws exception.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(InvalidOperationException))]
+		[Test]
 		public void TestGetComparisonTableByRuleWhenMultipleResultsThrowsException()
 		{
 			var validations = new[] { ItemValidationHelper.Create("MyField", "Something") };
@@ -30,13 +28,13 @@ namespace SpecBind.Tests
 			validationResult.CheckedItems.Add(new ValidationItemResult());
 			validationResult.CheckedItems.Add(new ValidationItemResult());
 
-			validationResult.GetComparisonTableByRule();
+			Assert.Throws<InvalidOperationException>(() => validationResult.GetComparisonTableByRule());
 		}
 
 		/// <summary>
 		/// Tests the get comparison table by rule with valid fields.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableByRuleWithValidFields()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");
@@ -59,7 +57,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the get comparison table by rule with invalid field value.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableByRuleWithInvalidFieldValue()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");
@@ -82,7 +80,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the get comparison table by rule with missing field.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableByRuleWithMissingField()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");
@@ -105,7 +103,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the get comparison table with valid fields.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableWithValidFields()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");
@@ -128,7 +126,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the get comparison table with invalid fields.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableWithInvalidFields()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");
@@ -151,7 +149,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the get comparison table with invalid null fields.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableWithInvalidNullFields()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");
@@ -174,7 +172,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the get comparison table with missing fields.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetComparisonTableWithMissingFields()
 		{
             var validation = ItemValidationHelper.Create("MyField", "Something");

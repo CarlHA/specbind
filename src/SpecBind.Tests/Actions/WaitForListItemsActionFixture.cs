@@ -6,10 +6,8 @@ namespace SpecBind.Tests.Actions
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -17,13 +15,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a wait for list items action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class WaitForListItemsActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new WaitForListItemsAction(null);
@@ -34,8 +32,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with an element that does not exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestExecuteWhenElementIsNotFoundThrowsAnException()
         {
             var logger = new Mock<ILogger>();
@@ -49,15 +46,16 @@ namespace SpecBind.Tests.Actions
             var action = new WaitForListItemsAction(logger.Object) { ElementLocator = locator.Object };
             var context = new WaitForListItemsAction.WaitForListItemsContext("doesnotexist", null);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => action.Execute(context),
-                e => locator.VerifyAll());
+                e => locator.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the action execute with an element that does not exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenElementIsNotAListReturnsAFailure()
         {
             var logger = new Mock<ILogger>();
@@ -83,7 +81,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a list that contains an item.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageIsFoundAndUrlMatchesReturnsSuccess()
         {
             var logger = new Mock<ILogger>();
@@ -111,7 +109,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a page exists and matches the url after an initial failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageIsFoundAndUrlMatchesAfterInitialFailureReturnsSuccess()
         {
             var logger = new Mock<ILogger>(MockBehavior.Strict);
@@ -149,7 +147,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a page exists but never matches the URL returns a failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageIsFoundAndUrlDoesntMatchAfterTimeoutReturnsFailure()
         {
             var logger = new Mock<ILogger>(MockBehavior.Strict);

@@ -6,10 +6,8 @@ namespace SpecBind.Tests.Actions
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Helpers;
@@ -18,13 +16,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a button click action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SetTokenFromValueActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var getItemAction = new SetTokenFromValueAction(null);
@@ -35,8 +33,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the get item action with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistThenExceptionIsThrown()
         {
             var tokenManager = new Mock<ITokenManager>(MockBehavior.Strict);
@@ -50,20 +47,20 @@ namespace SpecBind.Tests.Actions
                                         };
 
             var context = new SetTokenFromValueAction.TokenFieldContext("doesnotexist", "mytoken");
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => getItemAction.Execute(context),
                 e =>
                     {
                         locator.VerifyAll();
                         tokenManager.VerifyAll();
-                    });
+                    }));
         }
 
         /// <summary>
         /// Tests the get item action with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [Test]
         public void TestExecuteWhenContextTypeIsInvalidThenAnExceptionIsThrown()
         {
             var tokenManager = new Mock<ITokenManager>(MockBehavior.Strict);
@@ -75,21 +72,22 @@ namespace SpecBind.Tests.Actions
             };
 
             var context = new ActionContext("doesnotexist");
+            Assert.Throws<InvalidOperationException>(() => 
             ExceptionHelper.SetupForException<InvalidOperationException>(
                 () => getItemAction.Execute(context),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "TokenFieldContext");
+                    StringAssert.Contains("TokenFieldContext", e.Message);
 
                     locator.VerifyAll();
                     tokenManager.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the get item action with a property that exists.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemAndSetTokenSuccess()
         {
             var tokenManager = new Mock<ITokenManager>(MockBehavior.Strict);

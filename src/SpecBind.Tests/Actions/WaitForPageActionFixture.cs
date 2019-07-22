@@ -7,10 +7,8 @@ namespace SpecBind.Tests.Actions
     using System;
     using System.Diagnostics;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
     using SpecBind.Pages;
@@ -18,13 +16,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a wait for page action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class WaitForPageActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new WaitForPageAction(null, null, null);
@@ -35,7 +33,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a page that doesn't exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageDoesNotExistReturnsAFailure()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -60,7 +58,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a page exists and matches the url.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageIsFoundAndUrlMatchesReturnsSuccess()
         {
             var page = new Mock<IPage>(MockBehavior.Strict);
@@ -90,7 +88,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a page exists and matches the url after an initial failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageIsFoundAndUrlMatchesAfterInitialFailureReturnsSuccess()
         {
             var page = new Mock<IPage>(MockBehavior.Strict);
@@ -134,7 +132,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a page exists but never matches the URL returns a failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPageIsFoundAndUrlDoesntMatchAfterTimeoutReturnsFailure()
         {
             var page = new Mock<IPage>(MockBehavior.Strict);

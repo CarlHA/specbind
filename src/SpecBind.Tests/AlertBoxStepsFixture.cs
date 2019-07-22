@@ -4,10 +4,8 @@
 
 namespace SpecBind.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Helpers;
@@ -16,13 +14,13 @@ namespace SpecBind.Tests
     /// <summary>
     /// A set of unit tests for the <see cref="AlertBoxSteps"/>.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class AlertBoxStepsFixture
     {
         /// <summary>
         /// Tests that the see alert and select button calls pipeline action correctly.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestSeeAlertAndSelectButtonCallsPipelineAction()
         {
             var testPage = new Mock<IPage>();
@@ -47,7 +45,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests that the see alert and select button calls pipeline action correctly.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestSeeAlertEnterTextAndSelectButtonCallsPipelineAction()
         {
             var testPage = new Mock<IPage>();

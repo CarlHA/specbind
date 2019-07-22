@@ -8,10 +8,8 @@ namespace SpecBind.Tests
 
     using BoDi;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
@@ -19,23 +17,23 @@ namespace SpecBind.Tests
     using SpecBind.Helpers;
     using SpecBind.Pages;
     using SpecBind.Validation;
-
+    using Support;
+    using TechTalk.SpecFlow;
     using TechTalk.SpecFlow.Tracing;
 
     /// <summary>
     /// A test fixture for the Web Driver class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class WebDriverSupportFixture
     {
         /// <summary>
         /// Tests the teardown with no errors.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestInitializeTests()
         {
             var logger = new Mock<ILogger>();
-
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
             container.Setup(c => c.RegisterInstanceAs(It.IsAny<BrowserFactory>(), null, true));
             container.Setup(c => c.RegisterFactoryAs(It.IsAny<Func<IObjectContainer, IBrowser>>(), null));
@@ -58,7 +56,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the check for screen shot no error.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckForScreenShotNoError()
         {
             var scenarioContext = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -66,6 +64,9 @@ namespace SpecBind.Tests
 
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
             container.Setup(c => c.Resolve<IScenarioContextHelper>()).Returns(scenarioContext.Object);
+
+            
+            WebDriverSupport.SetBrowserFactory(new MockBrowserFactory());
 
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
             browser.Setup(b => b.IsCreated).Returns(true);
@@ -81,7 +82,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the teardown with an error that then takes a screenshot.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckForScreenshotWithErrorTakesSueccessfulScreenshot()
         {
             var listener = new Mock<ITraceListener>(MockBehavior.Strict);
@@ -115,7 +116,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the teardown with an error that then takes a screenshot.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckForScreenshotWithNoErrorButSettingEnabledTakesSuccessfulScreenshot()
         {
             var listener = new Mock<ITraceListener>(MockBehavior.Strict);
@@ -158,7 +159,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the teardown with an error that then takes a screenshot.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckForScreenshotWithErrorAttemptsScreenshotButFails()
         {
             var scenarioContext = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -187,7 +188,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the teardown with an error that then takes a screenshot but does not write a message.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckForScreenshotWithErrorAttemptsScreenshotButListenerIsUnavailable()
         {
             var scenarioContext = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -217,7 +218,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the tear down after test.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestTearDownAfterTest()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -232,7 +233,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the tear down after scenario when reuse browser is true.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestTearDownAfterScenarioWhenReuseBrowserIsTrue()
         {
 
@@ -258,7 +259,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the tear down after scenario when reuse browser is false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestTearDownAfterScenarioWhenReuseBrowserIsFalse()
         {
             // arrange
@@ -284,7 +285,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests WaitForAngular with a successful result, when nothing is pending.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForAngularWithNothingPending()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -303,7 +304,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests WaitForAngular with a successful result, when something is pending.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForAngularWithSomethingPending()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -324,7 +325,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests WaitForjQuery with a successful result, when nothing is pending.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForjQueryWithNothingPending()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -343,7 +344,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests WaitForjQuery with a successful result, when something is pending.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForjQueryWithSomethingPending()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -364,7 +365,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests WaitForjQuery when the browser can get the URL.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void WaitForjQuery_WhenCanGetUrlReturnsTrue_GetsUrl()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -383,7 +384,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests WaitForjQuery when the browser cannot get the URL.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void WaitForjQuery_WhenCanGetUrlReturnsFalse_DoesNotTryToGetUrl()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);

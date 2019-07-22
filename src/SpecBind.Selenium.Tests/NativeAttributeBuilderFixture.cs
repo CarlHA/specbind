@@ -4,21 +4,20 @@
 
 namespace SpecBind.Selenium.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.PageObjects;
 
     /// <summary>
     /// Unit tests for the NativeAttributeBuilder class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class NativeAttributeBuilderFixture
     {
         /// <summary>
         /// Tests the locator method by ID.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateId()
         {
             var attribute = new FindsByAttribute { How = How.Id, Using = "Foo" };
@@ -31,7 +30,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by name.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateName()
         {
             var attribute = new FindsByAttribute { How = How.Name, Using = "Foo" };
@@ -44,7 +43,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by tag name.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateTagName()
         {
             var attribute = new FindsByAttribute { How = How.TagName, Using = "div" };
@@ -57,7 +56,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by class name.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateClassName()
         {
             var attribute = new FindsByAttribute { How = How.ClassName, Using = "btn" };
@@ -70,7 +69,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by CSS selector.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateCssSelector()
         {
             var attribute = new FindsByAttribute { How = How.CssSelector, Using = "btn" };
@@ -83,7 +82,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by link text.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateLinkText()
         {
             var attribute = new FindsByAttribute { How = How.LinkText, Using = "Hello" };
@@ -96,7 +95,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by partial link text.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreatePartialLinkText()
         {
             var attribute = new FindsByAttribute { How = How.PartialLinkText, Using = "Hello" };
@@ -109,7 +108,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by XPath text.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocatorCreateXPath()
         {
             var attribute = new FindsByAttribute { How = How.XPath, Using = "//tag" };
@@ -122,7 +121,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the locator method by a custom class, not supported.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCustomClass()
         {
             var attribute = new FindsByAttribute { How = How.Custom, Using = "notsupported" };

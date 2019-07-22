@@ -5,9 +5,7 @@
 namespace SpecBind.Selenium.Tests
 {
     using System.Linq;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using OpenQA.Selenium;
 
     using SpecBind.Pages;
@@ -15,13 +13,13 @@ namespace SpecBind.Selenium.Tests
     /// <summary>
     /// A test fixture for the locator builder class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class LocatorBuilderFixture
     {
         /// <summary>
         /// Tests the attribute with identifier returns identifier locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithIdReturnsIdLocator()
         {
             var attribute = new ElementLocatorAttribute { Id = "MyId" };
@@ -36,7 +34,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with a CSS selector
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithIdReturnsCssSelectorLocator()
         {
             var attribute = new ElementLocatorAttribute { CssSelector = "div#MyId" };
@@ -51,7 +49,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with name returns name locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithNameReturnsNameLocator()
         {
             var attribute = new ElementLocatorAttribute { Name = "MyName" };
@@ -66,7 +64,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with CSS class returns CSS class locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithCssClassReturnsCssClassLocator()
         {
             var attribute = new ElementLocatorAttribute { Class = ".something" };
@@ -81,7 +79,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with link text returns link text locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithLinkTextReturnsLinkTextLocator()
         {
             var attribute = new ElementLocatorAttribute { Text = "Hello World" };
@@ -96,7 +94,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name returns tag locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameReturnsTagLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input" };
@@ -111,7 +109,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and type returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndTypeReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Type = "email" };
@@ -126,7 +124,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and title returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndTitleReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Title = "Page" };
@@ -141,7 +139,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and value returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndValueReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Value = "test" };
@@ -156,7 +154,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and alt returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndAltReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Alt = "test" };
@@ -171,7 +169,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with XPath property returns XPath locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithXPathReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { XPath = ".//[@element='row']" };
@@ -186,7 +184,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with image tag and URL returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithImageTagAndUrlReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "img", Url = "myimage.png" };
@@ -201,7 +199,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with link tag and URL returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithLinkTagAndUrlReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "a", Url = "mylink.htm" };
@@ -216,7 +214,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with link area tag and URL returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithLinkAreaTagAndUrlReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "area", Url = "mylink.htm" };
@@ -231,7 +229,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and index returns x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndIndexReturnsXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Index = 1 };
@@ -246,7 +244,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and type and index returns complex x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndTypeAndIndexReturnsComplexXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Type = "email", Index = 1 };
@@ -261,7 +259,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with tag name and type and title returns compound x path locator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithTagNameAndTypeAndTitleReturnsCompoundXPathLocator()
         {
             var attribute = new ElementLocatorAttribute { TagName = "input", Type = "email", Title = "my title" };
@@ -276,7 +274,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with identifier and tag name returns two locators.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestAttributeWithIdAndTagNameReturnsTwoLocators()
         {
             var attribute = new ElementLocatorAttribute { Id = "MyId", TagName = "a" };
@@ -295,13 +293,13 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the attribute with no tag name and property throws an exception.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestAttributeWithNoTagNameAndPropertyThrowsAnException()
         {
             var attribute = new ElementLocatorAttribute { Type = "submit" };
 
-            LocatorBuilder.GetElementLocators(attribute);
+            Assert.Throws<ElementExecuteException>(() => 
+            LocatorBuilder.GetElementLocators(attribute));
         }
     }
 }

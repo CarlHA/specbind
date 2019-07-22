@@ -4,9 +4,7 @@
 namespace SpecBind.Tests.Helpers
 {
     using System.Linq;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.Helpers;
     using SpecBind.Pages;
 
@@ -15,7 +13,7 @@ namespace SpecBind.Tests.Helpers
     /// <summary>
     ///     A test fixture for the ValidationTableExtensions methods.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ValidationTableExtensionsFixture
     {
         private const string InvalidColumnErrorMessage =
@@ -24,63 +22,63 @@ namespace SpecBind.Tests.Helpers
         /// <summary>
         /// Tests to validation table that when field column is missing it throws an exception.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestToValidationTableWhenFieldColumnIsMissingThrowsException()
         {
             var table = new Table("Rule", "Value");
 
+            Assert.Throws<ElementExecuteException>(() =>
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => table.ToValidationTable(),
-                ex => Assert.AreEqual(InvalidColumnErrorMessage, ex.Message));
+                ex => Assert.AreEqual(InvalidColumnErrorMessage, ex.Message)));
         }
 
         /// <summary>
         /// Tests to validation table that when rule column is missing it throws an exception.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestToValidationTableWhenRuleColumnIsMissingThrowsException()
         {
             var table = new Table("Field");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => table.ToValidationTable(),
-                ex => Assert.AreEqual(InvalidColumnErrorMessage, ex.Message));
+                ex => Assert.AreEqual(InvalidColumnErrorMessage, ex.Message)));
         }
 
         /// <summary>
         /// Tests to validation table that when value column is missing it throws an exception.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestToValidationTableWhenValueColumnIsMissingThrowsException()
         {
             var table = new Table("Field", "Rule");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => table.ToValidationTable(),
-                ex => Assert.AreEqual(InvalidColumnErrorMessage, ex.Message));
+                ex => Assert.AreEqual(InvalidColumnErrorMessage, ex.Message)));
         }
 
         /// <summary>
         /// Tests to validation table that the columns exist but the table is empty, returns an empty collection.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestToValidationTableWhenTableIsEmptyThrowsException()
         {
             var table = new Table("Field", "Rule", "Value");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => table.ToValidationTable(),
-                ex => Assert.AreEqual("The validation table must contain at least one validation row.", ex.Message));
+                ex => Assert.AreEqual("The validation table must contain at least one validation row.", ex.Message)));
         }
 
         /// <summary>
         /// Tests to validation table that the columns exist but the table is empty, returns an empty collection.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestToValidationTableWhenTableIsPopulatedReturnsValidationTable()
         {
             var table = new Table("Field", "Rule", "Value");

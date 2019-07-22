@@ -5,10 +5,8 @@ namespace SpecBind.Tests
 {
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Helpers;
@@ -17,13 +15,13 @@ namespace SpecBind.Tests
     /// <summary>
     /// A test fixture for the token steps class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class TokenStepsFixture
     {
         /// <summary>
         /// Tests the SetTokenFromFieldStep method pulls the value from the field and sets the value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestSetTokenFromFieldStepSetsCurrentValue()
         {
             var page = new Mock<IPage>();
@@ -48,7 +46,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the SetTokenFromFieldStep method pulls the value from the field and sets the value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateTokenStep()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);

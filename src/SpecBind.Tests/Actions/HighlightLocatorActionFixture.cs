@@ -4,24 +4,22 @@
 
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Moq;
-
-    using SpecBind.Actions;
+     using Moq;
+     using NUnit.Framework;
+     using SpecBind.Actions;
     using SpecBind.Helpers;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for the HighlightLocatorAction.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class HighlightLocatorActionFixture
     {
         /// <summary>
         /// Tests that the on locate does nothing.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestOnLocateDoesNothing()
         {
             var settingHelper = new Mock<ISettingHelper>(MockBehavior.Strict);
@@ -38,7 +36,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the on locate complete method does nothing when the result is null.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestOnLocateCompleteWhenResultIsNullDoesNothing()
         {
             var settingHelper = new Mock<ISettingHelper>(MockBehavior.Strict);
@@ -55,7 +53,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the on locate complete method does nothing when the context is disabled and setting is off.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestOnLocateCompleteWhenSettingIsDisabledAndContextAreOffDoesNothing()
         {
             var settingHelper = new Mock<ISettingHelper>(MockBehavior.Strict);
@@ -79,7 +77,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the on locate complete method highlights the element when the item context is enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestOnLocateCompleteWhenSettingIsEnabledHighlightsElement()
         {
             var settingHelper = new Mock<ISettingHelper>(MockBehavior.Strict);
@@ -102,7 +100,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the on locate complete method highlights the element when the item context is enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestOnLocateCompleteWhenSettingIsDisabledAndItemContextIsEnabledHighlightsElement()
         {
             var settingHelper = new Mock<ISettingHelper>(MockBehavior.Strict);
@@ -127,7 +125,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the on locate complete method highlights the element when the item context is enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestOnLocateCompleteWhenSettingIsDisabledAndFeatureContextIsEnabledHighlightsElement()
         {
             var settingHelper = new Mock<ISettingHelper>(MockBehavior.Strict);

@@ -6,10 +6,9 @@ namespace SpecBind.Tests.PropertyHandlers
 {
     using System;
     using System.Collections.Generic;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Actions;
     using SpecBind.Pages;
     using SpecBind.PropertyHandlers;
@@ -20,14 +19,14 @@ namespace SpecBind.Tests.PropertyHandlers
     /// <summary>
     /// A test fixture for the ElementPropertyData class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ElementPropertyDataFixture
     {
         /// <summary>
         /// Tests that other methods in the class are not supported.
         /// </summary>
-        [TestMethod]
-        public void TestMethodsAreNotSupported()
+        [Test]
+        public void TestsAreNotSupported()
         {
             var element = new BaseElement();
             var pageBase = new Mock<IPageElementHandler<BaseElement>>(MockBehavior.Strict);
@@ -45,8 +44,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the click element method.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestClickElementWhereElementDoesNotExist()
         {
             var element = new BaseElement();
@@ -56,15 +54,16 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 propertyData.ClickElement,
-                e => pageBase.VerifyAll());
+                e => pageBase.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the click element method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestClickElement()
         {
             var element = new BaseElement();
@@ -82,9 +81,8 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the click element method.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
-        public void TestClickElementFails()
+        [Test]
+         public void TestClickElementFails()
         {
             var element = new BaseElement();
             var pageBase = new Mock<IPageElementHandler<BaseElement>>(MockBehavior.Strict);
@@ -93,15 +91,16 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 propertyData.ClickElement,
-                e => pageBase.VerifyAll());
+                e => pageBase.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the CheckElementEnabled method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckElementEnabled()
         {
             var element = new BaseElement();
@@ -120,7 +119,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the CheckElementExists method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckElementExists()
         {
             var element = new BaseElement();
@@ -139,8 +138,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the FillData method where the element does not exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestFillDataWhereElementDoesNotExist()
         {
             var element = new BaseElement();
@@ -150,9 +148,10 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => propertyData.FillData("My Data"),
-                e => pageBase.VerifyAll());
+                e => pageBase.VerifyAll()));
         }
 
 
@@ -160,8 +159,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the FillData method where the element does not exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestFillDataWhereHandlerIsNotFound()
         {
             var element = new BaseElement();
@@ -172,15 +170,16 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => propertyData.FillData("My Data"),
-                e => pageBase.VerifyAll());
+                e => pageBase.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the FillData method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestFillData()
         {
             var element = new BaseElement();
@@ -201,7 +200,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the highlight element method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestHighlightElement()
         {
             var element = new BaseElement();
@@ -218,9 +217,8 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateItem method where the element does not exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
-        public void TestValidateItemWhereElementDoesNotExist()
+        [Test]
+         public void TestValidateItemWhereElementDoesNotExist()
         {
             var element = new BaseElement();
             var pageBase = new Mock<IPageElementHandler<BaseElement>>(MockBehavior.Strict);
@@ -229,16 +227,25 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element);
 
-            string actualValue;
-            ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => propertyData.ValidateItem(ItemValidationHelper.Create("MyField", "My Data"), out actualValue),
-                e => pageBase.VerifyAll());
+            Assert.Throws<ElementExecuteException>(() =>
+                                                   {
+                                                       string actualValue;
+                                                       ExceptionHelper.SetupForException<ElementExecuteException>(
+                                                                                                                  () =>
+                                                                                                                      propertyData
+                                                                                                                         .ValidateItem(ItemValidationHelper.Create("MyField", "My Data"),
+                                                                                                                                       out
+                                                                                                                                       actualValue),
+                                                                                                                  e =>
+                                                                                                                      pageBase
+                                                                                                                         .VerifyAll());
+                                                   });
         }
 
         /// <summary>
         /// Tests the ValidateItem method where the element does not exist but the check is skipped.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateItemWhereElementDoesNotExistAndCheckIsDisabled()
         {
             var element = new BaseElement();
@@ -260,7 +267,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateItem method for an element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateItemAsElement()
         {
             var element = new BaseElement();
@@ -282,7 +289,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests that GetComboBoxItems from an element property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetComboBoxItemsFromElementProperty()
         {
             var element = new BaseElement();
@@ -307,7 +314,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the GetItemAsPage method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemAsPageSuccess()
         {
             var element = new BaseElement();
@@ -331,7 +338,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests that GetCurrentValue from an element property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetCurrentValueFromElementProperty()
         {
             var element = new BaseElement();
@@ -356,7 +363,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests WaitForElement method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForElementCondition()
         {
             var timeout = TimeSpan.FromSeconds(15);

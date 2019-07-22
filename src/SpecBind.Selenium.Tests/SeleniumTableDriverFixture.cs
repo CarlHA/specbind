@@ -8,10 +8,9 @@ namespace SpecBind.Selenium.Tests
     using System.Collections.ObjectModel;
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Moq;
-
+    using NUnit.Framework;
     using OpenQA.Selenium;
 
     using SpecBind.BrowserSupport;
@@ -20,13 +19,13 @@ namespace SpecBind.Selenium.Tests
     /// <summary>
     /// A test fixture for the SeleniumTableDriver.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SeleniumTableDriverFixture
     {
         /// <summary>
         /// Tests the get empty list to ensure it returns no results but doesn't fail.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetEmptyListReturnsNoResults()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -47,7 +46,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get empty list to ensure it returns no results but doesn't fail.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetEmptyListWithNullDriverSearchResultsNoResults()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -68,7 +67,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get the item with no table headers returns the item but no columns.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemWithNoHeadersReturnsItemButNotColumns()
         {
             var firstRow = new Mock<IWebElement>(MockBehavior.Strict);
@@ -89,8 +88,8 @@ namespace SpecBind.Selenium.Tests
             var result = tableDriver.FirstOrDefault();
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(SeleniumTableDriver.RowWrapper));
-            Assert.IsInstanceOfType(result, typeof(IElementProvider));
+            Assert.IsInstanceOf(typeof(SeleniumTableDriver.RowWrapper), result);
+            Assert.IsInstanceOf( typeof(IElementProvider), result);
 
             var elementList = ((IElementProvider)result).GetElements();
 
@@ -105,7 +104,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get the item with no table headers but no rows returns the columns.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemWithHeadersButNoRowsReturnsNull()
         {
             var oneColumn = new Mock<IWebElement>(MockBehavior.Strict);
@@ -136,7 +135,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get the item with table headers and rows returns the data.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemWithHeadersAndMultipleRowsReturnsData()
         {
             var oneColumn = new Mock<IWebElement>(MockBehavior.Strict);
@@ -165,8 +164,8 @@ namespace SpecBind.Selenium.Tests
             var result = tableDriver.FirstOrDefault();
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(SeleniumTableDriver.RowWrapper));
-            Assert.IsInstanceOfType(result, typeof(IElementProvider));
+            Assert.IsInstanceOf(typeof(SeleniumTableDriver.RowWrapper), result);
+            Assert.IsInstanceOf(typeof(IElementProvider), result);
 
             var elementList = ((IElementProvider)result).GetElements().ToList();
 
@@ -190,7 +189,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get the item with table headers that contains whitespace are trimmed and returned.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemWithHeadersThatContainWhitespaceAndMultipleRowsReturnsData()
         {
             var oneColumn = new Mock<IWebElement>(MockBehavior.Strict);
@@ -219,8 +218,8 @@ namespace SpecBind.Selenium.Tests
             var result = tableDriver.FirstOrDefault();
 
             Assert.IsNotNull(result);
-            Assert.IsInstanceOfType(result, typeof(SeleniumTableDriver.RowWrapper));
-            Assert.IsInstanceOfType(result, typeof(IElementProvider));
+            Assert.IsInstanceOf(typeof(SeleniumTableDriver.RowWrapper), result);
+            Assert.IsInstanceOf(typeof(IElementProvider), result);
 
             var elementList = ((IElementProvider)result).GetElements().ToList();
 

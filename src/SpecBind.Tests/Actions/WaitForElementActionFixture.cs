@@ -6,10 +6,8 @@ namespace SpecBind.Tests.Actions
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -17,13 +15,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a wait for element action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class WaitForElementActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new WaitForElementAction();
@@ -34,8 +32,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action execute with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestExecuteFieldDoesNotExist()
         {
             var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -50,14 +47,15 @@ namespace SpecBind.Tests.Actions
 
             var context = new WaitForElementAction.WaitForElementContext("doesnotexist", WaitConditions.Exists, TimeSpan.FromMilliseconds(1));
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => buttonClickAction.Execute(context), e => locator.VerifyAll());
+                () => buttonClickAction.Execute(context), e => locator.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the element execute success.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteSuccess()
         {
             var timeout = TimeSpan.FromMilliseconds(1);
@@ -85,7 +83,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the element execute success.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteFailureIfResultIsFalse()
         {
             var timeout = TimeSpan.FromSeconds(1);

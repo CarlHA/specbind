@@ -6,11 +6,9 @@ namespace SpecBind.Tests.Actions
 {
     using System.Collections.Generic;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
     using Moq.Protected;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
@@ -19,14 +17,14 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for the NavigationPostAction.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class NavigationPostActionFixture
     {
         /// <summary>
         /// Tests that the method is not called when action fails.
         /// </summary>
-        [TestMethod]
-        public void TestMethodIsNotCalledWhenActionFails()
+        [Test]
+        public void TestIsNotCalledWhenActionFails()
         {
             var action = new Mock<IAction>(MockBehavior.Strict);
             var context = new Mock<ActionContext>(MockBehavior.Strict, "testproperty");
@@ -43,8 +41,8 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the method is not called when action fails.
         /// </summary>
-        [TestMethod]
-        public void TestMethodIsNotCalledWhenActionIsNotNavigation()
+        [Test]
+        public void TestIsNotCalledWhenActionIsNotNavigation()
         {
             var action = new Mock<IAction>(MockBehavior.Strict);
             action.SetupGet(a => a.Name).Returns("OtherAction");
@@ -63,8 +61,8 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the method is called when action is navigation and successful.
         /// </summary>
-        [TestMethod]
-        public void TestMethodIsCalledWhenActionIsNavigationAndSuccessful()
+        [Test]
+        public void TestIsCalledWhenActionIsNavigationAndSuccessful()
         {
             var page = new Mock<IPage>(MockBehavior.Strict);
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -89,8 +87,8 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that the method is called when action is navigation and has arguments and successful.
         /// </summary>
-        [TestMethod]
-        public void TestMethodIsCalledWhenActionIsNavigationAndHasArgumentsAndSuccessful()
+        [Test]
+        public void TestIsCalledWhenActionIsNavigationAndHasArgumentsAndSuccessful()
         {
             var page = new Mock<IPage>(MockBehavior.Strict);
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);

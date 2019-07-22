@@ -4,21 +4,20 @@
 
 namespace SpecBind.Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+	using NUnit.Framework;
 	using SpecBind.Pages;
 	using SpecBind.Tests.Support;
 
 	/// <summary>
 	/// A test fixture for the <see cref="PageMapper" /> class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class PageMapperFixture
 	{
 		/// <summary>
 		/// Tests to ensure a normal type will not be mapped.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestMapAssemblyTypesWithNormalType()
 		{
 			var mapper = new PageMapper();
@@ -30,7 +29,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests to ensure a page class will be mapped by name.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestMapAssemblyTypesWithNonPrefixedPageName()
 		{
 			var mapper = new PageMapper();
@@ -45,7 +44,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests to ensure a page class will be mapped by name removing page from it.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestMapAssemblyTypesWithPrefixedPageName()
 		{
 			var mapper = new PageMapper();
@@ -62,7 +61,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests to ensure a page class will be mapped by name and any aliases.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestMapAssemblyTypesWithPrefixedPageNameAndAlias()
 		{
 			var mapper = new PageMapper();
@@ -79,7 +78,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests to ensure the GetTypeFromName method return null if the string is null or empty.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetTypeFromNameNullString()
 		{
 			var mapper = new PageMapper();

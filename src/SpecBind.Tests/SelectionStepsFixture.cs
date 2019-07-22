@@ -4,10 +4,8 @@
 
 namespace SpecBind.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Helpers;
@@ -18,13 +16,13 @@ namespace SpecBind.Tests
     /// <summary>
     /// A test fixture for a steps involving selection.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SelectionStepsFixture
     {
         /// <summary>
         /// Tests the WhenIChooseALinkStep method with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWhenIChooseALinkStep()
         {
 
@@ -51,7 +49,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WhenIHoverOverAnElement method with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWhenIHoverOverAnElementStep()
         {
 
@@ -78,8 +76,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WhenIChooseALinkStep method when a step has not been set.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(PageNavigationException))]
+        [Test]
         public void TestWhenIChooseALinkStepContextNotSet()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -89,19 +86,25 @@ namespace SpecBind.Tests
 
             var steps = new SelectionSteps(pipelineService.Object, scenarioContext.Object);
 
-            ExceptionHelper.SetupForException<PageNavigationException>(
-                () => steps.WhenIChooseALinkStep("my link"),
-                e =>
-                {
-                    scenarioContext.VerifyAll();
-                    pipelineService.VerifyAll();
-                });
+            ;
+
+            Assert.Throws<PageNavigationException>(() => ExceptionHelper.SetupForException<PageNavigationException>(
+                                                                                                                    () =>
+                                                                                                                        steps
+                                                                                                                           .WhenIChooseALinkStep("my link"),
+                                                                                                                    e =>
+                                                                                                                    {
+                                                                                                                        scenarioContext
+                                                                                                                           .VerifyAll();
+                                                                                                                        pipelineService
+                                                                                                                           .VerifyAll();
+                                                                                                                    }));
         }
 
         /// <summary>
         /// Tests the GivenEnsureOnListItemStep method for common path.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGivenEnsureOnListItemStep()
         {
             var page = new Mock<IPage>();
@@ -129,7 +132,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the GoToListItemWithCriteriaStep method for expected path.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGoToListItemWithCriteriaStep()
         {
             var page = new Mock<IPage>();

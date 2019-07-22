@@ -13,41 +13,9 @@ namespace SpecBind.BrowserSupport
 	public enum BrowserType
 	{
 		/// <summary>
-		/// Internet Explorer
-		/// </summary>
-		IE = 1,
-
-		/// <summary>
-		/// FireFox browser
-		/// </summary>
-		FireFox = 2,
-
-		/// <summary>
 		/// Chrome Browser
 		/// </summary>
 		Chrome = 3,
-
-        /// <summary>
-        /// Safari Browser
-        /// </summary>
-        Safari = 4,
-
-        /// <summary>
-        /// Opera Browser
-        /// </summary>
-        Opera = 5,
-
-        /// <summary>
-        /// PhantomJS Browser
-        /// </summary>
-        // ReSharper disable once InconsistentNaming
-        PhantomJS = 9,
-
-		/// <summary>
-		/// Microsoft Edge Browser
-		/// </summary>
-		// ReSharper disable once InconsistentNaming
-		Edge = 10,
 
 	    /// <summary>
 	    /// Chrome Browser without a UI attached

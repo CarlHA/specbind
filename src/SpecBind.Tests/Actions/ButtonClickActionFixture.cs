@@ -4,24 +4,23 @@
 
 namespace SpecBind.Tests.Actions
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using Moq;
-
+	using NUnit.Framework;
 	using SpecBind.ActionPipeline;
 	using SpecBind.Actions;
 	using SpecBind.Pages;
+	using ExceptionHelper = Tests.ExceptionHelper;
 
 	/// <summary>
 	/// A test fixture for a button click action
 	/// </summary>
-	[TestClass]
+	[TestFixture()]
 	public class ButtonClickActionFixture
 	{
 		/// <summary>
 		/// Tests getting the name of the action.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetActionName()
 		{
 			var buttonClickAction = new ButtonClickAction();
@@ -32,8 +31,7 @@ namespace SpecBind.Tests.Actions
 		/// <summary>
 		///     Tests the fill field with a field on the page that doesn't exist.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ElementExecuteException))]
+		[Test]
 		public void TestClickItemFieldDoesNotExist()
 		{
 			var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -46,14 +44,15 @@ namespace SpecBind.Tests.Actions
 
 		    var context = new ActionContext("doesnotexist");
 
+		    Assert.Throws<ElementExecuteException>(() =>
 			ExceptionHelper.SetupForException<ElementExecuteException>(
-				() => buttonClickAction.Execute(context), e => locator.VerifyAll());
+				() => buttonClickAction.Execute(context), e => locator.VerifyAll()));
 		}
 
 		/// <summary>
 		///     Tests the fill field with an element that exists and can be clicked.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestClickItemSuccess()
 		{
 			var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -81,7 +80,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
 		///     Tests the fill field with an element that exists and can be clicked.
 		/// </summary>
-		[TestMethod]
+		[Test]
         public void TestClickItemWhenWaitIsEnabledReturnsSuccess()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);

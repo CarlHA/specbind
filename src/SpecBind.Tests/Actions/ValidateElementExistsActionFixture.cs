@@ -4,10 +4,8 @@
 
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -15,13 +13,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a button click action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ValidateElementExistsActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new ValidateElementExistsAction();
@@ -32,8 +30,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the check items exists with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestExecuteFieldDoesNotExist()
         {
             var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -46,14 +43,15 @@ namespace SpecBind.Tests.Actions
 
             var context = new ValidationCheckContext("doesnotexist", true);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => buttonClickAction.Execute(context), e => locator.VerifyAll());
+                () => buttonClickAction.Execute(context), e => locator.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the execute with an element that is enabled and should be enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenElementShouldBeEnabledAndIsReturnsSuccess()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -79,7 +77,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with an element that is not enabled and should be enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenElementShouldBeEnabledAndIsNotEnabledReturnsFailure()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -107,7 +105,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with an element that is not enabled and should be enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenElementShouldNoeBeEnabledAndIsnabledReturnsFailure()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -135,7 +133,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with an element that is not enabled and should not be enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenElementShouldBeNotEnabledAndIsNotEnabledReturnsSuccess()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);

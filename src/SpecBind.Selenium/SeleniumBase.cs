@@ -114,7 +114,7 @@ namespace SpecBind.Selenium
                 var fullPath = Path.Combine(imageFolder, $"{fileNameBase}.jpg");
 
                 var screenshot = takesScreenshot.GetScreenshot();
-                screenshot.SaveAsFile(fullPath, ScreenshotImageFormat.Jpeg);
+                screenshot.SaveAsFile(fullPath, ScreenshotImageFormat.Png);
 
                 return fullPath;
             }

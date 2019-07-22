@@ -4,24 +4,22 @@
 
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Moq;
-
-    using SpecBind.Actions;
+     using Moq;
+     using NUnit.Framework;
+     using SpecBind.Actions;
     using SpecBind.Helpers;
     using SpecBind.Tests.Validation;
 
     /// <summary>
     /// A test fixture for a validate token action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ValidateTokenActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new ValidateTokenAction(null);
@@ -32,7 +30,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method with a property that does not exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenTokenReturnsNullReturnsFailure()
         {
             var tokenManager = new Mock<ITokenManager>(MockBehavior.Strict);
@@ -48,7 +46,7 @@ namespace SpecBind.Tests.Actions
             Assert.AreEqual(false, result.Success);
 
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "doesnotexist");
+            StringAssert.Contains("doesnotexist", result.Exception.Message);
 
             tokenManager.VerifyAll();
         }
@@ -56,7 +54,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method with a valid token and value returns success.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenTokenReturnsValidValueReturnsSuccess()
         {
             var tokenManager = new Mock<ITokenManager>(MockBehavior.Strict);

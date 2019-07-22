@@ -3,23 +3,21 @@
 // </copyright>
 namespace SpecBind.Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using Moq;
-
+	using NUnit.Framework;
 	using SpecBind.BrowserSupport;
 	using SpecBind.Pages;
 
 	/// <summary>
 	/// A unit test fixture for the <see cref="BrowserExtensions"/> class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class PageExtensionsFixture
 	{
 		/// <summary>
 		/// Tests the ensure on page method to ensure the page exists.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestEnsureOnPage()
 		{
 			var page = new Mock<IPage>(MockBehavior.Strict);
@@ -37,7 +35,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the GoToPage method to ensure the page exists.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGoToPage()
 		{
 			var page = new Mock<IPage>(MockBehavior.Strict);

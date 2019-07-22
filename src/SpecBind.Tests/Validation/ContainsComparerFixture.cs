@@ -6,21 +6,19 @@
 namespace SpecBind.Tests.Validation
 {
     using System.Linq;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.Validation;
 
     /// <summary>
     /// A test fixture for the contains string comparison.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ContainsComparerFixture : ComparisonTestBase<ContainsComparer>
     {
         /// <summary>
         /// Tests the rule key property for the correct tags.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestRuleValuesReturnsProperTags()
         {
             var item = new ContainsComparer();
@@ -31,7 +29,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the contains method when it matches the substring returns true.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestContainsWhenMatchesReturnsTrue()
         {
             RunItemCompareTest("Fie", "My Field", true);
@@ -40,7 +38,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the contains method when it doesn't match the substring returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestContainsWhenDoesNotMatchReturnsFalse()
         {
             RunItemCompareTest("foo", "My Field", false);
@@ -49,7 +47,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the contains method when the actual value is null returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestContainsWhenActualValueIsNullReturnsFalse()
         {
             RunItemCompareTest("foo", null, false);

@@ -12,7 +12,7 @@ namespace SpecBind.Selenium.IntegrationTests.Pages
     /// <summary>
     /// The courses page model
     /// </summary>
-    [PageNavigation("/Course")]
+    [PageNavigation("/Courses")]
     [PageAlias("Courses")]
     public class CoursesSearchPage
     {

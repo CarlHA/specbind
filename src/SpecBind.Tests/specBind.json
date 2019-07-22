@@ -1,0 +1,12 @@
+﻿{
+    "specBind": {
+        "application": {
+            "startUrl":"http://localhost:2222",
+            "waitForStillElementBeforeClicking": true
+        },
+        "browserFactory": {
+            "provider": "SpecBind.Tests.Support.MockBrowserFactory, SpecBind.Tests",
+            "browserType": "Chrome"
+        }
+    }
+}

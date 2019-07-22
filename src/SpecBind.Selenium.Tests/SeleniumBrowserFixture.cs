@@ -5,19 +5,19 @@ namespace SpecBind.Selenium.Tests
 {
 	using System;
 	using System.Diagnostics.CodeAnalysis;
+	using System.Drawing;
 	using System.Drawing.Imaging;
 	using System.IO;
-
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+	using System.Reflection;
 	using Moq;
-
+	using NUnit.Framework;
 	using OpenQA.Selenium;
-
+	using SixLabors.ImageSharp;
+	using SixLabors.ImageSharp.Formats;
+	using SixLabors.ImageSharp.Formats.Jpeg;
 	using SpecBind.Actions;
 	using SpecBind.BrowserSupport;
 	using SpecBind.Pages;
-	using SpecBind.Selenium.Tests.Resources;
 
 	/// <summary>
 	/// A test fixture for the Selenium Browser.
@@ -31,14 +31,14 @@ namespace SpecBind.Selenium.Tests
 	/// perform assertions related to the browser in that "using" statement,
 	/// and then after that, we verify the driver.
 	/// </remarks>
-	[TestClass]
+	[TestFixture]
 	[ExcludeFromCodeCoverage]
 	public class SeleniumBrowserFixture
 	{
 		/// <summary>
 		/// Tests the getting of the page base type, expecting it to return null.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetPageBaseTypeReturnsNull()
 		{
 			var driver = this.CreateMockWebDriverNotExpectingInitialization();
@@ -53,7 +53,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the getting of the Url property returns the value from the window.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetUrlReturnsBrowserUrl()
 		{
 			const string BrowserUrl = "http://www.mysite.com/home";
@@ -70,7 +70,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the getting of the goto page calls the appropriate driver method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGotoPageCallsDriverMethod()
 		{
 			var url = new Uri("http://www.bing.com");
@@ -92,7 +92,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the add cookie calls driver method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestAddCookieWhenCookieDoesntExistCallsDriverMethod()
 		{
 			var expireDate = DateTime.Now;
@@ -119,7 +119,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the add cookie calls driver method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestAddCookieWhenCookieExistsCallsDriverMethodAndRemovesExistingCookie()
 		{
 			var expireDate = DateTime.Now;
@@ -147,7 +147,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the clear cookies method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestClearCookies()
 		{
 			var cookies = new Mock<ICookieJar>(MockBehavior.Strict);
@@ -171,7 +171,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the GetCookie method returns a System.Net.Cookie
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetCookieReturnsCookieWhenExists()
 		{
 			const string CookieName = "TestCookie";
@@ -200,7 +200,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the GetCookie method returns null when a cookie with a given name was not found
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetCookieReturnsNullWhenCookieDoesNotExist()
 		{
 			System.Net.Cookie cookie = null;
@@ -226,7 +226,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the clear URL method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestClearUrl()
 		{
 			var expected = "about:blank";
@@ -247,7 +247,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the can get URL method without an alert box displayed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void CanGetUrl_WithoutAlertBoxDisplayed_ReturnsTrue()
         {
             var locator = new Mock<ITargetLocator>(MockBehavior.Strict);
@@ -272,7 +272,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the can get URL method with an alert box displayed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void CanGetUrl_WithAlertBoxDisplayed_ReturnsFalse()
         {
             var alerter = new Mock<IAlert>(MockBehavior.Strict);
@@ -299,7 +299,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the dismiss alert calls accept when ok is chosen.
         /// </summary>
-        [TestMethod]
+        [Test]
 		public void TestDismissAlertAcceptsWhenOkIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.Ok, true);
@@ -308,7 +308,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when yes is chosen.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertAcceptsWhenYesIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.Yes, true);
@@ -317,7 +317,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when retry is chosen.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertAcceptsWhenRetryIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.Retry, true);
@@ -326,7 +326,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when cancel is chosen.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertAcceptsWhenCancelIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.Cancel, false);
@@ -335,7 +335,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when close is chosen.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertAcceptsWhenCloseIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.Close, false);
@@ -344,7 +344,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when ignore is chosen.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertAcceptsWhenIgnoreIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.Ignore, false);
@@ -353,7 +353,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when no is chosen.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertAcceptsWhenNoIsChoosen()
 		{
 			TestAlertScenario(AlertBoxAction.No, false);
@@ -362,7 +362,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dismiss alert calls accept when ok is chosen after entering text.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDismissAlertEntersTextAndAcceptsWhenOkIsChoosen()
 		{
 			var alerter = new Mock<IAlert>(MockBehavior.Strict);
@@ -387,7 +387,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the close method does nothing when the driver has not been called.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestClosesDoesNothingWhenDriverIsNotInitialized()
 		{
 			var driver = new Mock<IWebDriver>(MockBehavior.Strict);
@@ -401,7 +401,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the close method is called if the driver has been used.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestClosesBrowserWhenDriverIsInitialized()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -416,7 +416,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the getting the page location returns the url value.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetNativePageLocationReturnsUrl()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -431,7 +431,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dispose method does nothing when the driver has not been called.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDisposeDoesNothingWhenDriverIsNotInitialized()
 		{
 			var driver = this.CreateMockWebDriverNotExpectingInitialization();
@@ -444,7 +444,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dispose method is called if the driver has been used.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDisposeClosesBrowserWhenDriverIsInitialized()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -457,7 +457,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the dispose is only called once.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestDisposeWhenCalledTwiceOnlyDisposesOnce()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -474,7 +474,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the execute script method for the browser when it exists.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestExecuteScriptWhenDriverSupportItRunsScript()
 		{
 			var result = new object();
@@ -492,7 +492,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the execute script method for the browser when it exists.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestExecuteScriptWhenResultIsNativeElementReturnsProxyClass()
 		{
 			var result = new Mock<IWebElement>(MockBehavior.Strict);
@@ -505,7 +505,7 @@ namespace SpecBind.Selenium.Tests
 				var resultObject = browser.ExecuteScript("some script", "Hello");
 
 				Assert.IsNotNull(resultObject);
-				Assert.IsInstanceOfType(resultObject, typeof(WebElement));
+				Assert.IsInstanceOf(typeof(WebElement), resultObject);
 			});
 
 			result.VerifyAll();
@@ -514,7 +514,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the execute script method when it doesn't support it returns null.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestExecuteScriptWhenDriverDoesNotSupportScriptReturnsNull()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -530,7 +530,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the take screenshot method does nothing when the interface is not supported.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTakeScreenshotWhenNotSupportedDoesNothing()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -546,7 +546,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the take screenshot method does nothing when the interface is not supported.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTakeScreenshotWhenScreenshotErrorsReturnsNothing()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
@@ -563,26 +563,32 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the take screenshot method performs the appropriate calls.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTakeScreenshotWhenCalledWithoutErrorTakesScreenshot()
 		{
 			var driver = this.CreateMockWebDriverExpectingInitialization();
-			driver.As<ITakesScreenshot>().Setup(s => s.GetScreenshot()).Throws<InvalidOperationException>();
 
 			var basePath = Path.GetTempPath();
 			var fileName = Guid.NewGuid().ToString();
 
-			Screenshot screenshot;
+			Screenshot testImage;
 			using (var ms = new MemoryStream())
 			{
-				var image = TestResource.TestImage;
-				image.Save(ms, ImageFormat.Jpeg);
+				using (var rs = GetType().Assembly
+				                        .GetManifestResourceStream("SpecBind.Selenium.Tests.Resources.TestImage.jpg"))
+				{
+		
+					var image = Image.Load(rs);
 
-				screenshot = new Screenshot(Convert.ToBase64String(ms.ToArray()));
+					image.Save(ms, new JpegEncoder());
+
+					testImage = new Screenshot(Convert.ToBase64String(ms.ToArray()));
+						
+				}
 			}
 
 			var screenShot = driver.As<ITakesScreenshot>();
-			screenShot.Setup(s => s.GetScreenshot()).Returns(screenshot);
+			screenShot.Setup(s => s.GetScreenshot()).Returns(testImage);
 
 			this.TestBrowserWith(driver, browser =>
 			{
@@ -604,7 +610,7 @@ namespace SpecBind.Selenium.Tests
 			});
 		}
 
-        [TestMethod]
+        [Test]
         public void IsCreated_BeforeBrowserIsCreated_ReturnsFalse()
         {
             // Arrange
@@ -617,7 +623,7 @@ namespace SpecBind.Selenium.Tests
             Assert.IsFalse(browser.IsCreated);
         }
 
-        [TestMethod]
+        [Test]
         public void IsCreated_AfterBrowserIsCreated_ReturnsTrue()
         {
             // Arrange

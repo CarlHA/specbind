@@ -73,7 +73,7 @@ namespace SpecBind.BrowserSupport
             var configSection = SettingHelper.GetConfigurationSection();
             if (configSection == null || configSection.BrowserFactory == null || string.IsNullOrWhiteSpace(configSection.BrowserFactory.Provider))
             {
-                throw new InvalidOperationException("The specBind config section must have a browser factor with a provider configured.");
+                throw new InvalidOperationException("The specBind config section must have a browser factory with a provider configured.");
             }
 
             var type = Type.GetType(configSection.BrowserFactory.Provider, AssemblyLoader.OnAssemblyCheck, AssemblyLoader.OnGetType);
@@ -108,27 +108,8 @@ namespace SpecBind.BrowserSupport
         /// <returns>The browser factory configuration.</returns>
         protected static BrowserFactoryConfiguration LoadConfiguration()
         {
-            BrowserFactoryConfiguration configuration = new BrowserFactoryConfiguration();
-
             var configSection = SettingHelper.GetConfigurationSection();
-
-            if (configSection != null && configSection.BrowserFactory != null)
-            {
-                BrowserFactoryConfigurationElement browserFactoryConfiguration = configSection.BrowserFactory;
-                configuration.BrowserType = GetBrowserType(browserFactoryConfiguration.BrowserType);
-                configuration.CreateScreenshotOnExit = browserFactoryConfiguration.CreateScreenshotOnExit;
-                configuration.ElementLocateTimeout = browserFactoryConfiguration.ElementLocateTimeout;
-                configuration.EnsureCleanSession = browserFactoryConfiguration.EnsureCleanSession;
-                configuration.PageLoadTimeout = browserFactoryConfiguration.PageLoadTimeout;
-                configuration.Provider = browserFactoryConfiguration.Provider;
-                configuration.ReuseBrowser = browserFactoryConfiguration.ReuseBrowser;
-                configuration.ValidateWebDriver = browserFactoryConfiguration.ValidateWebDriver;
-                configuration.WaitForPendingAjaxCallsVia = browserFactoryConfiguration.WaitForPendingAjaxCallsVia;
-                configuration.Settings = browserFactoryConfiguration.Settings.ToKeyValuePairs().ToDictionary(x => x.Key, x => x.Value);
-                configuration.UserProfilePreferences = browserFactoryConfiguration.UserProfilePreferences.ToKeyValuePairs().ToDictionary(x => x.Key, x => x.Value);
-            }
-
-            return configuration;
+            return configSection.BrowserFactory;
         }
 
         /// <summary>
@@ -160,7 +141,7 @@ namespace SpecBind.BrowserSupport
                 return browserTypeEnum;
             }
 
-            return BrowserType.IE;
+            return BrowserType.Chrome;
         }
     }
 }

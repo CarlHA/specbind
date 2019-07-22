@@ -6,7 +6,7 @@ namespace SpecBind.Tests.PropertyHandlers
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using NUnit.Framework;
 
     /// <summary>
     /// A test class base that helps check a property for a not supported exception.
@@ -30,7 +30,7 @@ namespace SpecBind.Tests.PropertyHandlers
             {
                 if (!string.IsNullOrEmpty(catchClause))
                 {
-                    StringAssert.Contains(e.Message, catchClause);
+                    StringAssert.Contains(catchClause, e.Message);
                 }
             }
         }

@@ -5,21 +5,19 @@
 namespace SpecBind.Tests
 {
     using System.Linq.Expressions;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for the page builder context and expression data context.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class PageBuilderContextFixture
     {
         /// <summary>
         /// Tests the expression data when constructed returns the constructed values.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExpressionDataWhenConstructedReturnsTheConstructedValues()
         {
             var expression = Expression.Constant(null, typeof(object));
@@ -32,7 +30,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the expression data when constructed returns the constructed values.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExpressionDataWithNameWhenConstructedReturnsTheConstructedValues()
         {
             var expression = Expression.Constant(null, typeof(object));
@@ -46,7 +44,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the expression data ToString method returns the type.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExpressionDataToStringReturnsType()
         {
             var expression = Expression.Constant(null, typeof(object));
@@ -58,7 +56,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the expression data ToString method returns the type and name when specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExpressionDataToStringWhenNameIsSpecifiedReturnsTypeAndName()
         {
             var expression = Expression.Constant(null, typeof(object));
@@ -70,7 +68,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the page builder context when constructed returns the constructed values.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestPageBuilderContextWhenConstructedReturnsTheConstructedValues()
         {
             var browser = new ExpressionData(null, typeof(object));
@@ -89,7 +87,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the page builder context when constructed returns the constructed values.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreateChildContextWhenCalledReturnsTheConstructedValuesAndNewContext()
         {
             var browser = new ExpressionData(null, typeof(object));
@@ -113,7 +111,7 @@ namespace SpecBind.Tests
         /// Tests the page builder context when multiples are created
         /// returns the first parent context as the root context.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreateChildContextWhenMultipleContextsAreCreatedThenTheRootContextIsTheFirstParent()
         {
             var browser = new ExpressionData(null, typeof(object));

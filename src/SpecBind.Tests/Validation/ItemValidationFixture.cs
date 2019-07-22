@@ -3,23 +3,21 @@
 // </copyright>
 namespace SpecBind.Tests.Validation
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Pages;
     using SpecBind.Validation;
 
     /// <summary>
 	/// A test fixture for the <see cref="ItemValidation"/> class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class ItemValidationFixture
 	{
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestConstructorRawValuesWhenNullSetsNulls()
         {
             var item = new ItemValidation(null, null, null);
@@ -34,7 +32,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestConstructorRawValuesWhenValuesAreSetAreStored()
         {
             var item = new ItemValidation("Field", "equals", "value");
@@ -50,7 +48,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the constructor for trimming whitespace on values
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestConstructorRawValuesWhenValuesHaveWhitespaceAreTrimmedWhenStored()
         {
             var item = new ItemValidation(" Field ", " equals ", " value ");
@@ -63,7 +61,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the compare method that it returns true when a valid comparison is called.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareWithValuesSetAndEqualReturnsTrue()
         {
             var item = new ItemValidation(" Field ", " equals ", " value ")
@@ -85,7 +83,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the compare method that it returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareWithNullComparerReturnsFalse()
         {
             var item = new ItemValidation(" Field ", " equals ", " value ")
@@ -107,7 +105,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the ToString method to return the correct string.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestToStringReturnsRelevantItemData()
         {
             var item = new ItemValidation(" Field ", " equals ", " value ");
@@ -120,7 +118,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the ToString method with a null value to return the correct string.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestToStringWithNullValueReturnsRelevantItemData()
         {
             var item = new ItemValidation(" Field ", " equals ", null);

@@ -4,21 +4,20 @@
 
 namespace SpecBind.Tests.ActionPipeline
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for the <see cref="ActionResultExtensions"/> class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ActionResultExtensionsFixture
     {
         /// <summary>
         /// Tests the check result when successful does nothing.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckResultWhenSuccessfulDoesNothing()
         {
             var result = ActionResult.Successful();
@@ -28,18 +27,18 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the check result when failed throws an exception.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestCheckResultWhenFailedThrowsAnException()
         {
             var result = ActionResult.Failure(new ElementExecuteException("Something Failed!"));
-            result.CheckResult();
+            
+            Assert.Throws<ElementExecuteException>(() =>  result.CheckResult());
         }
 
         /// <summary>
         /// Tests the check result with a value when successful returns the value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckResultWithItemWhenSuccessfulReturnsTheContent()
         {
             var resultItem = new object();
@@ -53,18 +52,17 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the check result with a value when failed throws an exception.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestCheckResultWithItemWhenFailedThrowsAnException()
         {
             var result = ActionResult.Failure(new ElementExecuteException("Something Failed!"));
-            result.CheckResult<object>();
+            Assert.Throws<ElementExecuteException>(() => result.CheckResult<object>());
         }
 
         /// <summary>
         /// Tests the check result when it is null does nothing.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCheckResultWhenNullReturnsNothing()
         {
             var actionResult = (ActionResult)null;

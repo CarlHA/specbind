@@ -7,10 +7,9 @@ namespace SpecBind.Selenium.Tests
     using System.Collections.ObjectModel;
     using System.Drawing;
     using System.Linq;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Moq;
-
+    using NUnit.Framework;
     using OpenQA.Selenium;
 
     using SpecBind.Actions;
@@ -19,13 +18,13 @@ namespace SpecBind.Selenium.Tests
     /// <summary>
     /// A test fixture for the <see cref="SeleniumPage"/> class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SeleniumPageFixture
     {
         /// <summary>
         /// Tests the get native page method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetNativePage()
         {
             var nativePage = new NativePage();
@@ -38,7 +37,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get native page type property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetPageType()
         {
             var nativePage = new NativePage();
@@ -51,7 +50,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the obtaining of elements.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestTryGetCorrectElement()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -71,7 +70,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get a nested page from an element within the page.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetPageFromElement()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -88,7 +87,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns true when the element is displayed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementExistsCheckWhenDisplayedReturnsTrue()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -106,7 +105,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when the element is not displayed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementExistsCheckWhenNotDisplayedReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -124,7 +123,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when a NoSuchElementException is thrown.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementExistsCheckWhenNoSuchElementExceptionReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -142,7 +141,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when a ElementNotVisibleException is thrown.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementExistsCheckWhenElementNotVisibleExceptionReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -160,7 +159,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns true when the element is displayed and enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementEnabledCheckWhenDisplayedAndEnabledReturnsTrue()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -179,7 +178,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when the element is not displayed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementEnabledCheckWhenNotDisplayedReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -197,7 +196,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the highlight method draws a border around the element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestHighlightElementExecutesJavascript()
         {
             const string DefaultStyle = "color: blue;";
@@ -223,7 +222,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the highlight method does not throw an exception if the driver isn't supported.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestHighlightElementWhenDriverNotSupportedDoesNotThowException()
         {
             const string DefaultStyle = "color: blue;";
@@ -246,7 +245,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when the element is displayed but not enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementEnabledCheckWhenDisplayedButNotEnabledReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -265,7 +264,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when a NoSuchElementException is thrown.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementEnabledCheckWhenNoSuchElementExceptionReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -283,7 +282,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check returns false when a ElementNotVisibleException is thrown.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementEnabledCheckWhenElementNotVisibleExceptionReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -302,7 +301,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the element enabled check when stale element reference returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestElementEnabledCheckWhenStaleElementReferenceReturnsFalse()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -320,7 +319,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element text method when the control is a standard control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementTextWhenControlIsNotSpecialReturnsTheElementText()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -339,7 +338,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element text method when the control is a select (combo box) control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementTextWhenControlASelectControlReturnsTheSelectedItemText()
         {
             var option = new Mock<IWebElement>(MockBehavior.Strict);
@@ -366,7 +365,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element text method when the control is a standard input control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementTextWhenControlIsStandardInputControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -386,7 +385,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element text method when the control is a text area control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementTextWhenControlIsTextAreaControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -407,7 +406,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element text method when the control is a checkbox input control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementTextWhenControlIsCheckBoxInputControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -427,7 +426,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the click element
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetClickElement()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -445,7 +444,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element options for a combo box
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementOptionsForComboBox()
         {
             var optionElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -476,7 +475,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element options for a  non-combo box
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementOptionsForOtherControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -494,7 +493,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get clear method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetClearMethod()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -512,7 +511,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get page fill method for a standard control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetFillMethodForStandardControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -531,7 +530,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get page fill method for a standard input control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetFillMethodForStandardInputControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -551,7 +550,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get page fill method for a checkbox control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetFillMethodForCheckboxControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -572,7 +571,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get page fill method for a radio button control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetFillMethodForRadioButtonControl()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -593,7 +592,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get fill method when the control is a select (combo box) control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetFillMethodForSingleSelectControl()
         {
             var option = new Mock<IWebElement>(MockBehavior.Strict);
@@ -620,7 +619,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get fill method when the control is a select (combo box) control.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetFillMethodForMultipleSelectControl()
         {
             var option = new Mock<IWebElement>(MockBehavior.Strict);
@@ -650,7 +649,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the wait for control exists.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlExists()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -669,7 +668,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the wait for control to not exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlExpectExistButIsNot()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -688,7 +687,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the wait for control to not exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotExists()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -708,7 +707,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the wait for control enabled.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlEnabled()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -727,7 +726,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the wait for control to not exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotEnabled()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);
@@ -746,7 +745,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get element attribute value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetElementAttributeValueWithValidAttribute()
         {
             var element = new Mock<IWebElement>(MockBehavior.Strict);

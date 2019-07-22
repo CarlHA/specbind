@@ -6,10 +6,8 @@ namespace SpecBind.Tests.PropertyHandlers
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Actions;
     using SpecBind.Pages;
     using SpecBind.PropertyHandlers;
@@ -19,14 +17,14 @@ namespace SpecBind.Tests.PropertyHandlers
     /// <summary>
     /// A test fixture virtual properties.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class VirtualPropertyDataFixture
     {
         /// <summary>
         /// Tests that other methods in the class are not supported.
         /// </summary>
-        [TestMethod]
-        public void TestMethodsAreNotSupported()
+        [Test]
+        public void TestsAreNotSupported()
         {
             var element = new BaseElement();
             var pageBase = new Mock<IPageElementHandler<BaseElement>>(MockBehavior.Strict);
@@ -50,7 +48,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests that GetCurrentValue from a non-element property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetCurrentValue()
         {
             var element = new BaseElement();
@@ -74,7 +72,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateItem method for a property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateItem()
         {
             var element = new BaseElement();

@@ -7,10 +7,8 @@ namespace SpecBind.Tests.PropertyHandlers
     using System;
     using System.Collections.Generic;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Actions;
     using SpecBind.Pages;
     using SpecBind.PropertyHandlers;
@@ -21,14 +19,14 @@ namespace SpecBind.Tests.PropertyHandlers
     /// <summary>
     /// A test fixture for the list property data.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ListPropertyDataFixture
     {
         /// <summary>
         /// Tests that other methods in the class are not supported.
         /// </summary>
-        [TestMethod]
-        public void TestMethodsAreNotSupported()
+        [Test]
+        public void TestsAreNotSupported()
         {
             var element = new BaseElement();
             var pageBase = new Mock<IPageElementHandler<BaseElement>>(MockBehavior.Strict);
@@ -50,7 +48,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateItem method for a list parent.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateItemAsList()
         {
             var element = new BaseElement();
@@ -76,9 +74,8 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests that GetCurrentValue throws an exception if getting a value from the property.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(NotSupportedException))]
-        public void TestGetCurrentValueFromListProperty()
+        [Test]
+         public void TestGetCurrentValueFromListProperty()
         {
             var element = new BaseElement();
             var propData = new Mock<IPropertyData>();
@@ -88,6 +85,7 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element);
 
+            Assert.Throws<NotSupportedException>(() => 
             ExceptionHelper.SetupForException<NotSupportedException>(
                 () => propertyData.GetCurrentValue(),
                 v =>
@@ -95,13 +93,13 @@ namespace SpecBind.Tests.PropertyHandlers
                     pageBase.VerifyAll();
                     page.VerifyAll();
                     propData.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListContains()
         {
             var element = new BaseElement();
@@ -137,7 +135,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListStartsWith()
         {
             var element = new BaseElement();
@@ -172,7 +170,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method using the equals operator.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListEquals()
         {
             var element = new BaseElement();
@@ -207,7 +205,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListEndsWith()
         {
             var element = new BaseElement();
@@ -242,7 +240,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListNotContains()
         {
             var element = new BaseElement();
@@ -277,7 +275,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method with NotEquals comparison.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListNotEquals()
         {
             var element = new BaseElement();
@@ -312,7 +310,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListInvalidComparison()
         {
             var element = new BaseElement();
@@ -333,7 +331,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListContainsChildElementNotFound()
         {
             var element = new BaseElement();
@@ -365,7 +363,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateList method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListContainsValidationFails()
         {
             var element = new BaseElement();
@@ -400,7 +398,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the GetItemAtIndex method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemAtIndexChildElementNotFound()
         {
             var element = new BaseElement();
@@ -424,7 +422,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the GetItemAtIndex method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetItemAtIndexSuccess()
         {
             var element = new BaseElement();
@@ -450,7 +448,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateListRowCount with an equality check that is successful.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListRowCountEqualsSuccess()
         {
             var element = new BaseElement();
@@ -475,7 +473,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateListRowCount with an equality check that is successful.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListRowCountGreaterThanEqualsSuccess()
         {
             var element = new BaseElement();
@@ -500,7 +498,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateListRowCount with an equality check that is successful.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateListRowCountLessThanEqualsSuccess()
         {
             var element = new BaseElement();

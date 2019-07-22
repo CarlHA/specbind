@@ -103,19 +103,11 @@ namespace SpecBind.Selenium
         {
             switch (this.Configuration.BrowserType)
             {
-                case BrowserType.IE:
-                    return new SeleniumInternetExplorerDriver();
-                case BrowserType.FireFox:
-                    return new SeleniumFirefoxDriver();
                 case BrowserType.Chrome:
                     return new SeleniumChromeDriver();
                 case BrowserType.ChromeHeadless:
-                    return new SeleniumChromeDriver();
-                case BrowserType.Safari:
-                    return new SeleniumSafariDriver();
-                case BrowserType.Edge:
-                    return new SeleniumEdgeDriver();
-                default:
+                    return new SeleniumChromeDriver("--headless");
+                 default:
                     throw new InvalidOperationException(
                         $"Browser type '{this.Configuration.BrowserType}' is not supported in Selenium local mode. Did you mean to configure a remote driver?");
             }

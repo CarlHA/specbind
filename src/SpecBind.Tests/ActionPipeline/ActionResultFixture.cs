@@ -4,21 +4,19 @@
 namespace SpecBind.Tests.ActionPipeline
 {
 	using System;
-
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+	using NUnit.Framework;
 	using SpecBind.ActionPipeline;
 
 	/// <summary>
 	/// A test fixture for the ActionResult class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class ActionResultFixture
 	{
 		/// <summary>
 		/// Tests a successful action with no object.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSuccessfulActionResultWithNoObject()
 		{
 			var result = ActionResult.Successful();
@@ -31,7 +29,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests a successful action with a populated object.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSuccessfulActionResultWithAPopulatedObject()
 		{
 			const string HelloItem = "Hello!";
@@ -45,7 +43,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests a failure action with no object.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestFailureActionResultWithNoObject()
 		{
 			var result = ActionResult.Failure();
@@ -58,7 +56,7 @@ namespace SpecBind.Tests.ActionPipeline
 		/// <summary>
 		/// Tests a failure action with a corresponding exception.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestFailureActionResultWithAnExceptionItem()
 		{
 			var exception = new Exception();

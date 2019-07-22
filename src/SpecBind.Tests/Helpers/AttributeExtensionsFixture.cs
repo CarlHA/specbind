@@ -3,21 +3,20 @@
 // </copyright>
 namespace SpecBind.Tests.Helpers
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.Helpers;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for the attribute extensions class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class AttributeExtensionsFixture
     {
         /// <summary>
         /// Tests the GetAttribute method when the attribute exists.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetAttributeWhenAttributeExistsReturnsAttribute()
         {
             var result = typeof(AttributeExists).GetAttribute<PageNavigationAttribute>();
@@ -29,7 +28,7 @@ namespace SpecBind.Tests.Helpers
         /// <summary>
         /// Tests the GetAttribute method when the attribute does not exists.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetAttributeWhenAttributedDoesNotExistReturnsNull()
         {
             var result = typeof(object).GetAttribute<PageNavigationAttribute>();
@@ -40,7 +39,7 @@ namespace SpecBind.Tests.Helpers
         /// <summary>
         /// Tests the TryGetAttribute method when the attribute exists.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestTryGetAttributeWhenAttributeExistsReturnsAttribute()
         {
             PageNavigationAttribute attribute;
@@ -54,7 +53,7 @@ namespace SpecBind.Tests.Helpers
         /// <summary>
         /// Tests the TryGetAttribute method when the attribute does not exists.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetTryAttributeWhenAttributedDoesNotExistReturnsNull()
         {
             PageNavigationAttribute attribute;

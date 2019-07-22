@@ -4,25 +4,24 @@
 
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
 
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
     using System;
+    using NUnit.Framework;
 
     /// <summary>
     /// A test fixture for hovering over an element
     /// </summary>
-    [TestClass]
+    [TestFixture]
 	public class HoverOverElementActionFixture
     {
 		/// <summary>
 		/// Tests getting the name of the action.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetActionName()
 		{
 			var hoverOverElementAction = new HoverOverElementAction();
@@ -33,8 +32,7 @@ namespace SpecBind.Tests.Actions
 		/// <summary>
 		///     Tests the fill field with a field on the page that doesn't exist.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ElementExecuteException))]
+		[Test]
 		public void TestClickItemFieldDoesNotExist()
 		{
 			var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -47,14 +45,15 @@ namespace SpecBind.Tests.Actions
 
 		    var context = new ActionContext("doesnotexist");
 
+		    Assert.Throws<ElementExecuteException>(() => 
 			ExceptionHelper.SetupForException<ElementExecuteException>(
-				() => hoverOverElementAction.Execute(context), e => locator.VerifyAll());
+				() => hoverOverElementAction.Execute(context), e => locator.VerifyAll()));
 		}
 
 		/// <summary>
 		///     Tests the fill field with an element that exists and can be clicked.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestClickItemSuccess()
 		{
 			var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -82,7 +81,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
 		///     Tests the fill field with an element that exists and can be clicked.
 		/// </summary>
-		[TestMethod]
+		[Test]
         public void TestClickItemWhenHoveringProducesSpecificErrorReturnsSuccess()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -110,7 +109,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
 		///     Tests the fill field with an element that exists and can be clicked.
 		/// </summary>
-		[TestMethod]
+		[Test]
         public void TestClickItemWhenSomeOtherErrorHappensReturnsFailure()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -139,7 +138,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
 		///     Tests the fill field with an element that exists and can be clicked.
 		/// </summary>
-		[TestMethod]
+		[Test]
         public void TestClickItemWhenWaitIsEnabledReturnsSuccess()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);

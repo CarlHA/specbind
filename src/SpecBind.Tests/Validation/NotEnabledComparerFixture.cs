@@ -2,23 +2,21 @@
 {
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Pages;
     using SpecBind.Validation;
 
     /// <summary>
     /// A test fixture for the not enabled comparison.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class NotEnabledComparerFixture : ComparisonTestBase<NotEnabledComparer>
     {
         /// <summary>
         /// Tests the rule key property for the correct tags.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestRuleValuesReturnsProperTags()
         {
             var item = new NotEnabledComparer();
@@ -29,7 +27,7 @@
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareNotEnabledCase()
         {
             var propertyData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -41,7 +39,7 @@
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareEnabledCase()
         {
             var propertyData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -53,7 +51,7 @@
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareNotEnabledValueSetCaseShouldIgnoreValue()
         {
             var propertyData = new Mock<IPropertyData>(MockBehavior.Strict);

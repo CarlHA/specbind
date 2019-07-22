@@ -3,20 +3,19 @@
 // </copyright>
 namespace SpecBind.Tests
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for the SetCookieAttribute class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SetCookieAttributeFixture
     {
         /// <summary>
         /// Tests that the default constructor sets name and value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDefaultConstructorSetsNameAndValue()
         {
             var attribute = new SetCookieAttribute("TestName", "TestValue");
@@ -29,7 +28,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests that the set of the path value overrides the default value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestSetPathOverridesDefaultValue()
         {
             var attribute = new SetCookieAttribute("TestName", "TestValue") { Path = "/MyDomain" };
@@ -42,16 +41,16 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests that the set of the path value overrides the default value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestToStringReturnsValues()
         {
             var attribute = new SetCookieAttribute("TestName", "TestValue") { Path = "/MyDomain" };
 
             var result = attribute.ToString();
 
-            StringAssert.Contains(result, "Name: TestName");
-            StringAssert.Contains(result, "Value: TestValue");
-            StringAssert.Contains(result, "Path: /MyDomain");
+            StringAssert.Contains("Name: TestName", result);
+            StringAssert.Contains("Value: TestValue",result);
+            StringAssert.Contains("Path: /MyDomain", result);
         }
     }
 }

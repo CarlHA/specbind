@@ -8,8 +8,7 @@ namespace SpecBind.Selenium
     using System.Collections.Generic;
 
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Support.UI;
-
+ 
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
     using SpecBind.Helpers;

@@ -8,10 +8,8 @@ namespace SpecBind.Tests.Actions
     using System.Collections.Generic;
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -20,13 +18,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for an action that gets an item by some criteria
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class GetListItemByCriteriaActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new GetListItemByCriteriaAction();
@@ -37,8 +35,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the locator when the list does not exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestGetElementAsPageFieldDoesNotExist()
         {
             var locater = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -51,14 +48,15 @@ namespace SpecBind.Tests.Actions
 
             var context = new GetListItemByCriteriaAction.ListItemByCriteriaContext("doesnotexist", new ValidationTable());
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => buttonClickAction.Execute(context), e => locater.VerifyAll());
+                () => buttonClickAction.Execute(context), e => locater.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the execute method when the property is not a list returns a failure result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyIsNotAListReturnsFailureResult()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -86,7 +84,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property cannot find a matching element returns an error.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsErrorsReturnsFailureResult()
         {
             var table = new ValidationTable();
@@ -125,7 +123,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property finds a matching element returns success and the result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyContainsMatchingItemReturnsSuccessful()
         {
             var table = new ValidationTable();

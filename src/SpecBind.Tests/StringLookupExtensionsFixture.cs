@@ -4,20 +4,19 @@
 
 namespace SpecBind.Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+	using NUnit.Framework;
 	using SpecBind.Helpers;
 
 	/// <summary>
 	///     A test fixture for the <see cref="StringLookupExtensions" /> class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class StringLookupExtensionsFixture
 	{
 		/// <summary>
 		/// Tests the ToLookupKey method with null and empty strings.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestToLookupKeyNullStrings()
 		{
 			var nullResult = ((string)null).ToLookupKey();
@@ -32,7 +31,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the ToLookupKey method with A string that has no whitespace.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestToLookupKeyNoWhitespace()
 		{
 			var result = "HelloWorld1".ToLookupKey();
@@ -43,7 +42,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the ToLookupKey method with A string that has whitespace.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestToLookupKeyWithWhitespace()
 		{
 			var result = "Hello World 1".ToLookupKey();
@@ -54,7 +53,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the ToLookupKey method with a string that contains A in it.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestToLookupKeyWithSingularFiller()
 		{
 			var resultUpper = "Eat A Cookie".ToLookupKey();
@@ -73,7 +72,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the ToLookupKey method with a string that contains the in it.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestToLookupKeyWithTitleFiller()
 		{
 			var resultUpper = "The Cookie".ToLookupKey();
@@ -86,7 +85,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the ToLookupKey method with special characters.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestToLookupKeyWithSpecialCharacters()
 		{
 			var result = "Hello_World 1!".ToLookupKey();
@@ -97,7 +96,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the NormalizedEquals method with null and empty strings.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestNormalizedEqualsNullStrings()
 		{
 			var nullResult = ((string)null).NormalizedEquals(null);
@@ -110,7 +109,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the NormalizedEquals method with special characters.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestNormalizedEqualsWithSpecialCharacters()
 		{
 			var result = "Hello_World 1!".NormalizedEquals("helloworld1");

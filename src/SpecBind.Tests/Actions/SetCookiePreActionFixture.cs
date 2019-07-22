@@ -6,10 +6,8 @@ namespace SpecBind.Tests.Actions
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
@@ -18,13 +16,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for the set cookie pre action.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SetCookiePreActionFixture
     {
         /// <summary>
         /// Tests the pre-action with an action that is not navigation.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenActionIsNotNavigationDoesNothing()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -45,7 +43,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action on a page that doesn't exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistDoesNothing()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -68,7 +66,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with a page that does not have an attribute ensuring a cookie isn't placed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithPageThatDoesNotContainAnAttributeDoesNothing()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -92,7 +90,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with navigate and correct parameters and page arguments returns successfully.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithNavigateAndCorrectParametersAndArgumentsReturnsSuccessful()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -117,7 +115,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with a DateTime constant parses as the minimum date time.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithMinDateTimePassesToBrowser()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -142,7 +140,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with a DateTime constant parses as the maximum date time.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithMaxDateTimePassesToBrowser()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -167,7 +165,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with a DateTime constant parses with a fixed date time.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithFixedDateTimePassesToBrowser()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -192,7 +190,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with a DateTime constant parses with a fixed date time.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithNumericSlidingDateTimePassesToBrowser()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -217,7 +215,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with a DateTime constant parses with a fixed date time.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithInvalidDateTimeLogsInfoAndContinues()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);

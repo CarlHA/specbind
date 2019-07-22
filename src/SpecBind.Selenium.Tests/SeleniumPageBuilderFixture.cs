@@ -8,10 +8,9 @@ namespace SpecBind.Selenium.Tests
     using System.Diagnostics.CodeAnalysis;
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using Moq;
-
+    using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.PageObjects;
 
@@ -21,13 +20,13 @@ namespace SpecBind.Selenium.Tests
     /// <summary>
     /// A test fixture for the PageBuilder class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class SeleniumPageBuilderFixture
     {
         /// <summary>
         /// Tests the create page method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreatePage()
         {
             var driver = new Mock<IWebDriver>(MockBehavior.Strict);
@@ -71,7 +70,7 @@ namespace SpecBind.Selenium.Tests
 
             //List Test
             Assert.IsNotNull(page.MyCollection);
-            Assert.IsInstanceOfType(page.MyCollection, typeof(SeleniumListElementWrapper<IWebElement, ListItem>));
+            Assert.IsInstanceOf(typeof(SeleniumListElementWrapper<IWebElement, ListItem>), page.MyCollection);
 
             var propertyList = (SeleniumListElementWrapper<IWebElement, ListItem>)page.MyCollection;
             Assert.IsNotNull(propertyList.Parent);
@@ -92,7 +91,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the multiple constructor arguments. when looking for a driver and parent context.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestMultipleConstructorArguments()
         {
             var driver = new Mock<IWebDriver>(MockBehavior.Strict);
@@ -135,7 +134,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the create page method with mixed attributes.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreatePageWithNativeAttributes()
         {
             var driver = new Mock<IWebDriver>();
@@ -154,7 +153,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the create page method with mixed attributes.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreatePageWithCombinedNativeAndLocatorAttributes()
         {
             var driver = new Mock<IWebDriver>();
@@ -173,7 +172,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the create page method with duplicate attributes.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreatePageWithDuplicateNativeAndLocatorAttributes()
         {
             var driver = new Mock<IWebDriver>();
@@ -192,7 +191,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the create page method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreatePageWithNativeProperties()
         {
             var driver = new Mock<IWebDriver>(MockBehavior.Strict);
@@ -268,7 +267,7 @@ namespace SpecBind.Selenium.Tests
 
             //List Test
             Assert.IsNotNull(page.MyCollection);
-            Assert.IsInstanceOfType(page.MyCollection, typeof(SeleniumListElementWrapper<IWebElement, ListItem>));
+            Assert.IsInstanceOf(typeof(SeleniumListElementWrapper<IWebElement, ListItem>), page.MyCollection);
 
             var propertyList = (SeleniumListElementWrapper<IWebElement, ListItem>)page.MyCollection;
             Assert.IsNotNull(propertyList.Parent);
@@ -289,7 +288,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the constructor scenario where there is no argument.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestMissingArgumentConstructor()
         {
             var builder = new SeleniumPageBuilder();
@@ -304,13 +303,13 @@ namespace SpecBind.Selenium.Tests
             var page = pageFunc(driver.Object, browser.Object, null);
 
             Assert.IsNotNull(page);
-            Assert.IsInstanceOfType(page, typeof(NoConstructorElement));
+            Assert.IsInstanceOf(typeof(NoConstructorElement), page);
         }
 
         /// <summary>
         /// Tests the create page method with the browser in the constructor.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreatePageWithBrowserArgument()
         {
             var driver = new Mock<IWebDriver>();
@@ -331,7 +330,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the type of the generic.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGenericType()
         {
             var baseType = typeof(IElementList<IWebElement, IWebElement>);

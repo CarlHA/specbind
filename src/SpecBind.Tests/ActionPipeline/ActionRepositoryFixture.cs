@@ -9,23 +9,21 @@ namespace SpecBind.Tests.ActionPipeline
 
     using BoDi;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Moq;
-
+     using Moq;
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Validation;
 
     /// <summary>
     /// A test fixture for the ActionRepository.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ActionRepositoryFixture
     {
         /// <summary>
         /// Tests the get pre actions method without an initialize call returns an empty list.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetPreActionsWithoutInitializeReturnsEmptyList()
         {
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
@@ -43,7 +41,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the get pre actions method without an initialize call returns an empty list.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCreateActionReturnsContainerItem()
         {
             var mockItem = new Mock<IAction>(MockBehavior.Strict);
@@ -64,7 +62,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the get post actions method without an initialize call returns an empty list.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetPostActionsWithoutInitializeReturnsEmptyList()
         {
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
@@ -82,7 +80,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the get locator actions method without an initialize call returns an empty list.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetLocatorActionsWithoutInitializeReturnsEmptyList()
         {
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
@@ -100,7 +98,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests the get validation comparers method without an initialize call returns an empty list.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetValidationComparersWithoutInitializeReturnsEmptyList()
         {
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
@@ -118,7 +116,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests that the Initialize method loads any extensions known to be in the project.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestInitializeLoadsKnownActionsInClasses()
         {
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);
@@ -138,7 +136,7 @@ namespace SpecBind.Tests.ActionPipeline
         /// <summary>
         /// Tests that the RegisterType method loads the given test type.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestRegisterTypeLoadsKnownActionsInClasses()
         {
             var container = new Mock<IObjectContainer>(MockBehavior.Strict);

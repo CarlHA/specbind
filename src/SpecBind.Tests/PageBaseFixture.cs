@@ -4,8 +4,8 @@
 
 namespace SpecBind.Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+	using NUnit.Framework;
+	
 	using System.Linq;
 
 	using SpecBind.Pages;
@@ -14,13 +14,13 @@ namespace SpecBind.Tests
 	/// <summary>
 	///     A test fixture for PageBase method.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class PageBaseFixture
 	{
 		/// <summary>
 		/// The that the metadata is discovered on inherited types.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestInheritedPageTypeDiscovery()
 		{
 			var target = new TestBase();
@@ -39,7 +39,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// The that the highlight method does nothing by default.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestHighlightDoesNothing()
         {
             var target = new TestBase();
@@ -50,7 +50,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// The that the a non-existent element cannot be found.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetElementNotFound()
 		{
 			var target = new TestBase();
@@ -65,7 +65,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// The that the a property cannot be returned as an element.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetPropertyAsElementNotFound()
 		{
 			var target = new TestBase();
@@ -80,7 +80,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// The that a non-existent property cannot be found.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestTryGetPropertyNotFound()
 		{
 			var target = new TestBase();
@@ -95,7 +95,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// The that a non-existent property cannot be found.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetPropertyNames()
 		{
 			var target = new TestBase();
@@ -110,7 +110,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Ensures the property invoker for the class works properly.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestCallElementInvoker()
 		{
 			var page = new InheritedClass { Button = new BaseElement() };
@@ -128,7 +128,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests that a property value can be set with the property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestSetPropertySetsPropertyValue()
         {
             var page = new InheritedClass();
@@ -147,7 +147,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// The that wait for page checks for and invokes the interface.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForPageToBeActiveCallsNativeInterfaceNoActionIfMissing()
         {
             var targetClass = new InheritedClass();
@@ -159,7 +159,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// The that wait for page checks for and invokes the interface.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForPageToBeActiveCallsNativeInterface()
         {
             var targetClass = new InheritedActivateClass();

@@ -8,10 +8,8 @@ namespace SpecBind.Tests.Validation
     using System.Collections.Generic;
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Moq;
-
+     using Moq;
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Helpers;
     using SpecBind.Pages;
@@ -20,13 +18,13 @@ namespace SpecBind.Tests.Validation
     /// <summary>
     /// A test fixture for the ValidationTablePreAction.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ValidationTablePreActionFixture
     {
         /// <summary>
         /// Tests the action when context is not a table, ensures it exits.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestActionWhenContextIsNotATableExits()
         {
             var action = new Mock<IAction>(MockBehavior.Strict);
@@ -47,7 +45,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the action when context is a table, processes the values.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestActionWhenContextIsATableProcessesActions()
         {
             var action = new Mock<IAction>(MockBehavior.Strict);
@@ -71,7 +69,7 @@ namespace SpecBind.Tests.Validation
             Assert.AreEqual("myfield", validation.FieldName);
             Assert.AreEqual("foo", validation.ComparisonValue);
             Assert.IsNotNull(validation.Comparer);
-            Assert.IsInstanceOfType(validation.Comparer, typeof(StartsWithComparer));
+            Assert.IsInstanceOf(typeof(StartsWithComparer), validation.Comparer);
 
             action.VerifyAll();
             actionRepository.VerifyAll();
@@ -81,7 +79,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the action when context is a table throws an exception if the rule is invalid.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestActionWhenContextIsATableButHasBadRuleProcessesActions()
         {
             var action = new Mock<IAction>(MockBehavior.Strict);
@@ -105,7 +103,7 @@ namespace SpecBind.Tests.Validation
             }
             catch (Exception e)
             {
-                Assert.IsInstanceOfType(e, typeof(ElementExecuteException));
+                Assert.IsInstanceOf(typeof(ElementExecuteException), e);
                 Assert.AreEqual("Vaidation Rule could not be found for rule name: bad rule", e.Message);
             }
 

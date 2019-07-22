@@ -6,23 +6,21 @@ namespace SpecBind.Selenium.Tests
     using System.Drawing;
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Interactions.Internal;
 
     /// <summary>
     /// A test fixture for WebElement.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class WebElementFixture
     {
         /// <summary>
         /// Tests the clone native element to ensure it bypasses the locators.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCloneNativeElementBypassesLocators()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -38,7 +36,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests update locators method to ensure it doesn't update if locators are null.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestUpdateLocatorsWhenNullDoesNotUpdateLocators()
         {
             var element = new WebElement(null);
@@ -50,7 +48,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests update locators method to ensure updates the locators.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestUpdateLocatorsWhenExistsUpdatesLocators()
         {
             var locator = By.Id("id1");
@@ -64,7 +62,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get coordinates property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetCoordinatesReturnsWrappedValue()
         {
             var coordinates = new Mock<ICoordinates>(MockBehavior.Strict);
@@ -84,7 +82,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get displayed property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetDisplayedReturnsWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -101,7 +99,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get enabled property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetEnablesReturnsWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -118,7 +116,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get location property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetLocationReturnsWrappedValue()
         {
             var point = new Point(22, 10);
@@ -136,7 +134,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get location on screen property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetLocationOnScreenReturnsWrappedValue()
         {
             var point = new Point(22, 10);
@@ -154,7 +152,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get selected property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetSelectedReturnsWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -171,7 +169,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get size property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetSizeReturnsWrappedValue()
         {
             var point = new Size(22, 10);
@@ -189,7 +187,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get tag name property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetTagNameReturnsWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -206,7 +204,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get text property to ensure it returns the wrapped value.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetTextReturnsWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -223,7 +221,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the click method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallClickInvokesWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -239,7 +237,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the click method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestClearClickInvokesWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -255,7 +253,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get attributes method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallGetAttributesInvokesWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -272,7 +270,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get find element method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallFindElementInvokesWrappedValue()
         {
             var innerElement = new Mock<IWebElement>();
@@ -291,7 +289,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the send keys method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallSendKeysInvokesWrappedValue()
         {
 			var expected = "correct value";
@@ -311,8 +309,7 @@ namespace SpecBind.Selenium.Tests
 		/// <summary>
 		/// Tests the send keys method invokes the wrapped element.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(WebDriverException))]
+		[Test]
 		public void TestCallSendKeysInvokesWrappedValueWithRetryFails()
 		{
 			var expected = "correct value";
@@ -325,13 +322,14 @@ namespace SpecBind.Selenium.Tests
 
 			var element = CreateBasicWrappedElement(mockElement.Object);
 
-			element.SendKeys(expected);
+            Assert.Throws<WebDriverException>(() => 
+			element.SendKeys(expected));
 		}
 
 		/// <summary>
         /// Tests the submit method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallSubmitInvokesWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -347,7 +345,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get CSS value method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallGetCssValueInvokesWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -364,7 +362,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get hash code method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCallGetHashCodeInvokesWrappedValue()
         {
             var mockElement = new Mock<IWebElement>(MockBehavior.Strict);
@@ -380,7 +378,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the get hash code method invokes the wrapped element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocateElementBySingleLocatorFindsTheElement()
         {
             var targetElement = new Mock<IWebElement>();
@@ -401,8 +399,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the single locator element fails to find the element.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(NoSuchElementException))]
+        [Test]
         public void TestLocateElementBySingleLocatorDoesNotFindTheElement()
         {
             var searchContext = new Mock<ISearchContext>(MockBehavior.Strict);
@@ -410,26 +407,29 @@ namespace SpecBind.Selenium.Tests
 
             var element = new WebElement(searchContext.Object);
             element.UpdateLocators(new[] { By.Id("1234") });
+            Assert.Throws<NoSuchElementException>(() =>
+                                                  {
+                                                      try
+                                                      {
+                                                          // ReSharper disable once UnusedVariable
+                                                          var result = element.WrappedElement;
+                                                      }
+                                                      catch (NoSuchElementException ex)
+                                                      {
+                                                          Assert.AreEqual("Could not find element by: By.Id: 1234",
+                                                                          ex.Message);
 
-            try
-            {
-                // ReSharper disable once UnusedVariable
-                var result = element.WrappedElement;
-            }
-            catch (NoSuchElementException ex)
-            {
-                Assert.AreEqual("Could not find element by: By.Id: 1234", ex.Message);
+                                                          searchContext.VerifyAll();
 
-                searchContext.VerifyAll();
-
-                throw;
-            }
+                                                          throw;
+                                                      }
+                                                  });
         }
 
         /// <summary>
         /// Tests the element locator for finding multiple items.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLocateElementByMultipleLocatorsFindsTheElement()
         {
             var targetElement = new Mock<IWebElement>();
@@ -451,8 +451,7 @@ namespace SpecBind.Selenium.Tests
         /// <summary>
         /// Tests the multiple locator element fails to find the element.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(NoSuchElementException))]
+        [Test]
         public void TestLocateElementByMultipleLocatorsDoesNotFindTheElement()
         {
             var searchContext = new Mock<ISearchContext>(MockBehavior.Strict);
@@ -462,19 +461,24 @@ namespace SpecBind.Selenium.Tests
             var element = new WebElement(searchContext.Object);
             element.UpdateLocators(new[] { By.Id("1234"), By.Name("test") });
 
-            try
-            {
-                // ReSharper disable once UnusedVariable
-                var result = element.WrappedElement;
-            }
-            catch (NoSuchElementException ex)
-            {
-                Assert.AreEqual("Could not find element by: By.Id: 1234, or: By.Name: test", ex.Message);
+            Assert.Throws<NoSuchElementException>(() =>
+                                                  {
+                                                      try
+                                                      {
+                                                          // ReSharper disable once UnusedVariable
+                                                          var result = element.WrappedElement;
+                                                      }
+                                                      catch (NoSuchElementException ex)
+                                                      {
+                                                          Assert
+                                                             .AreEqual("Could not find element by: By.Id: 1234, or: By.Name: test",
+                                                                       ex.Message);
 
-                searchContext.VerifyAll();
+                                                          searchContext.VerifyAll();
 
-                throw;
-            }
+                                                          throw;
+                                                      }
+                                                  });
         }
 
         /// <summary>

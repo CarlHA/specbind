@@ -6,10 +6,8 @@ namespace SpecBind.Tests
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
@@ -21,13 +19,13 @@ namespace SpecBind.Tests
     /// <summary>
     ///     A test fixture for common page steps.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class PageNavigationStepsFixture
     {
         /// <summary>
         /// Tests the GivenNavigateToPageStep with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGivenNavigateToPageStep()
         {
             var testPage = new Mock<IPage>();
@@ -55,7 +53,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the GivenNavigateToPageStep with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGivenNavigateToPageStepWithArguments()
         {
             var testPage = new Mock<IPage>();
@@ -88,7 +86,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the GivenEnsureOnPageStep with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGivenEnsureOnPageStep()
         {
             var testPage = new Mock<IPage>();
@@ -116,7 +114,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the GivenEnsureOnDialogStep method for happy path.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGivenEnsureOnDialogStep()
         {
             var page = new Mock<IPage>();
@@ -151,7 +149,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WaitForPageStep with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForPageStepWhenSuccessful()
         {
             var testPage = new Mock<IPage>();
@@ -178,8 +176,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WaitForPageStep with a failure result, makes sure to clear the context then throw the error.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(PageNavigationException))]
+        [Test]
         public void TestWaitForPageStepWhenFailsClearsPageContext()
         {
             var testPage = new Mock<IPage>();
@@ -200,6 +197,7 @@ namespace SpecBind.Tests
 
             var steps = new PageNavigationSteps(scenarioContext.Object, pipelineService.Object, tokenManager.Object);
 
+            Assert.Throws<PageNavigationException>(() => 
             ExceptionHelper.SetupForException<PageNavigationException>(() => steps.WaitForPageStep("mypage"),
                 e =>
                     {
@@ -207,13 +205,13 @@ namespace SpecBind.Tests
                         pageMapper.VerifyAll();
                         scenarioContext.VerifyAll();
                         testPage.VerifyAll();
-                    });
+                    }));
         }
 
         /// <summary>
         /// Tests the WaitForPageStep with a timeout specified and a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForPageStepWithTimeoutWhenSuccessful()
         {
             var testPage = new Mock<IPage>();
@@ -245,7 +243,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WaitForPageStep with a timeout of zero specified and a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForPageStepWithTimeoutWhenTimeoutIsZeroSetsTimeoutToNull()
         {
             var testPage = new Mock<IPage>();

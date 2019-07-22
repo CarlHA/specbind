@@ -4,10 +4,8 @@
 
 namespace SpecBind.Tests.BrowserSuport
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.BrowserSupport;
 
     using TechTalk.SpecFlow.Tracing;
@@ -15,13 +13,13 @@ namespace SpecBind.Tests.BrowserSuport
     /// <summary>
     /// A test fixture for the proxy logger
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ProxyLoggerFixture
     {
         /// <summary>
         /// Tests the log debug method writes to trace listener.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLogDebugWritesToTraceListener()
         {
             var traceListener = new Mock<ITraceListener>(MockBehavior.Strict);
@@ -37,7 +35,7 @@ namespace SpecBind.Tests.BrowserSuport
         /// <summary>
         /// Tests the log information method writes to trace listener.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestLogInfoWritesToTraceListener()
         {
             var traceListener = new Mock<ITraceListener>(MockBehavior.Strict);

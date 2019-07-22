@@ -7,10 +7,8 @@ namespace SpecBind.Tests.Actions
     using System;
     using System.Collections.Generic;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Actions;
     using SpecBind.BrowserSupport;
     using SpecBind.Pages;
@@ -19,13 +17,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a page navigation steps
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class PageNavigationActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new PageNavigationAction(null, null, null);
@@ -36,7 +34,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the action on a page that doesn't exist.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistThrowsAnException()
         {
             var pageMapper = new Mock<IPageMapper>(MockBehavior.Strict);
@@ -62,7 +60,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with navigate and correct parameters returns successfully.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithNavigateAndCorrectParametersReturnsSuccessful()
         {
             var testPage = new Mock<IPage>();
@@ -91,7 +89,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with navigate and correct parameters and page arguments returns successfully.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithNavigateAndCorrectParametersAndArgumentsReturnsSuccessful()
         {
             var testPage = new Mock<IPage>();
@@ -122,7 +120,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute with ensure on page and correct parameters returns successfully.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWithEnsureOnPageAndCorrectParametersReturnsSuccessful()
         {
             var testPage = new Mock<IPage>();

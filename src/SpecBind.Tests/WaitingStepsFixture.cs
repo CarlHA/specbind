@@ -5,8 +5,6 @@ namespace SpecBind.Tests
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
 
     using SpecBind.ActionPipeline;
@@ -15,11 +13,12 @@ namespace SpecBind.Tests
     using SpecBind.Pages;
 	using SpecBind.BrowserSupport;
 	using BoDi;
+    using NUnit.Framework;
 
     /// <summary>
     /// A test fixture for the <see cref="WaitingSteps"/> step class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class WaitingStepsFixture
     {
         private static readonly TimeSpan Timeout = TimeSpan.FromSeconds(10);
@@ -27,7 +26,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the default wait property for a 30 second timeout.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetDefaultWaitReturnsThirtySeconds()
         {
             var result = WaitingSteps.DefaultWait;
@@ -38,7 +37,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control exists step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlExistsStep()
         {
             var testPage = new Mock<IPage>();
@@ -63,7 +62,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control exists step with a timeout of 0.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlExistsStepInvalidTimeout()
         {
             var testPage = new Mock<IPage>();
@@ -88,7 +87,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control exists step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlExistsNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -113,7 +112,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not exists step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotExistsStep()
         {
             var testPage = new Mock<IPage>();
@@ -138,7 +137,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not exists step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotExistsNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -163,7 +162,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control still exists step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlStillExistsStep()
         {
             var testPage = new Mock<IPage>();
@@ -188,7 +187,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not exists step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlStillExistsNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -213,7 +212,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control remains non-existent step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlRemainsNonExistentStep()
         {
             var testPage = new Mock<IPage>();
@@ -238,7 +237,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control remains non-existent step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlRemainsNonExistentNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -263,7 +262,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control enabled step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlEnabledStep()
         {
             var testPage = new Mock<IPage>();
@@ -288,7 +287,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control enabled step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlEnabledNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -313,7 +312,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control remains enabled step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlRemainsEnabledStep()
         {
             var testPage = new Mock<IPage>();
@@ -338,7 +337,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control remains enabled step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlRemainsEnabledNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -363,7 +362,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not enabled step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotEnabledStep()
         {
             var testPage = new Mock<IPage>();
@@ -388,7 +387,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not enabled step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotEnabledNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -413,7 +412,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control remains disabled step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlRemainsDisabledStep()
         {
             var testPage = new Mock<IPage>();
@@ -438,7 +437,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control remains disabled step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlRemainsDisabledNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -463,7 +462,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not moving step.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotMovingStep()
         {
             var testPage = new Mock<IPage>();
@@ -488,7 +487,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for control not moving step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForControlNotMovingNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -513,7 +512,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for list items step with no timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForListItemsNoTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -538,7 +537,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the wait for list items step with a timeout specified.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWaitForListItemsWithTimeoutStep()
         {
             var testPage = new Mock<IPage>();
@@ -563,7 +562,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the GivenIWaitForTheViewToBeActive with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGivenIWaitForViewToBeActiveStep()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -585,7 +584,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the IWaitForAngularAjaxCallsToComplete with a successful result, when nothing is pending.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestIWaitForAngularAjaxCallsToCompleteStepWithNothingPending()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -608,7 +607,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the IWaitForAngularAjaxCallsToComplete with a successful result, when something is pending.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestIWaitForAngularAjaxCallsToCompleteStepWithSomethingPending()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -633,7 +632,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the IWaitForjQueryAjaxCallsToComplete with a successful result, when nothing is pending.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestIWaitForjQueryAjaxCallsToCompleteStepWithNothingPending()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -656,7 +655,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the IWaitForjQueryAjaxCallsToComplete with a successful result, when something is pending.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestIWaitForjQueryAjaxCallsToCompleteStepWithSomethingPending()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -681,7 +680,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests IWaitForAngularAjaxCallsToComplete when the browser can get the URL.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void IWaitForAngularAjaxCallsToCompleteStep_WhenCanGetUrlReturnsTrue_GetsUrl()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -704,7 +703,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests IWaitForAngularAjaxCallsToComplete when the browser cannot get the URL.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void IWaitForAngularAjaxCallsToCompleteStep_WhenCanGetUrlReturnsFalse_DoesNotTryToGetUrl()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -725,7 +724,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests IWaitForjQueryAjaxCallsToComplete when the browser can get the URL.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void IWaitForjQueryAjaxCallsToCompleteStep_WhenCanGetUrlReturnsTrue_GetsUrl()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -748,7 +747,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests IWaitForjQueryAjaxCallsToComplete when the browser cannot get the URL.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void IWaitForjQueryAjaxCallsToCompleteStep_WhenCanGetUrlReturnsFalse_DoesNotTryToGetUrl()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);

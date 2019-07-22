@@ -5,21 +5,19 @@
 namespace SpecBind.Tests.Validation
 {
     using System.Linq;
-
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+    using NUnit.Framework;
     using SpecBind.Validation;
 
     /// <summary>
     /// A test fixture for the inequality comparison across supported data types.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class NotEqualsComparerFixture : ComparisonTestBase<NotEqualsComparer>
     {
         /// <summary>
         /// Tests the rule key property for the correct tags.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestRuleValuesReturnsProperTags()
         {
             var item = new NotEqualsComparer();
@@ -30,7 +28,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the comparison with equal string members returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestComparisonWithEqualStringsReturnsFalse()
         {
             RunItemCompareTest("foo", "foo", false);
@@ -39,7 +37,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the comparison with equal different case string members returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestComparisonWithEqualDifferentCaseStringsReturnsFalse()
         {
             RunItemCompareTest("foo", "Foo", false);
@@ -48,7 +46,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the comparison with equal integer members returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestComparisonWithEqualIntsReturnsFalse()
         {
             RunItemCompareTest("1", "1", false);
@@ -57,7 +55,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the comparison with equal double members returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestComparisonWithEqualDoublesReturnsFalse()
         {
             RunItemCompareTest("2.0", "2", false);
@@ -66,7 +64,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the comparison with equal boolean members returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestComparisonWithEqualBooleansReturnsFalse()
         {
             RunItemCompareTest("false", "False", false);
@@ -75,7 +73,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the comparison with equal date time members returns false.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestComparisonWithEqualDateTimeReturnsFalse()
         {
             RunItemCompareTest("2/22/2013", "February 22, 2013", false);

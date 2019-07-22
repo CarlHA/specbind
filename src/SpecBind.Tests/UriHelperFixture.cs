@@ -6,8 +6,6 @@ namespace SpecBind.Tests
 {
 	using System;
 
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using Moq;
 
 	using SpecBind.BrowserSupport;
@@ -16,17 +14,18 @@ namespace SpecBind.Tests
 	using SpecBind.Tests.Support;
 
 	using System.Collections.Generic;
+	using NUnit.Framework;
 
 	/// <summary>
 	///     A test fixture for URI helpers.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class UriHelperFixture
 	{
 		/// <summary>
 		///     Tests the get page URI method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetQualifiedPageUri()
 		{
             UriHelper.BaseUri = new Uri("http://localhost:2222/");
@@ -38,7 +37,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		///     Tests the get page URI method with a page type.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetQualifiedPageUriFromPageType()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -54,7 +53,7 @@ namespace SpecBind.Tests
         /// <summary>
 		///     Tests the get page URI method with a page type.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetQualifiedPageUriFromPageTypeWithAbslouteUriAttribute()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -70,7 +69,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method with a page type and a longer hostname.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetDottedHostnameQualifiedPageUriFromPageType()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -86,7 +85,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriWithBaseVirtualDirectory()
         {
             UriHelper.BaseUri = new Uri("http://localhost/MyVirtualDir");
@@ -98,7 +97,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method with a page type with no slash.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriFromPageTypeWithNoSlash()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -114,7 +113,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriRegex()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -131,7 +130,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method with parameters
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriRegexWithParameters()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -148,7 +147,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriRegexAttributeDoesNotContainASlash()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -165,7 +164,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the get page URI method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriWithAbsoluteNavigationPath()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -181,7 +180,7 @@ namespace SpecBind.Tests
         /// <summary>
         ///     Tests the get page URI method.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetQualifiedPageUriRegexWithRegexInNavigation()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -197,7 +196,7 @@ namespace SpecBind.Tests
         /// <summary>
 		///     Tests the get page URI method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetPageUriFromTypeWithNavigationAttribute()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -213,31 +212,33 @@ namespace SpecBind.Tests
 		/// <summary>
 		///     Tests the get page URI method with a type that doesn't contain an attribute.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(PageNavigationException))]
+		[Test]
 		public void TestGetPageUriFromTypeWithInvalidNavigationAttribute()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
 			browser.Setup(b => b.GetUriForPageType(typeof(InvalidPage))).Returns((string)null);
 
-			try
-			{
-                UriHelper.BaseUri = new Uri("http://localhost:2222/");
-				UriHelper.GetPageUri(browser.Object, typeof(InvalidPage));
-			}
-			catch (PageNavigationException ex)
-			{
-				StringAssert.Contains(ex.Message, "InvalidPage");
+			Assert.Throws<PageNavigationException>(() =>
+			                                       {
+				                                       try
+				                                       {
+					                                       UriHelper.BaseUri = new Uri("http://localhost:2222/");
+					                                       UriHelper.GetPageUri(browser.Object, typeof(InvalidPage));
+				                                       }
+				                                       catch (PageNavigationException ex)
+				                                       {
+					                                       StringAssert.Contains("InvalidPage", ex.Message);
 
-				browser.VerifyAll();
-				throw;
-			}
+					                                       browser.VerifyAll();
+					                                       throw;
+				                                       }
+			                                       });
 		}
 
 		/// <summary>
 		///     Tests the get page URI method.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestFillPageUri()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -254,7 +255,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		///     Tests the get page URI method with a null dictionary.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestFillPageUriNullDictionary()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -271,7 +272,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		///     Tests the get page URI method with a null dictionary.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestFillPageUriNoAttribute()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -290,7 +291,7 @@ namespace SpecBind.Tests
 		///     Tests the FillPageUri method when a template is specified and AbsoluteUri is true.
 		///     When these conditions are met, the base Uri should be ignored.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestFillPageUriWithTemplateAndAbsoluteUri()
 		{
 			var browser = new Mock<IBrowser>(MockBehavior.Strict);

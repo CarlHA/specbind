@@ -7,10 +7,8 @@ namespace SpecBind.Tests
     using System.Collections.Generic;
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Helpers;
@@ -21,14 +19,13 @@ namespace SpecBind.Tests
     /// <summary>
     /// A test fixture for the data steps class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class DataStepsFixture
     {
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a null table.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestWhenIEnterDataInFieldsStepNullTable()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -36,22 +33,22 @@ namespace SpecBind.Tests
 
             var steps = new DataSteps(scenarioContext.Object, pipelineService.Object);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.WhenIEnterDataInFieldsStep(null),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a table that has no field column.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestWhenIEnterDataInFieldsStepMissingFieldColumn()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -61,23 +58,23 @@ namespace SpecBind.Tests
 
             var table = new Table("Value");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.WhenIEnterDataInFieldsStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a table that has no field column.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
-        public void TestWhenIEnterDataInFieldsStepMissingValueColumn()
+        [Test]
+         public void TestWhenIEnterDataInFieldsStepMissingValueColumn()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
             var scenarioContext = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -86,21 +83,22 @@ namespace SpecBind.Tests
 
             var table = new Table("Field");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.WhenIEnterDataInFieldsStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWhenIEnterDataInFieldsStep()
         {
             var testPage = new Mock<IPage>();
@@ -132,8 +130,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a successful result.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestWhenIEnterDataInFieldsStepMultipleEntriesWithFailure()
         {
             var testPage = new Mock<IPage>();
@@ -165,24 +162,29 @@ namespace SpecBind.Tests
                                  { "Value", "myvalue" }
                              });
 
-            try
-            {
-                steps.WhenIEnterDataInFieldsStep(table);
-            }
-            catch (ElementExecuteException ex)
-            {
-                StringAssert.Contains(ex.Message, "Could Not Find Field: mysecondfield");
+            Assert.Throws<ElementExecuteException>(() =>
+                                                   {
+                                                       try
+                                                       {
+                                                           steps.WhenIEnterDataInFieldsStep(table);
+                                                       }
+                                                       catch (ElementExecuteException ex)
+                                                       {
+                                                           StringAssert.Contains("Could Not Find Field: mysecondfield", ex.Message);
 
-                scenarioContext.VerifyAll();
-                pipelineService.VerifyAll();
-                throw;
-            }
+                                                           scenarioContext.VerifyAll();
+                                                           pipelineService.VerifyAll();
+                                                           throw;
+                                                       }
+                                                   });
+
+            ;
         }
 
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWhenIEnterDataInFieldStep()
         {
             var testPage = new Mock<IPage>();
@@ -206,9 +208,8 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WhenIEnterDataInFieldsStep method with a failed result.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
-        public void TestWhenIEnterDataInFieldStepWithFailure()
+        [Test]
+         public void TestWhenIEnterDataInFieldStepWithFailure()
         {
             var testPage = new Mock<IPage>();
 
@@ -222,25 +223,28 @@ namespace SpecBind.Tests
 
             var steps = new DataSteps(scenarioContext.Object, pipelineService.Object);
 
-            try
-            {
-                steps.WhenIEnterDataInFieldStep("myvalue", "My Field");
-            }
-            catch (ElementExecuteException ex)
-            {
-                StringAssert.Contains(ex.Message, "Could Not Find Field: myfield");
+            Assert.Throws<ElementExecuteException>(() =>
+                                                   {
+                                                       try
+                                                       {
+                                                           steps.WhenIEnterDataInFieldStep("myvalue", "My Field");
+                                                       }
+                                                       catch (ElementExecuteException ex)
+                                                       {
+                                                           StringAssert.Contains(ex.Message,
+                                                                                 "Could Not Find Field: myfield");
 
-                scenarioContext.VerifyAll();
-                pipelineService.VerifyAll();
-                throw;
-            }
+                                                           scenarioContext.VerifyAll();
+                                                           pipelineService.VerifyAll();
+                                                           throw;
+                                                       }
+                                                   });
         }
 
         /// <summary>
         /// Tests the WhenIClearDataInFieldsStep method with a null table.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestWhenIClearDataInFieldsStepNullTable()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -248,22 +252,22 @@ namespace SpecBind.Tests
 
             var steps = new DataSteps(scenarioContext.Object, pipelineService.Object);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.WhenIClearDataInFieldsStep(null),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the WhenIClearDataInFieldsStep method with a table that has no field column.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestWhenIClearDataInFieldsStepMissingFieldColumn()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -273,21 +277,22 @@ namespace SpecBind.Tests
 
             var table = new Table("Notes");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.WhenIClearDataInFieldsStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the WhenIClearDataInFieldsStep method with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestWhenIClearDataInFieldsStep()
         {
             var testPage = new Mock<IPage>();
@@ -318,8 +323,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the WhenIClearDataInFieldsStep method with a successful result.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestWhenIClearDataInFieldsStepMultipleEntriesWithFailure()
         {
             var testPage = new Mock<IPage>();
@@ -348,25 +352,27 @@ namespace SpecBind.Tests
                                  { "Field", "My Field" }
                              });
 
-            try
-            {
-                steps.WhenIClearDataInFieldsStep(table);
-            }
-            catch (ElementExecuteException ex)
-            {
-                StringAssert.Contains(ex.Message, "Could Not Find Field: mysecondfield");
+            Assert.Throws<ElementExecuteException>(() =>
+                                                   {
+                                                       try
+                                                       {
+                                                           steps.WhenIClearDataInFieldsStep(table);
+                                                       }
+                                                       catch (ElementExecuteException ex)
+                                                       {
+                                                           StringAssert.Contains("Could Not Find Field: mysecondfield", ex.Message);
 
-                scenarioContext.VerifyAll();
-                pipelineService.VerifyAll();
-                throw;
-            }
+                                                           scenarioContext.VerifyAll();
+                                                           pipelineService.VerifyAll();
+                                                           throw;
+                                                       }
+                                                   });
         }
 
         /// <summary>
         /// Tests the ThenISeeStep method with a null table.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestThenISeeStepNullTable()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -374,23 +380,23 @@ namespace SpecBind.Tests
 
             var steps = new DataSteps(scenarioContext.Object, pipelineService.Object);
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.ThenISeeStep(null),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the ThenISeeStep method with a table that has no field column.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
-        public void TestThenISeeStepMissingFieldColumn()
+        [Test]
+         public void TestThenISeeStepMissingFieldColumn()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
             var scenarioContext = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -399,22 +405,22 @@ namespace SpecBind.Tests
 
             var table = new Table("Value");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.ThenISeeStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the ThenISeeStep method with a table that has no field column.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestThenISeeStepMissingValueColumn()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -424,22 +430,22 @@ namespace SpecBind.Tests
 
             var table = new Table("Field");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.ThenISeeStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the ThenISeeStep method with a table that has no rule column.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestThenISeeStepMissingRuleColumn()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -449,23 +455,23 @@ namespace SpecBind.Tests
 
             var table = new Table("Field", "Value");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.ThenISeeStep(table),
                 e =>
                 {
-                    StringAssert.Contains(e.Message, "A table must be specified for this step");
+                    StringAssert.Contains("A table must be specified for this step", e.Message);
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the ThenISeeStep method with headers but no rows just exists.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
-        public void TestThenISeeStepEmptyTableRunsCorrectly()
+        [Test]
+         public void TestThenISeeStepEmptyTableRunsCorrectly()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
             var scenarioContext = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -474,6 +480,7 @@ namespace SpecBind.Tests
 
             var table = new Table("Field", "Rule", "Value");
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.ThenISeeStep(table),
                 e =>
@@ -482,13 +489,13 @@ namespace SpecBind.Tests
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the ThenISeeStep method with a successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeStepEqualsComparison()
         {
             var testPage = new Mock<IPage>();
@@ -522,7 +529,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the ThenISeeStep method multiple comparisons in the table.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeStepMultipleComparisons()
         {
             var testPage = new Mock<IPage>();
@@ -564,7 +571,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the ThenISeeStep method with a not enabled comparison.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeStepListRuleScenarios()
         {
             RunStepListScenario("equals", ComparisonType.Equals);
@@ -579,8 +586,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Runs the step list with an invalid rule type.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
+        [Test]
         public void TestThenISeeStepListInvalidRuleType()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -596,19 +602,20 @@ namespace SpecBind.Tests
                                  { "Value", "myvalue" }
                              });
 
+            Assert.Throws<InvalidOperationException>(() => 
             ExceptionHelper.SetupForException<InvalidOperationException>(
                 () => steps.ThenISeeListStep("myfield", "invalid", table),
                 ex =>
                 {
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Runs the step list with no table rows.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeStepListNoRows()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -627,7 +634,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the row count step with expected parameters.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeAListRowCountStepWithExactlyComparison()
         {
             var testPage = new Mock<IPage>();
@@ -652,7 +659,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the row count step with at most comparison parameter.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeAListRowCountStepWithAtMostEvaluation()
         {
             var testPage = new Mock<IPage>();
@@ -677,7 +684,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the row count step with at least comparison parameter.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeAListRowCountStepWithAtLeastEvaluation()
         {
             var testPage = new Mock<IPage>();
@@ -736,7 +743,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the combo box validate step with expected parameters.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeComboBoxContainsStepHasNoTable()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -753,8 +760,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the combo box validate with expected parameters.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestThenISeeComboBoxContainsStepHasInvalidTable()
         {
             var pipelineService = new Mock<IActionPipelineService>(MockBehavior.Strict);
@@ -768,6 +774,7 @@ namespace SpecBind.Tests
                                  { "Item", "Something Cool" }
                              });
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => steps.ThenISeeComboBoxContainsStep("myfield", "contains", table),
                 ex =>
@@ -776,13 +783,13 @@ namespace SpecBind.Tests
 
                     scenarioContext.VerifyAll();
                     pipelineService.VerifyAll();
-                });
+                }));
         }
 
         /// <summary>
         /// Tests the that the combo box contains the list of items.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeComboBoxContainsStepContainsItems()
         {
             var testPage = new Mock<IPage>();
@@ -814,7 +821,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the that the combo box does not contain the list of items.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeComboBoxContainsStepDoesNotContainItems()
         {
             var testPage = new Mock<IPage>();
@@ -846,7 +853,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the that the combo box does contains exactly the list of items.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestThenISeeComboBoxContainsStepContainsExactlyItems()
         {
             var testPage = new Mock<IPage>();

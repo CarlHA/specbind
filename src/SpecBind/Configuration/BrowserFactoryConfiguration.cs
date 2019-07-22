@@ -19,7 +19,7 @@ namespace SpecBind.Configuration
         public BrowserFactoryConfiguration()
         {
             // Default configuration settings
-            this.BrowserType = BrowserType.IE;
+            this.BrowserType = BrowserType.Chrome;
             this.ElementLocateTimeout = TimeSpan.FromSeconds(30);
             this.PageLoadTimeout = TimeSpan.FromSeconds(30);
             this.Settings = new Dictionary<string, string>();

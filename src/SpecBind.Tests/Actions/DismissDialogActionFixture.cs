@@ -4,23 +4,21 @@
 
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-    using Moq;
-
-    using SpecBind.Actions;
+   using Moq;
+   using NUnit.Framework;
+   using SpecBind.Actions;
     using SpecBind.BrowserSupport;
 
     /// <summary>
     /// A test fixture for dismissing a dialog action.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class DismissDialogActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var buttonClickAction = new DismissDialogAction(null);
@@ -32,7 +30,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the dismiss alert when an invalid option is selected returns a failure.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDismissAlertWhenInvalidOptionIsSelectedReturnsAFailure()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -44,7 +42,7 @@ namespace SpecBind.Tests.Actions
 
             Assert.AreEqual(false, result.Success);
             Assert.IsNotNull(result.Exception);
-            StringAssert.Contains(result.Exception.Message, "Could not translate 'foo' into a known dialog action. Available Actions:");
+            StringAssert.Contains("Could not translate 'foo' into a known dialog action. Available Actions:", result.Exception.Message);
 
             browser.VerifyAll();
         }
@@ -52,7 +50,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// dismiss alert when the OK button is selected.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDismissAlertWhenOkButtonIsChoosenCallsBrowserAction()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -71,7 +69,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// dismiss alert when the OK button is selected.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDismissAlertWhenOkButtonWithWhitespaceIsChoosenCallsBrowserAction()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -90,7 +88,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// dismiss alert when the text is null, to make sure it's translated into an empty string and the OK button is selected.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDismissAlertWhenTextIsEnteredButNullAndOkButtonIsChoosenCallsBrowserAction()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);
@@ -109,7 +107,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// dismiss alert when the text is null, to make sure it's translated into an empty string and the OK button is selected.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDismissAlertWhenTextIsEnteredAndOkButtonIsChoosenCallsBrowserAction()
         {
             var browser = new Mock<IBrowser>(MockBehavior.Strict);

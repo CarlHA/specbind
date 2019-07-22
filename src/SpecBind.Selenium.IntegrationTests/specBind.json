@@ -1,0 +1,16 @@
+﻿{
+    "specBind": {
+        "application": {
+            "startUrl": "http://localhost:2222/"
+        },
+        "browserFactory": {
+            "provider": "SpecBind.Selenium.SeleniumBrowserFactory, SpecBind.Selenium",
+            "browserType": "chrome",
+            "reuseBrowser": "true",
+            "validateWebDriver": true,
+            "settings": {
+                "ChromeArguments": "--headless"
+            }
+        }
+    }
+}

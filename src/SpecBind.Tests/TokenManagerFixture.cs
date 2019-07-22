@@ -4,24 +4,22 @@
 
 namespace SpecBind.Tests
 {
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 	using System;
 
 	using Moq;
-
+	using NUnit.Framework;
 	using SpecBind.Helpers;
 
 	/// <summary>
 	/// A test fixture for the TokenManager class.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class TokenManagerFixture
 	{
 		/// <summary>
 		/// Tests the GetToken method with a normal piece of data.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetTokenNormalData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -38,7 +36,7 @@ namespace SpecBind.Tests
 	    /// <summary>
 	    /// Tests the GetToken method with a normal piece of data.
 	    /// </summary>
-	    [TestMethod]
+	    [Test]
 	    public void TestGetTokenWithSendKeysFormat()
 	    {
 	        var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -55,7 +53,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Tests the GetTokenByKey method.
         /// </summary>
-        [TestMethod]
+        [Test]
 		public void TestGetTokenByKey()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -73,7 +71,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the GetToken method with a valid token.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetTokenIsTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -91,7 +89,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the GetToken method with a valid token that has extra whitespace.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestGetTokenIsMalformedTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -109,7 +107,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method with a key and value. No parsing is performed.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenKeyAndValueNormalData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -125,26 +123,26 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method with a key and value. No parsing is performed.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void TestSetTokenKeyAndValueNullKey()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
 			var manager = new TokenManager(context.Object);
 
+			Assert.Throws<ArgumentNullException>(() => 
 			ExceptionHelper.SetupForException<ArgumentNullException>(
 				() => manager.SetToken(null, "Test Data"),
 				e =>
 					{
 						Assert.AreEqual("tokenName", e.ParamName);
 						context.VerifyAll();
-					});
+					}));
 		}
 
 		/// <summary>
 		/// Tests the SetToken method with a normal piece of data.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenNormalData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -161,7 +159,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method with a null of data.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenNullData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -178,7 +176,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method with a valid token.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenIsTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -196,7 +194,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method with a token and no data which means the value should be retrieved.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenIsEmptyTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -214,7 +212,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method requesting a random integer value.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenIsIntTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -235,7 +233,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method requesting a random GUID value.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenIsGuidTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -256,7 +254,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method requesting a random string value with no length.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenIsStringTokenData()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);
@@ -275,7 +273,7 @@ namespace SpecBind.Tests
 		/// <summary>
 		/// Tests the SetToken method requesting a random string value with a length specified.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestSetTokenIsStringTokenDataCustomLength()
 		{
 			var context = new Mock<IScenarioContextHelper>(MockBehavior.Strict);

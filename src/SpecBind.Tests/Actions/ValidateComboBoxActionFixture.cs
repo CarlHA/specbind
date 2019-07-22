@@ -5,10 +5,8 @@
 namespace SpecBind.Tests.Actions
 {
     using System.Collections.Generic;
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -16,13 +14,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for a button click action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ValidateComboBoxActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var comboBoxAction = new ValidateComboBoxAction();
@@ -33,8 +31,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         ///     Tests the fill field with a field on the page that doesn't exist.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestExecuteWhenFieldDoesNotExistThrowsAnException()
         {
             var locator = new Mock<IElementLocator>(MockBehavior.Strict);
@@ -46,14 +43,15 @@ namespace SpecBind.Tests.Actions
                                         };
 
             var context = new ValidateComboBoxAction.ValidateComboBoxContext("doesnotexist", ComboComparisonType.Contains, new List<ComboBoxItem>(), true, true);
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
-                () => comboBoxAction.Execute(context), e => locator.VerifyAll());
+                () => comboBoxAction.Execute(context), e => locator.VerifyAll()));
         }
 
         /// <summary>
         /// Tests the execute method when the property is not a list returns a failure result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyIsNotAComboBoxReturnsFailureResult()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -81,7 +79,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns a validation failure returns an error.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsContainsErrorsReturnsFailureResult()
         {
 
@@ -111,7 +109,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns a validation failure returns an error.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsDoesNotContainErrorsReturnsFailureResult()
         {
             var items = new List<ComboBoxItem> { new ComboBoxItem { Text = "Item 1", Value = "1" } };
@@ -140,7 +138,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns a validation failure returns an error.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsExcactMatchWithExtraItemsReturnsFailureResult()
         {
             var items = new List<ComboBoxItem> { new ComboBoxItem { Text = "Item 1", Value = "1" }, new ComboBoxItem { Text = "Item 2", Value = "2" }, };
@@ -170,7 +168,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns no validation failures returns an successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationReturnsSuccessReturnsASuccess()
         {
             var mockItem = new ComboBoxItem { Text = "Item 1", Value = "1" };
@@ -198,7 +196,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns no validation failures returns an successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationIgnoresValuesReturnsASuccess()
         {
             var mockItem = new ComboBoxItem { Text = "Item 1", Value = "0" };
@@ -227,7 +225,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests the execute method when the property returns no validation failures returns an successful result.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteWhenPropertyValidationIgnoresTextReturnsASuccess()
         {
             var mockItem = new ComboBoxItem { Text = "Item", Value = "1" };

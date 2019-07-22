@@ -5,17 +5,15 @@ namespace SpecBind.Tests
 {
     using System;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.BrowserSupport;
     using SpecBind.Pages;
 
     /// <summary>
     /// A test fixture for the common operation of the PageBuilderBase class.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class PageBuilderBaseFixture
     {
         /// <summary>
@@ -35,7 +33,7 @@ namespace SpecBind.Tests
         /// <summary>
         /// Test set property is discovered and can be set correctly.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestDiscoverSetStringProperty()
         {
             var parent = new Mock<IParentContext>(MockBehavior.Strict);

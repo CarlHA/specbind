@@ -3,10 +3,8 @@
 // </copyright>
 namespace SpecBind.Tests.Actions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.ActionPipeline;
     using SpecBind.Actions;
     using SpecBind.Pages;
@@ -14,13 +12,13 @@ namespace SpecBind.Tests.Actions
     /// <summary>
     /// A test fixture for data clearing action
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class ClearDataActionFixture
     {
         /// <summary>
         /// Tests getting the name of the action.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetActionName()
         {
             var clearDataAction = new ClearDataAction();
@@ -31,7 +29,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that Execute will clear the data for the found element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteClearsDataIfElementIsFound()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -60,7 +58,7 @@ namespace SpecBind.Tests.Actions
         /// <summary>
         /// Tests that Execute will clear the data for the found element.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestExecuteClearsDataIfPropertyIsFound()
         {
             var propData = new Mock<IPropertyData>(MockBehavior.Strict);

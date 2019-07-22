@@ -5,23 +5,21 @@ namespace SpecBind.Tests.Validation
 {
     using System.Linq;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Pages;
     using SpecBind.Validation;
 
     /// <summary>
     /// A test fixture for the does not exist comparison.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class DoesNotExistComparerFixture : ComparisonTestBase<DoesNotExistComparer>
     {
         /// <summary>
         /// Tests the rule key property for the correct tags.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestRuleValuesReturnsProperTags()
         {
             var item = new DoesNotExistComparer();
@@ -32,7 +30,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the properties to ensure no other checks are needed.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestRuleDoesNotCheckForFieldExistenceOrFieldValue()
         {
             var item = new DoesNotExistComparer();
@@ -44,7 +42,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareWithNonBoolValueCase()
         {
             var propertyData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -56,7 +54,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareExistsCase()
         {
             var propertyData = new Mock<IPropertyData>(MockBehavior.Strict);
@@ -68,7 +66,7 @@ namespace SpecBind.Tests.Validation
         /// <summary>
         /// Tests the compare method for simple comparisons.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestCompareNotExistsCase()
         {
             var propertyData = new Mock<IPropertyData>(MockBehavior.Strict);

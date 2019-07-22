@@ -7,61 +7,63 @@ namespace SpecBind.Tests.Helpers
 	using System;
 	using System.Collections.Generic;
 	using System.Text;
-
-	using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+	using NUnit.Framework;
 	using SpecBind.Helpers;
 
 	/// <summary>
 	/// A test class for validating the able formatter.
 	/// </summary>
-	[TestClass]
+	[TestFixture]
 	public class TableFormatterFixture
 	{
 		/// <summary>
 		/// Tests the add column with null cell selector throws an exception.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void TestAddColumnWithNullCellSelectorThrowsException()
 		{
 			var tableFormatter = new TableFormater<MyFormatItem>();
 
-			try
-			{
-				tableFormatter.AddColumn<string>("BadColumn", null, null);
-			}
-			catch (ArgumentNullException ex)
-			{
-				Assert.AreEqual("cellSelector", ex.ParamName);
-				throw;
-			}
+			Assert.Throws<ArgumentNullException>(() =>
+			                                     {
+				                                     try
+				                                     {
+					                                     tableFormatter.AddColumn<string>("BadColumn", null, null);
+				                                     }
+				                                     catch (ArgumentNullException ex)
+				                                     {
+					                                     Assert.AreEqual("cellSelector", ex.ParamName);
+					                                     throw;
+				                                     }
+			                                     });
 		}
 
 		/// <summary>
 		/// Tests the add column with null value selector throws an exception.
 		/// </summary>
-		[TestMethod]
-		[ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void TestAddColumnWithNullValueSelectorThrowsException()
 		{
 			var tableFormatter = new TableFormater<MyFormatItem>();
 
-			try
-			{
-				tableFormatter.AddColumn("BadColumn", i => "Hello", null);
-			}
-			catch (ArgumentNullException ex)
-			{
-				Assert.AreEqual("valueSelector", ex.ParamName);
-				throw;
-			}
+			Assert.Throws<ArgumentNullException>(() =>
+			                                     {
+				                                     try
+				                                     {
+					                                     tableFormatter.AddColumn("BadColumn", i => "Hello", null);
+				                                     }
+				                                     catch (ArgumentNullException ex)
+				                                     {
+					                                     Assert.AreEqual("valueSelector", ex.ParamName);
+					                                     throw;
+				                                     }
+			                                     });
 		}
 
 		/// <summary>
 		/// Tests the add column with correct values.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestAddColumnWithValidSelectors()
 		{
 			var tableFormatter = new TableFormater<MyFormatItem>();
@@ -74,7 +76,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering of a simple table that has all valid values.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintValidTable()
 		{
 			var items = new[]
@@ -100,7 +102,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering returns null if no rows exist and the exclude option is enabled.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintTableWithRowExclusionEnableReturnsNullIfNoRowsExist()
 		{
 			var tableFormatter = new TableFormater<MyFormatItem>()
@@ -116,7 +118,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering returns just the headers if no rows exist.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintTableWithNoRowsReturnsJustHeaders()
 		{
 			var tableFormatter = new TableFormater<MyFormatItem>()
@@ -131,7 +133,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering of a simple table that has all valid values and a validation selector that returns null.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintValidTableWithNullValidationFunctionTreatsValuesAsTrue()
 		{
 			var items = new[]
@@ -157,7 +159,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering of a simple table that has all valid values, but some are null.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintValidTableWithNullValues()
 		{
 			var items = new[]
@@ -183,7 +185,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering of a simple table that has valid and invalid columns.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintValidTableWithInvalidValues()
 		{
 			var items = new[]
@@ -209,7 +211,7 @@ namespace SpecBind.Tests.Helpers
 		/// <summary>
 		/// Tests the rendering of a simple table that has valid and invalid columns.
 		/// </summary>
-		[TestMethod]
+		[Test]
 		public void TestPrintValidTableWithInvalidNullValues()
 		{
 			var items = new[]

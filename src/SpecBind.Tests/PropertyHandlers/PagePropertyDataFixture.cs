@@ -7,10 +7,8 @@ namespace SpecBind.Tests.PropertyHandlers
     using System;
     using System.Collections.Generic;
 
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
-
     using Moq;
-
+    using NUnit.Framework;
     using SpecBind.Actions;
     using SpecBind.Pages;
     using SpecBind.PropertyHandlers;
@@ -20,14 +18,14 @@ namespace SpecBind.Tests.PropertyHandlers
     /// <summary>
     /// A test fixture for the property data items that are just .net properties.
     /// </summary>
-    [TestClass]
+    [TestFixture]
     public class PagePropertyDataFixture
     {
         /// <summary>
         /// Tests that other methods in the class are not supported.
         /// </summary>
-        [TestMethod]
-        public void TestMethodsAreNotSupported()
+        [Test]
+        public void TestsAreNotSupported()
         {
             var element = new BaseElement();
             var pageBase = new Mock<IPageElementHandler<BaseElement>>(MockBehavior.Strict);
@@ -51,7 +49,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the FillData method where the it is a property and a string type.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestFillDataWherePropertyIsAString()
         {
             var element = new BaseElement();
@@ -67,8 +65,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the FillData method where the it is a property and not a string type.
         /// </summary>
-        [TestMethod]
-        [ExpectedException(typeof(ElementExecuteException))]
+        [Test]
         public void TestFillDataWherePropertyIsNotAString()
         {
             var element = new BaseElement();
@@ -76,15 +73,16 @@ namespace SpecBind.Tests.PropertyHandlers
 
             var propertyData = CreatePropertyData(pageBase, element, typeof(DateTime));
 
+            Assert.Throws<ElementExecuteException>(() => 
             ExceptionHelper.SetupForException<ElementExecuteException>(
                 () => propertyData.FillData("My Data"),
-                e => pageBase.VerifyAll());
+                e => pageBase.VerifyAll()));
         }
 
         /// <summary>
         /// Tests that GetCurrentValue from a non-element property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestGetCurrentValue()
         {
             var element = new BaseElement();
@@ -107,7 +105,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateItem method for a property.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateItem()
         {
             var element = new BaseElement();
@@ -126,7 +124,7 @@ namespace SpecBind.Tests.PropertyHandlers
         /// <summary>
         /// Tests the ValidateItem method for a property of an enumerable string type.
         /// </summary>
-        [TestMethod]
+        [Test]
         public void TestValidateItemAsEnumerableProperty()
         {
             var element = new List<string> { "My Data", "Other Item" };
